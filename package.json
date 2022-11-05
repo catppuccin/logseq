@@ -1,7 +1,8 @@
 {
   "name": "catppuccin",
   "version": "0.0.1",
-  "description": "Soothing pastel theme for Logseq",
+  "description": "🦫 Soothing pastel theme for Logseq",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sass --watch scss:.",
