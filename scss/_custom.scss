@@ -1,0 +1,23 @@
+// place for selection to customise elements not supported by default variables
+
+// Switches
+a.ui__toggle {
+    & .wrapper:focus {
+        --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+    }
+    span {
+        background-color: var(--ctp-switch-background);
+        span.switcher {
+            background-color: rgb(var(--ctp-switch-handle-color));
+        }
+    }
+}
+
+// Buttons
+button.ui__button {
+    color: var(--ctp-button-text);
+    background-color: rgb(var(--ctp-button-background));
+    &:hover {
+        background-color: rgb(var(--ctp-button-background));
+    }
+}

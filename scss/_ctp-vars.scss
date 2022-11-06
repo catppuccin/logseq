@@ -1,4 +1,5 @@
 :root {
+  // following are mapped to variables used in logseq
   --ctp-primary-background-color: rgb(var(--ctp-base));
   --ctp-secondary-background-color: rgb(var(--ctp-mantle));
   --ctp-tertiary-background-color: rgb(var(--ctp-crust));
@@ -92,4 +93,15 @@
   --ctp-error-color: var(--ctp-red);
   --ctp-warning-color: var(--ctp-peach);
   --ctp-success-color: var(--ctp-green);
+
+  // following used in _custom.scss
+
+  // Switches
+  --ctp-switch-background: var(--color-base-50);
+  --ctp-switch-handle-color: var(--ctp-accent, var(--ctp-blue));
+
+  // Buttons
+  --ctp-button-background: var(--ctp-accent, var(--ctp-blue));
+  --ctp-button-text: var(--color-base-10);
+
 }
