@@ -1,0 +1,110 @@
+// Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
+:root {
+  --ls-error-color: var(--ctp-error-color);
+  --ls-warning-color: var(--ctp-warning-color);
+  --ls-success-color: var(--ctp-success-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: rgb(var(--ctp-primary-background-color));
+  }
+
+  html[data-theme='light'] {
+    background-color: transparent;
+  }
+}
+
+.light-theme,
+.dark-theme,
+html {
+  --ls-primary-background-color: var(--ctp-primary-background-color);
+  --ls-secondary-background-color: var(--ctp-secondary-background-color);
+  --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
+  --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
+
+  --color-level-1: var(--ctp-color-level-1);
+  --color-level-2: var(--ctp-color-level-2);
+  --color-level-3: var(--ctp-color-level-3);
+  --color-level-4: var(--ctp-color-level-4);
+  --color-level-5: var(--ctp-color-level-5);
+  --color-level-6: var(--ctp-color-level-6);
+
+  --ls-active-primary-color: var(--ctp-active-primary-color);
+  --ls-active-secondary-color: var(--ctp-active-secondary-color);
+
+  --ls-table-tr-even-background-color: var(--ctp-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--ctp-block-properties-background-color);
+  --ls-page-properties-background-color: var(--ctp-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--ctp-block-ref-link-text-color);
+  --ls-search-background-color: var(--ctp-search-background-color);
+
+  --ls-border-color: var(--ctp-border-color);
+  --ls-secondary-border-color: var(--ctp-secondary-border-color);
+  --ls-tertiary-border-color: var(--ctp-tertiary-border-color);
+
+  --ls-guideline-color: var(--ctp-guideline-color);
+  --ls-menu-hover-color: var(--ctp-menu-hover-color);
+  --ls-primary-text-color: var(--ctp-primary-text-color);
+  --ls-secondary-text-color: var(--ctp-secondary-text-color);
+  --ls-title-text-color: var(--ctp-title-text-color);
+
+  --ls-link-text-color: var(--ctp-link-text-color);
+  --ls-link-text-hover-color: var(--ctp-link-text-hover-color);
+  --ls-link-ref-text-color: var(--ctp-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--ctp-link-ref-text-hover-color);
+
+  --ls-tag-text-color: var(--ctp-tag-text-color);
+  --ls-tag-text-hover-color: var(--ctp-tag-text-hover-color);
+
+  --ls-slide-background-color: var(--ctp-slide-background-color);
+
+  --ls-block-bullet-border-color: var(--ctp-block-bullet-border-color);
+  --ls-block-bullet-color: var(--ctp-block-bullet-color);
+  --ls-block-highlight-color: var(--ctp-block-highlight-color);
+
+  --ls-selection-background-color: var(--ctp-selection-background-color);
+  --ls-selection-text-color: var(--ctp-selection-text-color);
+
+  --ls-page-checkbox-color: var(--ctp-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--ctp-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--ctp-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--ctp-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--ctp-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--ctp-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--ctp-page-inline-code-bg-color);
+
+  --ls-scrollbar-foreground-color: var(--ctp-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--ctp-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--ctp-scrollbar-thumb-hover-color);
+
+  --ls-head-text-color: var(--ctp-head-text-color);
+  --ls-cloze-text-color: var(--ctp-cloze-text-color);
+  --ls-icon-color: var(--ctp-icon-color);
+  --ls-search-icon-color: var(--ctp-search-icon-color);
+  --ls-a-chosen-bg: var(--ctp-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--ctp-right-sidebar-code-bg-color);
+
+  --ls-pie-bg-color: var(--ctp-pie-bg-color);
+  --ls-pie-fg-color: var(--ctp-pie-fg-color);
+
+  --ls-highlight-color-gray: var(--ctp-highlight-color-gray);
+  --ls-highlight-color-red: var(--ctp-highlight-color-red);
+  --ls-highlight-color-yellow: var(--ctp-highlight-color-yellow);
+  --ls-highlight-color-green: var(--ctp-highlight-color-green);
+  --ls-highlight-color-blue: var(--ctp-highlight-color-blue);
+  --ls-highlight-color-purple: var(--ctp-highlight-color-purple);
+  --ls-highlight-color-pink: var(--ctp-highlight-color-pink);
+  
+  --ls-error-text-color: var(--ctp-error-text-color);
+  --ls-error-background-color: var(--ctp-error-background-color);
+
+  --ls-warning-text-color: var(--ctp-warning-text-color);
+  --ls-warning-background-color: var(--ctp-warning-background-color);
+
+  --ls-success-text-color: var(--ctp-success-text-color);
+  --ls-success-background-color: var(--ctp-success-background-color);
+
+  --ls-focus-ring-color: var(--ctp-focus-ring-color);
+  --ls-header-button-background: var(--ctp-header-button-background);
+}
