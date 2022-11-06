@@ -4,12 +4,12 @@
   --ctp-tertiary-background-color: rgb(var(--ctp-crust));
   --ctp-quaternary-background-color: rgb(var(--ctp-surface0));
 
-  --ctp-color-level-1: var(--ctp-secondary-background-color);
-  --ctp-color-level-2: var(--ctp-tertiary-background-color);
-  --ctp-color-level-3: var(--ctp-quaternary-background-color);
-  --ctp-color-level-4: rgb(var(--ctp-surface0));
-  --ctp-color-level-5: rgb(var(--ctp-surface1));
-  --ctp-color-level-6: rgb(var(--ctp-surface2));
+  --ctp-color-level-1: var(--color-base-10);
+  --ctp-color-level-2: var(--color-base-20);
+  --ctp-color-level-3: var(--color-base-30);
+  --ctp-color-level-4: var(--color-base-40);
+  --ctp-color-level-5: var(--color-base-50);
+  --ctp-color-level-6: var(--color-base-60);
 
   --ctp-active-primary-color: rgb(var(--ctp-accent));
   --ctp-active-secondary-color: rgb(var(--ctp-accent), 0.9);
@@ -42,7 +42,7 @@
 
   --ctp-block-bullet-border-color: rgb(var(--ctp-accent));
   --ctp-block-bullet-color: rgb(var(--ctp-accent));
-  --ctp-block-highlight-color: var(--color-base-70);
+  --ctp-block-highlight-color: var(--color-base-90);
 
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
   --ctp-selection-text-color: rgb(var(--color-base-00));
@@ -64,7 +64,7 @@
   --ctp-icon-color: var(--ctp-link-text-color);
   --ctp-search-icon-color: var(--ctp-link-text-color);
   --ctp-a-chosen-bg: var(--ctp-secondary-background-color);
-  --ctp-right-sidebar-code-bg-color: var(--color-base-25);
+  --ctp-right-sidebar-code-bg-color: var(--color-base-30);
 
   --ctp-pie-bg-color: var(--ctp-primary-background-color);
   --ctp-pie-fg-color: var(--ctp-secondary-background-color);
