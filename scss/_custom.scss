@@ -28,12 +28,15 @@ a.ui__toggle {
 }
 
 // Buttons
+
 button.ui__button {
     color: var(--ctp-button-text);
     background-color: rgb(var(--ctp-button-background));
 
-    &:hover {
+    &[intent=logseq]:hover:not(.active) {
+        color: var(--ctp-button-text);
         background-color: rgb(var(--ctp-button-background));
+        
     }
 }
 
@@ -46,4 +49,21 @@ button.ui__button {
 .tippy-popper .arrow-regular {
     display: none;
     /* Hide the arrow */
+}
+
+
+// Plugins page
+.dark .ui__button[intent=logseq]:hover {
+    color: var(--ls-link-text-color);
+}
+
+svg.warning {
+    fill: rgb(var(--ctp-warning-color))
+}
+
+// Global
+
+.form-input:focus {
+    box-shadow: 0 0 0 2px rgba(var(--ctp-accent),.45);
+    border-color: rgba(var(--ctp-accent),.45);
 }
