@@ -1,13 +1,27 @@
 // place for selection to customise elements not supported by default variables
 
+// Search bar placeholder
+div.input-wrap > input::placeholder  {
+    color: var(--ctp-search-input-placeholder);
+}
+
+// search result page icon
+.recent-search {
+    a > div > div {
+        border-color: rgb(var(--ctp-text));
+    }
+}
+
 // Switches
 a.ui__toggle {
     & .wrapper:focus {
         --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
     }
-    span {
+
+    &>span {
         background-color: var(--ctp-switch-background);
-        span.switcher {
+
+        &>span.switcher {
             background-color: rgb(var(--ctp-switch-handle-color));
         }
     }
@@ -17,7 +31,19 @@ a.ui__toggle {
 button.ui__button {
     color: var(--ctp-button-text);
     background-color: rgb(var(--ctp-button-background));
+
     &:hover {
         background-color: rgb(var(--ctp-button-background));
     }
+}
+
+// Tooltip
+.tippy-tooltip {
+    background: var(--ctp-tooltip-background);
+    color: var(--ctp-tooltip-text)
+}
+
+.tippy-popper .arrow-regular {
+    display: none;
+    /* Hide the arrow */
 }
