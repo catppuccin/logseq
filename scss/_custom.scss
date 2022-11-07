@@ -36,7 +36,10 @@ button.ui__button {
     &[intent=logseq]:hover:not(.active) {
         color: var(--ctp-button-text);
         background-color: rgb(var(--ctp-button-background));
-        
+    }
+
+    &:hover {
+        background-color: rgb(var(--ctp-button-background));
     }
 }
 
