@@ -33,8 +33,8 @@
 
   --ctp-link-text-color: rgb(var(--ctp-accent, var(--ctp-teal)));
   --ctp-link-text-hover-color: rgb(var(--ctp-accent, var(--ctp-teal))); // add underline on hover
-  --ctp-link-ref-text-color: rgb(var(--ctp-blue));
-  --ctp-link-ref-text-hover-color: rgb(var(--ctp-blue)); // add unerline on hover
+  --ctp-link-ref-text-color: rgb(var(--ctp-accent, var(--ctp-teal)));
+  --ctp-link-ref-text-hover-color: rgb(var(--ctp-accent, var(--ctp-teal))); // add unerline on hover
 
   --ctp-tag-text-color: rgb(var(--ctp-accent));
   --ctp-tag-text-hover-color: rgb(var(--ctp-accent)); // add underline on hover
@@ -108,4 +108,13 @@
   --ctp-tooltip-text: rgb(var(--ctp-text));
 
   --ctp-search-input-placeholder: rgb(var(--ctp-text));
+
+  // Header
+  --ctp-header-icon: rgb(var(--ctp-accent));
+  --ctp-header-icon-background: var(--ctp-tertiary-background-color);
+
+  // Markdown
+  --ctp-text-highlight: rgb(var(--ctp-yellow)); // settings?
+  --ctp-bullet-thread-color: rgb(var(--ctp-accent, var(--ctp-teal)));
+  
 }

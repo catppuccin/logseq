@@ -61,12 +61,43 @@ button.ui__button {
 }
 
 svg.warning {
-    fill: rgb(var(--ctp-warning-color))
+    fill: rgb(var(--ctp-warning-color));
+}
+
+svg.important {
+    fill: rgb(var(--ctp-error-color));
 }
 
 // Global
+.block-children-left-border:hover {
+    width: 2px;
+    background-color: var(--ctp-bullet-thread-color);
+}
+mark {
+    background: var(--ctp-text-highlight);
+}
 
 .form-input:focus {
     box-shadow: 0 0 0 2px rgba(var(--ctp-accent),.45);
     border-color: rgba(var(--ctp-accent),.45);
+}
+
+.bullet-container.bullet-closed {
+    background-color: rgb(var(--ctp-accent), .15);
+    &:hover {
+        background-color: rgb(var(--ctp-accent), .45);
+    }
+}
+.bullet-container {
+    &:hover {
+        background-color: rgb(var(--ctp-accent), .15);
+    }
+}
+
+// Header
+button.button.icon:hover { 
+    background-color: var(--ctp-header-icon-background);
+    &> i {
+        color: var(--ctp-header-icon);
+    }
 }
