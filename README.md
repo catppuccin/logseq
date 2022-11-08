@@ -47,7 +47,7 @@
 
 ## 💝 Thanks to
 
-- [Soumik (griimick)](https://github.com/griimick)
+- [griimick](https://github.com/griimick)
 
 &nbsp;
 
