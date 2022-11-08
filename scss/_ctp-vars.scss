@@ -43,7 +43,7 @@
 
   --ctp-block-bullet-border-color: rgb(var(--ctp-accent));
   --ctp-block-bullet-color: rgb(var(--ctp-accent));
-  --ctp-block-highlight-color: var(--color-base-90);
+  --ctp-block-highlight-color: var(--color-base-30);
 
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
   --ctp-selection-text-color: rgb(var(--color-base-00));
@@ -93,6 +93,7 @@
   --ctp-error-color: var(--ctp-red);
   --ctp-warning-color: var(--ctp-peach);
   --ctp-success-color: var(--ctp-green);
+  --ctp-info-color: var(--ctp-yellow);
 
   // following used in _custom.scss
 
@@ -111,10 +112,11 @@
 
   // Header
   --ctp-header-icon: rgb(var(--ctp-accent));
-  --ctp-header-icon-background: var(--ctp-tertiary-background-color);
+  --ctp-header-icon-background: var(--ctp-menu-hover-color);
 
   // Markdown
   --ctp-text-highlight: rgb(var(--ctp-yellow)); // settings?
   --ctp-bullet-thread-color: rgb(var(--ctp-accent, var(--ctp-teal)));
   
+  --ctp-dropdown-border-color: var(--color-base-30);
 }

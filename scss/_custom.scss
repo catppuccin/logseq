@@ -68,7 +68,44 @@ svg.important {
     fill: rgb(var(--ctp-error-color));
 }
 
+svg.note {
+    fill: rgb(var(--ctp-info-color));
+}
+
 // Global
+
+div.nav-content-item:not(.is-expand) {
+    .header {
+        background-color: var(--ls-tertiary-background-color);
+    }
+    .header a {
+        color: var(--ctp-link-text-hover-color);
+    }
+}
+
+.left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
+    color: var(--ctp-link-text-hover-color);
+    
+}
+
+.left-sidebar-inner a.item:hover {
+    background: var(--ctp-tertiary-background-color);
+}
+
+.cp__sidebar-left-layout .header:hover a {
+    color: var(--ctp-link-text-hover-color);
+}
+
+.ui__modal-panel {
+    border: 1px solid;
+    border-color: var(--ctp-dropdown-border-color)
+}
+
+.dropdown-wrapper {
+    border: 1px solid;
+    border-color: var(--ctp-dropdown-border-color)
+}
+
 .block-children-left-border:hover {
     width: 2px;
     background-color: var(--ctp-bullet-thread-color);
@@ -79,7 +116,7 @@ mark {
 
 .form-input:focus {
     box-shadow: 0 0 0 2px rgba(var(--ctp-accent),.45);
-    border-color: rgba(var(--ctp-accent),.45);
+    border-color: rgba(var(--ctp-accent), .45);
 }
 
 .bullet-container.bullet-closed {
