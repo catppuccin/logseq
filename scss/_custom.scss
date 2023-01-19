@@ -1,0 +1,140 @@
+// place for selection to customise elements not supported by default variables
+
+// Search bar placeholder
+div.input-wrap > input::placeholder  {
+    color: var(--ctp-search-input-placeholder);
+}
+
+// search result page icon
+.recent-search {
+    a > div > div {
+        border-color: rgb(var(--ctp-text));
+    }
+}
+
+// Switches
+a.ui__toggle {
+    & .wrapper:focus {
+        --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+    }
+
+    &>span {
+        background-color: var(--ctp-switch-background);
+
+        &>span.switcher {
+            background-color: rgb(var(--ctp-switch-handle-color));
+        }
+    }
+}
+
+// Buttons
+
+button.ui__button {
+    color: var(--ctp-button-text);
+    background-color: rgb(var(--ctp-button-background));
+
+    &[intent=logseq]:hover:not(.active) {
+        color: var(--ctp-button-text);
+        background-color: rgb(var(--ctp-button-background));
+    }
+
+    &:hover {
+        background-color: rgb(var(--ctp-button-background));
+    }
+}
+
+// Tooltip
+.tippy-tooltip {
+    background: var(--ctp-tooltip-background);
+    color: var(--ctp-tooltip-text)
+}
+
+.tippy-popper .arrow-regular {
+    display: none;
+    /* Hide the arrow */
+}
+
+
+// Plugins page
+.dark .ui__button[intent=logseq]:hover {
+    color: var(--ls-link-text-color);
+}
+
+svg.warning {
+    fill: rgb(var(--ctp-warning-color));
+}
+
+svg.important {
+    fill: rgb(var(--ctp-error-color));
+}
+
+svg.note {
+    fill: rgb(var(--ctp-info-color));
+}
+
+// Global
+
+div.nav-content-item:not(.is-expand) {
+    .header {
+        background-color: var(--ls-tertiary-background-color);
+    }
+    .header a {
+        color: var(--ctp-link-text-hover-color);
+    }
+}
+
+.left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
+    color: var(--ctp-link-text-hover-color);
+    
+}
+
+.left-sidebar-inner a.item:hover {
+    background: var(--ctp-tertiary-background-color);
+}
+
+.cp__sidebar-left-layout .header:hover a {
+    color: var(--ctp-link-text-hover-color);
+}
+
+.ui__modal-panel {
+    border: 1px solid;
+    border-color: var(--ctp-dropdown-border-color)
+}
+
+.dropdown-wrapper {
+    border: 1px solid;
+    border-color: var(--ctp-dropdown-border-color)
+}
+
+.block-children-left-border:hover {
+    width: 2px;
+    background-color: var(--ctp-bullet-thread-color);
+}
+mark {
+    background: var(--ctp-text-highlight);
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 2px rgba(var(--ctp-accent),.45);
+    border-color: rgba(var(--ctp-accent), .45);
+}
+
+.bullet-container.bullet-closed {
+    background-color: rgb(var(--ctp-accent), .15);
+    &:hover {
+        background-color: rgb(var(--ctp-accent), .45);
+    }
+}
+.bullet-container {
+    &:hover {
+        background-color: rgb(var(--ctp-accent), .15);
+    }
+}
+
+// Header
+button.button.icon:hover { 
+    background-color: var(--ctp-header-icon-background);
+    &> i {
+        color: var(--ctp-header-icon);
+    }
+}

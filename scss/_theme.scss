@@ -1,3 +1,75 @@
-@use "variables.scss"
+:root {
+    // darkest -> lightest (dark theme)
+  --color-base-00: rgb(var(--ctp-crust));
+  --color-base-10: rgb(var(--ctp-mantle));
+  --color-base-20: rgb(var(--ctp-base));
+  --color-base-30: rgb(var(--ctp-surface0));
+  --color-base-40: rgb(var(--ctp-surface1));
+  --color-base-50: rgb(var(--ctp-surface2));
+  --color-base-60: rgb(var(--ctp-overlay0));
+  --color-base-70: rgb(var(--ctp-overlay1));
+  --color-base-80: rgb(var(--ctp-overlay2));
+  --color-base-90: rgb(var(--ctp-subtext0));
+  --color-base-100: rgb(var(--ctp-text));
+}
 
-// feature-specific styles go below
+// Accents
+.ctp-full-palette {
+  --ctp-accent: unset;
+}
+
+.ctp-accent-rosewater {
+  --ctp-accent: var(--ctp-rosewater);
+}
+
+.ctp-accent-flamingo {
+  --ctp-accent: var(--ctp-flamingo);
+}
+
+.ctp-accent-pink {
+  --ctp-accent: var(--ctp-pink);
+}
+
+.ctp-accent-mauve {
+  --ctp-accent: var(--ctp-mauve);
+}
+
+.ctp-accent-red {
+  --ctp-accent: var(--ctp-red);
+}
+
+.ctp-accent-maroon {
+  --ctp-accent: var(--ctp-maroon);
+}
+
+.ctp-accent-peach {
+  --ctp-accent: var(--ctp-peach);
+}
+
+.ctp-accent-yellow {
+  --ctp-accent: var(--ctp-yellow);
+}
+
+.ctp-accent-green {
+  --ctp-accent: var(--ctp-green);
+}
+
+.ctp-accent-teal {
+  --ctp-accent: var(--ctp-teal);
+}
+
+.ctp-accent-sky {
+  --ctp-accent: var(--ctp-sky);
+}
+
+.ctp-accent-sapphire {
+  --ctp-accent: var(--ctp-sapphire);
+}
+
+.ctp-accent-blue {
+  --ctp-accent: var(--ctp-blue);
+}
+
+.ctp-accent-lavender {
+  --ctp-accent: var(--ctp-lavender);
+}
