@@ -64,7 +64,7 @@ function main() {
             logseq.App.showMsg(`Applied ${updatedSettings.CtpAccent} accent✨`)
         }
         if (updatedSettings.CtpReloadCss && !timer) {
-            timer = setInterval(reloadCss, 1000)
+            timer = setInterval(reloadCss, 5000)
         } else if (!updatedSettings.CtpReloadCss && timer) {
             clearInterval(timer);
             timer = null;

@@ -138,3 +138,11 @@ button.button.icon:hover {
         color: var(--ctp-header-icon);
     }
 }
+
+.cp__sidebar-left-layout a {
+    color: inherit;
+}
+
+.left-sidebar-inner .nav-content-item .header {
+    background-color: var(--ls-tertiary-background-color);
+}
