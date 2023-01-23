@@ -1,6 +1,6 @@
 let timer = null;
 const accentMap = {
-    "Full palette" : "ctp-full-palette",
+    // "Full palette" : "ctp-full-palette", TODO
     "Rosewater"    : "ctp-accent-rosewater",
     "Flamingo"     : "ctp-accent-flamingo",
     "Pink"         : "ctp-accent-pink",
@@ -28,7 +28,7 @@ const settings = [
         type: "enum",
         enumPicker: "select",
         enumChoices: accentNames,
-        default: "Full Palette"
+        default: "Green"
     },
     {
         key: "CtpReloadCss",
