@@ -26,7 +26,7 @@
   --ctp-tertiary-border-color: rgba(var(--ctp-surface0), 0.10);
 
   --ctp-guideline-color: rgb(var(--ctp-surface1));
-  --ctp-menu-hover-color: var(--ctp-secondary-background-color);
+  --ctp-menu-hover-color: var(--ctp-color-level-3);
   --ctp-primary-text-color: rgb(var(--ctp-text));
   --ctp-secondary-text-color: rgb(var(--ctp-subtext0));
   --ctp-title-text-color: rgb(var(--ctp-subtext1));
@@ -88,7 +88,7 @@
   --ctp-success-background-color: var(--color-green-900);
 
   --ctp-focus-ring-color: rgb(var(--ctp-overlay2));
-  --ctp-header-button-background: rgb(var(--ctp-overlay0));
+  --ctp-header-button-background: rgb(var(--ctp-text));
 
   --ctp-error-color: var(--ctp-red);
   --ctp-warning-color: var(--ctp-peach);
@@ -118,5 +118,5 @@
   --ctp-text-highlight: rgb(var(--ctp-yellow)); // settings?
   --ctp-bullet-thread-color: rgb(var(--ctp-accent, var(--ctp-teal)));
   
-  --ctp-dropdown-border-color: var(--color-base-30);
+  --ctp-dropdown-border-color: var(--color-base-50);
 }

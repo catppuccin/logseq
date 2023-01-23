@@ -1,5 +1,9 @@
 @use "main.scss";
 
+:root {
+  --ctp-cm-theme: 'ctp-macchiato';
+}
+
 :root,
 .theme-dark.ctp-macchiato {
   --ctp-rosewater: 244, 219, 214;

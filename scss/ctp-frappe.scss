@@ -1,5 +1,9 @@
 @use "main.scss";
 
+:root {
+  --ctp-cm-theme: 'ctp-frappe';
+}
+
 :root,
 .theme-dark.ctp-frappe {
   --ctp-rosewater: 242, 213, 207;
