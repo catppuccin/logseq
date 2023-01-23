@@ -17,7 +17,8 @@
 
 .light-theme,
 .dark-theme,
-html {
+html[data-theme="light"],
+html[data-theme="dark"] {
   --ls-primary-background-color: var(--ctp-primary-background-color);
   --ls-secondary-background-color: var(--ctp-secondary-background-color);
   --ls-tertiary-background-color: var(--ctp-tertiary-background-color);

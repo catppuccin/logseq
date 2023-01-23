@@ -140,6 +140,8 @@ button.button.icon:hover {
     }
 }
 
+
+// SideBar 
 .cp__sidebar-left-layout a {
     color: inherit;
 }
@@ -152,11 +154,12 @@ html[data-theme=dark] .cp__header a, html[data-theme=dark] .cp__header button, h
     opacity: 1;
 }
 
-
+// selection
 ::selection {
   color: var(--ctp-color-level-1)
 }
 
+// menu-links and dropdowns
 .menu-links-wrapper, .menu-link {
     background-color: var(--ctp-secondary-background-color);
 }
