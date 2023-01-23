@@ -37,6 +37,7 @@ const settings = [
         default: false
     }
 ];
+
 function setAccent(accentName) {
     let rootEl = parent.document.querySelector(':root'); 
 
@@ -51,13 +52,28 @@ function setAccent(accentName) {
     return true;
 }
 
+function overrideCodeMirrorTheme() {
+    const theme = window.getComputedStyle(parent.document.documentElement).getPropertyValue('--ctp-cm-theme').replace(/['"]+/g, '').trim();
+    console.log('Applying CodeMirror5 theme using --ctp-cm-theme:', theme);
+    parent.document.querySelectorAll('.CodeMirror').forEach(element => {
+        removeClassByPrefix(element, 'cm-s-');
+        element.classList.add(`cm-s-${theme}`);
+    }); 
+}
+
+function removeClassByPrefix(node, prefix) {
+    const regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
+    node.className = node.className.replace(regx, '');
+    return node;
+}
+
 function reloadCss() {
     var links = parent.document.getElementsByTagName("link");
     var link = Array.from(links).find(l => l.href.includes("ctp"));
     link.href += "";
 }
 
-function main() {
+async function main() {
     logseq.useSettingsSchema(settings);
     logseq.onSettingsChanged(updatedSettings => {
         if (setAccent(updatedSettings.CtpAccent)) {
@@ -70,6 +86,8 @@ function main() {
             timer = null;
         }
     });
+    // Hack: untill logseq.App.onRouteChange gets fixed
+    // setInterval(overrideCodeMirrorTheme, 1000);
 }
 
 

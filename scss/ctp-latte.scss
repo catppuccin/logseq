@@ -1,5 +1,9 @@
 @use "main.scss";
 
+:root {
+  --ctp-cm-theme: 'ctp-latte';
+}
+
 :root,
 .theme-light,
 .theme-light.ctp-latte {

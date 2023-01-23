@@ -1,5 +1,9 @@
 @use "main.scss";
 
+:root {
+  --ctp-cm-theme: 'ctp-mocha';
+}
+
 :root,
 .theme-dark,
 .theme-dark.ctp-mocha {
