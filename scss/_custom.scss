@@ -89,7 +89,7 @@ div.nav-content-item:not(.is-expand) {
 }
 
 .left-sidebar-inner a.item:hover {
-    background: var(--ctp-tertiary-background-color);
+    background: var(--ctp-color-level-3);
 }
 
 .cp__sidebar-left-layout .header:hover a {
@@ -133,6 +133,7 @@ mark {
 
 // Header
 button.button.icon:hover { 
+    color: rgb(var(--ctp-accent));
     background-color: var(--ctp-header-icon-background);
     &> i {
         color: var(--ctp-header-icon);
@@ -145,4 +146,25 @@ button.button.icon:hover {
 
 .left-sidebar-inner .nav-content-item .header {
     background-color: var(--ls-tertiary-background-color);
+}
+
+html[data-theme=dark] .cp__header a, html[data-theme=dark] .cp__header button, html[data-theme=dark] .cp__right-sidebar-topbar button {
+    opacity: 1;
+}
+
+
+::selection {
+  color: var(--ctp-color-level-1)
+}
+
+.menu-links-wrapper, .menu-link {
+    background-color: var(--ctp-secondary-background-color);
+}
+
+.menu-link, .menu-link:hover {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 5px;
 }
