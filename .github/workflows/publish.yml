@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -26,7 +28,7 @@ jobs:
           mkdir ${{ env.PLUGIN_NAME }} # folder for zip
           mkdir ${{ env.PLUGIN_NAME }}/assets # folder for icon
           cp assets/icon.png ${{ env.PLUGIN_NAME }}/assets # move icon
-          cp README.md package.json ctp-latte.css ctp-frappe.css ctp-macchiato.css ctp-mocha.css ${{ env.PLUGIN_NAME }} # move build assets
+          cp README.md package.json index.html index.js ctp-latte.css ctp-frappe.css ctp-macchiato.css ctp-mocha.css ${{ env.PLUGIN_NAME }} # move build assets
           zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }} # create zip
           ls
           echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
