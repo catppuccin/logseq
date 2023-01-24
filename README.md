@@ -52,7 +52,7 @@
 
 ### Switching Accent Color
 
-1. Theme settings can be accessed under `Settings` > `Plugings` > `Catppuccin`
+1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
 2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
 
 <details>
