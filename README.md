@@ -36,18 +36,39 @@
 
 ## Usage
 
-1. Clone this repo.
-2. Copy the `custom.css` to Logseq installation in `logseq/custom.css`
+### Installation
+
+1. Logseq Plugin Marketplace (Soon TBD)
+2. Add manually from GitHub Releases
+    1. Download `.zip` from latest release.
+    2. Extract it to desired location.
+    3. Enable `Developer Mode` under `Settings` > `Advanced`.
+    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
+4. Clone Repository and add manually
+    1. Clone repository (including submodules)
+    2. Run `npm ci && npm run build`
+    3. Enable `Developer Mode` under `Settings` > `Advanced`
+    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing repo folder to install the theme.
+
+### Switching Accent Color
+
+1. Theme settings can be accessed under `Settings` > `Plugings` > `Catppuccin`
+2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
+
+<details>
+<summary>Screenshot</summary>
+<img src="assets/ctp-logseq-switch-accent.webp"/>
+</details>
 
 
-## 🙋 FAQ (optional)
-
--	Q: **_"Where can I find the doc?"_**\
-	A: Run `:help theme`
 
 ## 💝 Thanks to
 
+**Current Maintainer(s)**
 - [griimick](https://github.com/griimick)
+
+**Inspiration and Contribution**
+- [pengx17](https://github.com/pengx17) for [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme)
 
 &nbsp;
 
@@ -56,7 +77,7 @@
 </p>
 
 <p align="center">
-	Copyright &copy; 2022-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+	Copyright &copy; 2023-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
 </p>
 
 <p align="center">
