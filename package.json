@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/griimick/logseq.git"
+    "url": "git+https://github.com/catppuccin/logseq.git"
   },
   "keywords": [],
   "author": "Soumik (griimick)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/griimick/logseq/issues"
+    "url": "https://github.com/catppuccin/logseq/issues"
   },
-  "homepage": "https://github.com/griimick/logseq#readme",
+  "homepage": "https://github.com/catppuccin/logseq#readme",
   "devDependencies": {
     "rimraf": "^3.0.2",
     "sass": "^1.55.0"
