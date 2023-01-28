@@ -236,3 +236,20 @@ blockquote {
     border-left: 2px solid;
     border-left-color: rgb(var(--ctp-blockquote-line));
 }
+
+$pallete: (
+    "Yellow": var(--ls-highlight-color-yellow),
+    "Red": var(--ls-highlight-color-red),
+    "Pink": var(--ls-highlight-color-pink),
+    "Green": var(--ls-highlight-color-green),
+    "Blue": var(--ls-highlight-color-blue),
+    "Purple": var(--ls-highlight-color-purple),
+    "Gray": var(--ls-highlight-color-gray),
+);
+
+// highlight color pallete in dropdown
+@each $title, $value in $pallete {
+    a[title=#{$title}].shadow-sm>.heading-bg {
+        background-color: #{$value} !important;
+    }
+}
