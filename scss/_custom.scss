@@ -92,6 +92,9 @@ div.nav-content-item:not(.is-expand) {
 
 .left-sidebar-inner a.item:hover {
     background: var(--ctp-color-level-3);
+    span {
+        color: var(--ctp-blue);
+    }
 }
 
 .cp__sidebar-left-layout .header:hover a {
