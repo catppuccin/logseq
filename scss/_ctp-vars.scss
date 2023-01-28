@@ -32,23 +32,22 @@
   --ctp-title-text-color: rgb(var(--ctp-subtext1));
 
   --ctp-link-text-color: rgb(var(--ctp-accent, var(--ctp-teal)));
-  --ctp-link-text-hover-color: rgb(var(--ctp-accent, var(--ctp-teal))); // add underline on hover
-  --ctp-link-ref-text-color: rgb(var(--ctp-accent, var(--ctp-teal)));
-  --ctp-link-ref-text-hover-color: rgb(var(--ctp-accent, var(--ctp-teal))); // add unerline on hover
-
-  --ctp-tag-text-color: rgb(var(--ctp-accent));
-  --ctp-tag-text-hover-color: rgb(var(--ctp-accent)); // add underline on hover
+  --ctp-link-text-hover-color: rgb(var(--ctp-accent, var(--ctp-mauve))); // add underline on hover
+  --ctp-link-ref-text-color: rgb(var(--ctp-accent, var(--ctp-blue)));
+  --ctp-link-ref-text-hover-color: rgb(var(--ctp-accent, var(--ctp-blue))); // add unerline on hover
+  --ctp-tag-text-color: rgb(var(--ctp-accent, var(--ctp-maroon)));
+  --ctp-tag-text-hover-color: rgb(var(--ctp-accent, var(--ctp-maroon))); // add underline on hover
 
   --ctp-slide-background-color: var(--ctp-primary-background-color);
 
-  --ctp-block-bullet-border-color: rgb(var(--ctp-accent));
-  --ctp-block-bullet-color: rgb(var(--ctp-accent));
+  --ctp-block-bullet-border-color: rgb(var(--ctp-accent, var(--ctp-sky)));
+  --ctp-block-bullet-color: rgb(var(--ctp-accent, var(--ctp-sky)));
   --ctp-block-highlight-color: var(--color-base-30);
 
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
   --ctp-selection-text-color: rgb(var(--color-base-00));
 
-  --ctp-page-checkbox-color: rgb(var(--ctp-accent));
+  --ctp-page-checkbox-color: rgb(var(--ctp-accent, var(--ctp-blue)));
   --ctp-page-checkbox-border-color: var(--ctp-primary-background-color);
   --ctp-page-blockquote-color: var(--ctp-primary-text-color);
   --ctp-page-blockquote-bg-color: var(--ctp-secondary-background-color);
@@ -119,4 +118,13 @@
   --ctp-bullet-thread-color: rgb(var(--ctp-accent, var(--ctp-teal)));
   
   --ctp-dropdown-border-color: var(--color-base-50);
+
+  // Full accent overrides
+  --ctp-text-bold: var(--ctp-accent, var(--ctp-blue));
+  --ctp-text-heading: var(--ctp-accent, var(--ctp-lavender));
+  --ctp-text-italics: var(--ctp-accent, var(--ctp-green));
+  --ctp-text-underline: var(--ctp-primary-text-color);
+  --ctp-text-strikethrough: var(--ctp-accent, var(--ctp-maroon));
+  --ctp-blockquote-line: var(--ctp-accent);
+  --ctp-active-setting: var(--ctp-accent, var(--ctp-blue));
 }

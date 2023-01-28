@@ -1,13 +1,13 @@
 // place for selection to customise elements not supported by default variables
 
 // Search bar placeholder
-div.input-wrap > input::placeholder  {
+div.input-wrap>input::placeholder {
     color: var(--ctp-search-input-placeholder);
 }
 
 // search result page icon
 .recent-search {
-    a > div > div {
+    a>div>div {
         border-color: rgb(var(--ctp-text));
     }
 }
@@ -78,18 +78,23 @@ div.nav-content-item:not(.is-expand) {
     .header {
         background-color: var(--ls-tertiary-background-color);
     }
+
     .header a {
         color: var(--ctp-link-text-hover-color);
     }
 }
 
-.left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
+.left-sidebar-inner a.item.active,
+.left-sidebar-inner a.item:active {
     color: var(--ctp-link-text-hover-color);
-    
+
 }
 
 .left-sidebar-inner a.item:hover {
     background: var(--ctp-color-level-3);
+    span {
+        color: var(--ctp-blue);
+    }
 }
 
 .cp__sidebar-left-layout .header:hover a {
@@ -110,32 +115,36 @@ div.nav-content-item:not(.is-expand) {
     width: 2px;
     background-color: var(--ctp-bullet-thread-color);
 }
+
 mark {
     background: var(--ctp-text-highlight);
 }
 
 .form-input:focus {
-    box-shadow: 0 0 0 2px rgba(var(--ctp-accent),.45);
-    border-color: rgba(var(--ctp-accent), .45);
+    box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+    border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
 }
 
 .bullet-container.bullet-closed {
-    background-color: rgb(var(--ctp-accent), .15);
+    background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+
     &:hover {
-        background-color: rgb(var(--ctp-accent), .45);
+        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
     }
 }
+
 .bullet-container {
     &:hover {
-        background-color: rgb(var(--ctp-accent), .15);
+        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
     }
 }
 
 // Header
-button.button.icon:hover { 
-    color: rgb(var(--ctp-accent));
+button.button.icon:hover {
+    color: rgb(var(--ctp-accent, var(--ctp-pink)));
     background-color: var(--ctp-header-icon-background);
-    &> i {
+
+    &>i {
         color: var(--ctp-header-icon);
     }
 }
@@ -150,24 +159,97 @@ button.button.icon:hover {
     background-color: var(--ls-tertiary-background-color);
 }
 
-html[data-theme=dark] .cp__header a, html[data-theme=dark] .cp__header button, html[data-theme=dark] .cp__right-sidebar-topbar button {
+html[data-theme=dark] .cp__header a,
+html[data-theme=dark] .cp__header button,
+html[data-theme=dark] .cp__right-sidebar-topbar button {
     opacity: 1;
 }
 
 // selection
 ::selection {
-  color: var(--ctp-color-level-1)
+    color: var(--ctp-color-level-1);
 }
 
+.inline.with-bg-color {
+    color: var(--ctp-primary-background-color);
+    b, .page-ref {
+        color: var(--ctp-primary-background-color);
+    }
+    .page-reference:hover {
+        color: var(--ctp-primary-text-color);
+        b, .page-ref, span {
+            color: var(--ctp-primary-text-color);
+        }
+    }
+    
+}
+
+
 // menu-links and dropdowns
-.menu-links-wrapper, .menu-link {
+.menu-links-wrapper,
+.menu-link {
     background-color: var(--ctp-secondary-background-color);
 }
 
-.menu-link, .menu-link:hover {
+.menu-link,
+.menu-link:hover {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     border-radius: 5px;
+}
+
+.cp__settings-inner>aside ul>li>a>strong {
+    color: rgb(var(--ctp-primary-text-color));
+}
+
+.cp__settings-inner>aside ul>li.active {
+    .ui__icon, strong {
+        color: rgb(var(--ctp-active-setting));
+    }
+}
+
+.cp__all_pages_table td>span {
+    color: rgb(var(--ctp-primary-text-color));
+}
+
+// full pallete overrides
+.editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+.editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+.ls-block :is(h1, h2, h3, h4, h5, h6) {
+    color:rgb(var(--ctp-text-heading))
+}
+
+b, strong {
+    color: rgb(var(--ctp-text-bold));
+}
+
+i {
+    color: rgb(var(--ctp-text-italics));
+}
+
+del {
+    color: rgb(var(--ctp-text-strikethrough));
+}
+blockquote {
+    border-left: 2px solid;
+    border-left-color: rgb(var(--ctp-blockquote-line));
+}
+
+$pallete: (
+    "Yellow": var(--ls-highlight-color-yellow),
+    "Red": var(--ls-highlight-color-red),
+    "Pink": var(--ls-highlight-color-pink),
+    "Green": var(--ls-highlight-color-green),
+    "Blue": var(--ls-highlight-color-blue),
+    "Purple": var(--ls-highlight-color-purple),
+    "Gray": var(--ls-highlight-color-gray),
+);
+
+// highlight color pallete in dropdown
+@each $title, $value in $pallete {
+    a[title=#{$title}].shadow-sm>.heading-bg {
+        background-color: #{$value} !important;
+    }
 }
