@@ -1,12 +1,12 @@
 @use "main.scss";
 
 :root {
-  --ctp-cm-theme: 'ctp-mocha';
+  --ctp-cm-theme: 'ctp-oled';
 }
 
 :root,
 .theme-dark,
-.theme-dark.ctp-mocha {
+.theme-dark.ctp-oled {
   --ctp-rosewater: 245, 224, 220;
   --ctp-flamingo: 242, 205, 205;
   --ctp-pink: 245, 194, 231;
@@ -30,16 +30,16 @@
   --ctp-surface2: 86, 89, 112;
   --ctp-surface1: 67, 70, 90;
   --ctp-surface0: 49, 50, 68;
-  --ctp-base: 30, 30, 46;
-  --ctp-mantle: 24, 24, 37;
-  --ctp-crust: 17, 17, 27;
+  --ctp-base: 02, 02, 02;
+  --ctp-mantle: 01, 01, 01;
+  --ctp-crust: 00, 00, 00;
 }
 
 
 // custom check box checked image
 // css var works but does not trigger reloading data asset in browser
 // hence a sass variable
-$ctp-base: 30, 30, 46;
+$ctp-base: 02, 02, 02;
 
 .form-checkbox:checked {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='rgb(#{$ctp-base})' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;

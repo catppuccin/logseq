@@ -1,6 +1,6 @@
 {
   "name": "logseq-catppuccin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "🦫 Soothing pastel theme for Logseq",
   "main": "index.html",
   "scripts": {
@@ -52,6 +52,12 @@
         "name": "Catppuccin Mocha",
         "url": "./ctp-mocha.css",
         "description": "Catppuccin Mocha",
+        "mode": "dark"
+      },
+      {
+        "name": "Oledppuccin",
+        "url": "./ctp-oled.css",
+        "description": "Oledppuccin",
         "mode": "dark"
       }
     ],
