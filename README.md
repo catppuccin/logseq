@@ -20,30 +20,51 @@
 <details>
 <summary>🌻 Latte</summary>
 <img src="assets/preview-latte.webp"/>
+<blockquote>Selected Accent: Red</blockquote>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
 <img src="assets/preview-frappe.webp"/>
+<blockquote>Selected Accent: Pink</blockquote>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
 <img src="assets/preview-macchiato.webp"/>
+<blockquote>Selected Accent: Yellow</blockquote>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
 <img src="assets/preview-mocha.webp"/>
+<blockquote>Selected Accent: Green</blockquote>
 </details>
 
 ## Usage
 
 ### Installation
 
-1. Logseq Plugin Marketplace (Soon TBD)
-2. Add manually from GitHub Releases
+There are couple of other methods you can use to set the theme up in Logseq. Later methods are more for development purpose.
+
+1. Logseq Plugin Marketplace **(Recommended)**
+    1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
+    2. Choose the the appropriate theme variant from `Settings` > `Themes`.
+    
+<img src="assets/ctp-logseq-marketplace.webp"/>
+    
+2. Import theme stylesheet by setting it in your `config.edn` ([source](https://github.com/logseq/logseq/blob/master/templates/config.edn#L72)). Set one of the following in your config and restart Logseq.
+
+```edn
+:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
+:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-frappe.css');"
+:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-macchiato.css');"
+:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
+```
+
+3. Add manually from GitHub Releases
     1. Download `.zip` from latest release.
     2. Extract it to desired location.
     3. Enable `Developer Mode` under `Settings` > `Advanced`.
     4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
+
 4. Clone Repository and add manually
     1. Clone repository (including submodules)
     2. Run `npm ci && npm run build`
@@ -55,11 +76,15 @@
 1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
 2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
 
-<details>
-<summary>Screenshot</summary>
 <img src="assets/ctp-logseq-switch-accent.webp"/>
-</details>
 
+### Bonus: Oledppuccin
+
+> The _niche_ dark side
+
+You can choose this variant for dark themes in `Settings` > `Themes`. 
+
+<img src="assets/ctp-oledppuccin.webp"/>
 
 
 ## 💝 Thanks to
