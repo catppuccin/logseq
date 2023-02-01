@@ -82,7 +82,7 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 
 > The _niche_ dark side
 
-You can choose this variant for dark themes in `Settings` > `Themes`. 
+You can choose this variant of dark theme under `Settings` > `Themes`. 
 
 <img src="assets/ctp-oledppuccin.webp"/>
 
