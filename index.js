@@ -1,20 +1,20 @@
 let timer = null;
 const accentMap = {
-    "Full palette" : "ctp-full-palette", // undefined css var name
-    "Rosewater"    : "ctp-accent-rosewater",
-    "Flamingo"     : "ctp-accent-flamingo",
-    "Pink"         : "ctp-accent-pink",
-    "Mauve"        : "ctp-accent-mauve",
-    "Red"          : "ctp-accent-red",
-    "Maroon"       : "ctp-accent-maroon",
-    "Peach"        : "ctp-accent-peach",
-    "Yellow"       : "ctp-accent-yellow",
-    "Green"        : "ctp-accent-green",
-    "Teal"         : "ctp-accent-teal",
-    "Sky"          : "ctp-accent-sky",
-    "Sapphire"     : "ctp-accent-sapphire",
-    "Blue"         : "ctp-accent-blue",
-    "Lavendar"     : "ctp-accent-lavendar"
+    "Full palette" : "unset", // undefined css var name
+    "Rosewater"    : "var(--ctp-rosewater)",
+    "Flamingo"     : "var(--ctp-flamingo)",
+    "Pink"         : "var(--ctp-pink)",
+    "Mauve"        : "var(--ctp-mauve)",
+    "Red"          : "var(--ctp-red)",
+    "Maroon"       : "var(--ctp-maroon)",
+    "Peach"        : "var(--ctp-peach)",
+    "Yellow"       : "var(--ctp-yellow)",
+    "Green"        : "var(--ctp-green)",
+    "Teal"         : "var(--ctp-teal)",
+    "Sky"          : "var(--ctp-sky)",
+    "Sapphire"     : "var(--ctp-sapphire)",
+    "Blue"         : "var(--ctp-blue)",
+    "Lavender"     : "var(--ctp-lavender)"
 };
 
 const accentClasses = Object.values(accentMap);
@@ -39,17 +39,14 @@ const settings = [
 ];
 
 function setAccent(accentName) {
-    let rootEl = parent.document.querySelector(':root'); 
-
-    if (rootEl.classList.contains(accentMap[accentName])) return false;
-
-    for (let accentClass of accentClasses) {
-        if (rootEl.classList.contains(accentClass)) {
-            rootEl.classList.remove(accentClass);
-        }
-    }
-    rootEl.classList.add(accentMap[accentName]);
-    return true;
+    logseq.provideStyle({
+        key: 'ctp-accent',
+        style: `
+          :root {
+            --ctp-accent: ${accentMap[accentName]};
+          }
+        `,
+    });
 }
 
 function reloadCss() {
