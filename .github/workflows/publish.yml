@@ -45,3 +45,4 @@ jobs:
           publish_dir: ./${{ env.PLUGIN_NAME }}/
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
+          cname: logseq.catppuccin.com
