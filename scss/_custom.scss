@@ -186,6 +186,7 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
 
 
 // menu-links and dropdowns
+
 .menu-links-wrapper,
 .menu-link {
     background-color: var(--ctp-secondary-background-color);
@@ -252,4 +253,14 @@ $pallete: (
     a[title=#{$title}].shadow-sm>.heading-bg {
         background-color: #{$value} !important;
     }
+}
+
+
+// Dropdown option group
+#ui__ac-inner {
+    background: var(--ctp-secondary-background-color);
+}
+
+.ui__ac-group-name {
+    background: var(--ctp-tertiary-background-color);
 }
