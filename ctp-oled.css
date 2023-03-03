@@ -64,7 +64,7 @@
   --ctp-cloze-text-color: rgb(var(--ctp-accent));
   --ctp-icon-color: var(--ctp-link-text-color);
   --ctp-search-icon-color: var(--ctp-link-text-color);
-  --ctp-a-chosen-bg: var(--ctp-secondary-background-color);
+  --ctp-a-chosen-bg: var(--ctp-quaternary-background-color);
   --ctp-right-sidebar-code-bg-color: var(--color-base-30);
   --ctp-pie-bg-color: var(--ctp-primary-background-color);
   --ctp-pie-fg-color: var(--ctp-secondary-background-color);
@@ -426,6 +426,14 @@ a[title=Purple].shadow-sm > .heading-bg {
 
 a[title=Gray].shadow-sm > .heading-bg {
   background-color: var(--ls-highlight-color-gray) !important;
+}
+
+#ui__ac-inner {
+  background: var(--ctp-secondary-background-color);
+}
+
+.ui__ac-group-name {
+  background: var(--ctp-tertiary-background-color);
 }
 
 div.cm-s-solarized.CodeMirror {
