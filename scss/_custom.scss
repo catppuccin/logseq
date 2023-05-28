@@ -184,6 +184,10 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
     
 }
 
+.ls-block .with-bg-color:is(h1,h2,h3,h4,h5,h6) {
+	color: var(--ctp-primary-background-color);
+}
+
 
 // menu-links and dropdowns
 
