@@ -1,15 +1,14 @@
 {
-  "name": "logseq-catppuccin",
-  "version": "0.2.3",
-  "description": "🦫 Soothing pastel theme for Logseq",
+  "name": "logseq-rose-pine",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sass --watch scss:.",
-    "build:latte": "sass scss/ctp-latte.scss ctp-latte.css --no-source-map",
-    "build:frappe": "sass scss/ctp-frappe.scss ctp-frappe.css --no-source-map",
-    "build:macchiato": "sass scss/ctp-macchiato.scss ctp-macchiato.css --no-source-map",
-    "build:mocha": "sass scss/ctp-mocha.scss ctp-mocha.css --no-source-map",
+    "build:main": "sass scss/rose-pine-dawn.scss rose-pine.css --no-source-map",
+    "build:moon": "sass scss/rose-pine-dawn.scss rose-pine-moon.css --no-source-map",
+    "build:dawn": "sass scss/rose-pine-dawn.scss rose-pine-dawn.css --no-source-map",
     "build": "sass scss:. --no-source-map",
     "clean": "rimraf *.css*"
   },
@@ -18,12 +17,12 @@
     "url": "git+https://github.com/catppuccin/logseq.git"
   },
   "keywords": [],
-  "author": "Soumik (griimick)",
+  "author": "Soumik (griimick) / latenighticecream",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/catppuccin/logseq/issues"
+    "url": "repo/issues"
   },
-  "homepage": "https://github.com/catppuccin/logseq#readme",
+  "homepage": "repo/readme",
   "devDependencies": {
     "rimraf": "^3.0.2",
     "sass": "^1.55.0"
@@ -31,38 +30,26 @@
   "logseq": {
     "themes": [
       {
-        "name": "Catppuccin Latte",
-        "url": "./ctp-latte.css",
-        "description": "Catppuccin Latte",
+        "name": "Rose Pine",
+        "url": "./rose-pine-dawn.css",
+        "description": "Rose Pine",
+        "mode": "dark"
+      },
+      {
+        "name": "Rose Pine Moon",
+        "url": "./rose-pine-dawn.css",
+        "description": "Rose Pine Moon",
+        "mode": "dark"
+      },
+      {
+        "name": "Rose Pine Dawn",
+        "url": "./rose-pine-dawn.css",
+        "description": "Rose Pine Dawn",
         "mode": "light"
-      },
-      {
-        "name": "Catppuccin Frappé",
-        "url": "./ctp-frappe.css",
-        "description": "Catppuccin Frappé",
-        "mode": "dark"
-      },
-      {
-        "name": "Catppuccin Macchiato",
-        "url": "./ctp-macchiato.css",
-        "description": "Catppuccin Macchiato",
-        "mode": "dark"
-      },
-      {
-        "name": "Catppuccin Mocha",
-        "url": "./ctp-mocha.css",
-        "description": "Catppuccin Mocha",
-        "mode": "dark"
-      },
-      {
-        "name": "Oledppuccin",
-        "url": "./ctp-oled.css",
-        "description": "Oledppuccin",
-        "mode": "dark"
       }
     ],
-	"title": "Catppuccin",
-    "id": "logseq-catppuccin",
+	"title": "Rose Pine",
+    "id": "logseq-rose-pine",
     "icon": "./assets/icon.png"
   }
 }

@@ -16,11 +16,11 @@ div.cm-s-solarized.CodeMirror {
 }
 
 .cm-s-solarized.cm-s-dark.CodeMirror, .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background-color: var(--ctp-secondary-background-color);
+  background-color: var(--rp-secondary-background-color);
 }
 
 .embed.embed-page {
   .cm-s-solarized.cm-s-dark.CodeMirror, .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-    background-color: var(--ctp-tertiary-background-color);
+    background-color: var(--rp-tertiary-background-color);
   }
 }

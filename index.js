@@ -1,20 +1,12 @@
 let timer = null;
 const accentMap = {
     "Full palette" : "unset", // undefined css var name
-    "Rosewater"    : "var(--ctp-rosewater)",
-    "Flamingo"     : "var(--ctp-flamingo)",
-    "Pink"         : "var(--ctp-pink)",
-    "Mauve"        : "var(--ctp-mauve)",
-    "Red"          : "var(--ctp-red)",
-    "Maroon"       : "var(--ctp-maroon)",
-    "Peach"        : "var(--ctp-peach)",
-    "Yellow"       : "var(--ctp-yellow)",
-    "Green"        : "var(--ctp-green)",
-    "Teal"         : "var(--ctp-teal)",
-    "Sky"          : "var(--ctp-sky)",
-    "Sapphire"     : "var(--ctp-sapphire)",
-    "Blue"         : "var(--ctp-blue)",
-    "Lavender"     : "var(--ctp-lavender)"
+    "Love"         : "var(--rp-love)",
+    "Gold"         : "var(--rp-gold)",
+    "Rose"         : "var(--rp-rose)",
+    "Pine"         : "var(--rp-pine)",
+    "Foam"         : "var(--rp-foam)",
+    "Iris"         : "var(--rp-iris)",
 };
 
 const accentClasses = Object.values(accentMap);
@@ -22,7 +14,7 @@ const accentNames = Object.keys(accentMap);
 
 const settings = [
     {
-        key: "CtpAccent",
+        key: "RpAccent",
         title: "Select Catppuccin theme accent color",
         description: "Select Catppuccin theme accent color",
         type: "enum",
@@ -31,7 +23,7 @@ const settings = [
         default: "Full palette"
     },
     {
-        key: "CtpReloadCss",
+        key: "RpReloadCss",
         title: "Developer Mode: Reload CSS",
         type: "boolean",
         default: false
@@ -40,10 +32,10 @@ const settings = [
 
 function setAccent(accentName) {
     logseq.provideStyle({
-        key: 'ctp-accent',
+        key: 'rp-accent',
         style: `
           :root {
-            --ctp-accent: ${accentMap[accentName]};
+            --rp-accent: ${accentMap[accentName]};
           }
         `,
     });
@@ -51,19 +43,19 @@ function setAccent(accentName) {
 
 function reloadCss() {
     var links = parent.document.getElementsByTagName("link");
-    var link = Array.from(links).find(l => l.href.includes("ctp"));
+    var link = Array.from(links).find(l => l.href.includes("rp"));
     link.href += "";
 }
 
 async function main() {
     logseq.useSettingsSchema(settings);
     logseq.onSettingsChanged(updatedSettings => {
-        if (setAccent(updatedSettings.CtpAccent)) {
-            console.log(`Applied ${updatedSettings.CtpAccent} accent✨`);
+        if (setAccent(updatedSettings.RpAccent)) {
+            console.log(`Applied ${updatedSettings.RpAccent} accent✨`);
         }
-        if (updatedSettings.CtpReloadCss && !timer) {
+        if (updatedSettings.RpReloadCss && !timer) {
             timer = setInterval(reloadCss, 5000)
-        } else if (!updatedSettings.CtpReloadCss && timer) {
+        } else if (!updatedSettings.RpReloadCss && timer) {
             clearInterval(timer);
             timer = null;
         }

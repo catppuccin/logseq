@@ -2,27 +2,27 @@
 
 // Search bar placeholder
 div.input-wrap>input::placeholder {
-    color: var(--ctp-search-input-placeholder);
+    color: var(--rp-search-input-placeholder);
 }
 
 // search result page icon
 .recent-search {
     a>div>div {
-        border-color: rgb(var(--ctp-text));
+        border-color: rgb(var(--rp-text));
     }
 }
 
 // Switches
 a.ui__toggle {
     & .wrapper:focus {
-        --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+        --tw-shadow: 0 0 0 3px rgba(var(--rp-switch-handle-color), 0.5)
     }
 
     &>span {
-        background-color: var(--ctp-switch-background);
+        background-color: var(--rp-switch-background);
 
         &>span.switcher {
-            background-color: rgb(var(--ctp-switch-handle-color));
+            background-color: rgb(var(--rp-switch-handle-color));
         }
     }
 }
@@ -30,23 +30,23 @@ a.ui__toggle {
 // Buttons
 
 button.ui__button {
-    color: var(--ctp-button-text);
-    background-color: rgb(var(--ctp-button-background));
+    color: var(--rp-button-text);
+    background-color: rgb(var(--rp-button-background));
 
     &[intent=logseq]:hover:not(.active) {
-        color: var(--ctp-button-text);
-        background-color: rgb(var(--ctp-button-background));
+        color: var(--rp-button-text);
+        background-color: rgb(var(--rp-button-background));
     }
 
     &:hover {
-        background-color: rgb(var(--ctp-button-background));
+        background-color: rgb(var(--rp-button-background));
     }
 }
 
 // Tooltip
 .tippy-tooltip {
-    background: var(--ctp-tooltip-background);
-    color: var(--ctp-tooltip-text)
+    background: var(--rp-tooltip-background);
+    color: var(--rp-tooltip-text)
 }
 
 .tippy-popper .arrow-regular {
@@ -61,15 +61,15 @@ button.ui__button {
 }
 
 svg.warning {
-    fill: rgb(var(--ctp-warning-color));
+    fill: rgb(var(--rp-warning-color));
 }
 
 svg.important {
-    fill: rgb(var(--ctp-error-color));
+    fill: rgb(var(--rp-error-color));
 }
 
 svg.note {
-    fill: rgb(var(--ctp-info-color));
+    fill: rgb(var(--rp-info-color));
 }
 
 // Global
@@ -80,77 +80,77 @@ div.nav-content-item:not(.is-expand) {
     }
 
     .header a {
-        color: var(--ctp-link-text-hover-color);
+        color: var(--rp-link-text-hover-color);
     }
 }
 
 .left-sidebar-inner a.item.active,
 .left-sidebar-inner a.item:active {
-    color: var(--ctp-link-text-hover-color);
+    color: var(--rp-link-text-hover-color);
 
 }
 
 .left-sidebar-inner a.item:hover {
-    background: var(--ctp-color-level-3);
+    background: var(--rp-color-level-3);
     span {
-        color: var(--ctp-blue);
+        color: var(--rp-blue);
     }
 }
 
 .cp__sidebar-left-layout .header:hover a {
-    color: var(--ctp-link-text-hover-color);
+    color: var(--rp-link-text-hover-color);
 }
 
 .ui__modal-panel {
     border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
+    border-color: var(--rp-dropdown-border-color)
 }
 
 .dropdown-wrapper {
     border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
+    border-color: var(--rp-dropdown-border-color)
 }
 
 .block-children-left-border:hover {
     width: 2px;
-    background-color: var(--ctp-bullet-thread-color);
+    background-color: var(--rp-bullet-thread-color);
 }
 
 mark {
-    background: var(--ctp-text-highlight);
+    background: var(--rp-text-highlight);
 }
 
 .form-input:focus {
-    box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
-    border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+    box-shadow: 0 0 0 2px rgba(var(--rp-accent, var(--rp-sapphire)), .5);
+    border-color: rgba(var(--rp-accent, var(--rp-sapphire)), .5);
 }
 
 .bullet-container.bullet-closed {
-    background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+    background-color: rgb(var(--rp-accent, var(--rp-blue)), .15);
 
     &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
+        background-color: rgb(var(--rp-accent, var(--rp-blue)), .65);
     }
 }
 
 .bullet-container {
     &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+        background-color: rgb(var(--rp-accent, var(--rp-blue)), .15);
     }
 }
 
 // Header
 button.button.icon:hover {
-    color: rgb(var(--ctp-accent, var(--ctp-pink)));
-    background-color: var(--ctp-header-icon-background);
+    color: rgb(var(--rp-accent, var(--rp-subtle)));
+    background-color: var(--rp-header-icon-background);
 
     &>i {
-        color: var(--ctp-header-icon);
+        color: var(--rp-header-icon);
     }
 }
 
 
-// SideBar 
+// SideBar
 .cp__sidebar-left-layout a {
     color: inherit;
 }
@@ -167,25 +167,25 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
 
 // selection
 ::selection {
-    color: var(--ctp-color-level-1);
+    color: var(--rp-selection-text-color);
 }
 
 .inline.with-bg-color {
-    color: var(--ctp-primary-background-color);
+    color: var(--rp-primary-background-color);
     b, .page-ref {
-        color: var(--ctp-primary-background-color);
+        color: var(--rp-primary-background-color);
     }
     .page-reference:hover {
-        color: var(--ctp-primary-text-color);
+        color: var(--rp-primary-text-color);
         b, .page-ref, span {
-            color: var(--ctp-primary-text-color);
+            color: var(--rp-primary-text-color);
         }
     }
-    
+
 }
 
 .ls-block .with-bg-color:is(h1,h2,h3,h4,h5,h6) {
-	color: var(--ctp-primary-background-color);
+	color: var(--rp-primary-background-color);
 }
 
 
@@ -193,7 +193,7 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
 
 .menu-links-wrapper,
 .menu-link {
-    background-color: var(--ctp-secondary-background-color);
+    background-color: var(--rp-secondary-background-color);
 }
 
 .menu-link,
@@ -206,40 +206,40 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
 }
 
 .cp__settings-inner>aside ul>li>a>strong {
-    color: rgb(var(--ctp-primary-text-color));
+    color: rgb(var(--rp-primary-text-color));
 }
 
 .cp__settings-inner>aside ul>li.active {
     .ui__icon, strong {
-        color: rgb(var(--ctp-active-setting));
+        color: rgb(var(--rp-active-setting));
     }
 }
 
 .cp__all_pages_table td>span {
-    color: rgb(var(--ctp-primary-text-color));
+    color: rgb(var(--rp-primary-text-color));
 }
 
 // full pallete overrides
 .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
 .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
-    color:rgb(var(--ctp-text-heading))
+    color:rgb(var(--rp-text-heading))
 }
 
 b, strong {
-    color: rgb(var(--ctp-text-bold));
+    color: rgb(var(--rp-text-bold));
 }
 
 i {
-    color: rgb(var(--ctp-text-italics));
+    color: rgb(var(--rp-text-italics));
 }
 
 del {
-    color: rgb(var(--ctp-text-strikethrough));
+    color: rgb(var(--rp-text-strikethrough));
 }
 blockquote {
     border-left: 2px solid;
-    border-left-color: rgb(var(--ctp-blockquote-line));
+    border-left-color: rgb(var(--rp-blockquote-line));
 }
 
 $pallete: (
@@ -262,9 +262,9 @@ $pallete: (
 
 // Dropdown option group
 #ui__ac-inner {
-    background: var(--ctp-secondary-background-color);
+    background: var(--rp-secondary-background-color);
 }
 
 .ui__ac-group-name {
-    background: var(--ctp-tertiary-background-color);
+    background: var(--rp-tertiary-background-color);
 }
