@@ -24,3 +24,27 @@ div.cm-s-solarized.CodeMirror {
     background-color: var(--ctp-tertiary-background-color);
   }
 }
+
+/* simple light theme fix */
+
+.cm-s-solarized.cm-s-light {
+  @include codemirror.theme;
+}
+
+.cm-s-solarized.cm-s-light {
+    text-shadow: unset;
+}
+
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: unset;
+}
+
+.cm-s-solarized.cm-s-light.CodeMirror, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: var(--ctp-secondary-background-color);
+}
+
+.embed.embed-page {
+  .cm-s-solarized.cm-s-light.CodeMirror, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--ctp-tertiary-background-color);
+  }
+}
