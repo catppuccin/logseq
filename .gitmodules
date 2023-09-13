@@ -1,3 +1,0 @@
-[submodule "scss/codemirror"]
-	path = scss/codemirror
-	url = https://github.com/catppuccin/codemirror.git
