@@ -15,8 +15,8 @@ const accentNames = Object.keys(accentMap);
 const settings = [
     {
         key: "RpAccent",
-        title: "Select Rose Pine theme accent color",
-        description: "Select Rose Pine theme accent color",
+        title: "Select Rosé Pine theme accent color",
+        description: "Select Rosé Pine theme accent color",
         type: "enum",
         enumPicker: "select",
         enumChoices: accentNames,
