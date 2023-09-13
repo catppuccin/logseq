@@ -1,30 +1,30 @@
 @use "main.scss";
 
 :root {
-  --rp-cm-theme: 'rp-dawn';
+  --rp-cm-theme: 'rp-moon';
 }
 
 :root,
-.theme-light,
-.theme-light.rp-dawn {
+.theme-dark,
+.theme-dark.rp-moon {
 
-  --rp-base: 250, 244, 237;
-  --rp-surface: 255, 250, 243;
-  --rp-overlay: 242, 233, 222;
-  --rp-muted: 152, 147, 165;
-  --rp-subtle: 121, 117, 147;
-  --rp-text: 87, 82, 121;
+  --rp-base: 35, 33, 54;
+  --rp-surface: 42, 39, 63;
+  --rp-overlay: 57, 53, 82;
+  --rp-muted: 110, 106, 134;
+  --rp-subtle: 144, 140, 170;
+  --rp-text: 224, 222, 244;
 
-  --rp-love: 180, 99, 122;
-  --rp-gold: 234, 157, 52;
-  --rp-rose: 215, 130, 126;
-  --rp-pine: 40, 105, 131;
-  --rp-foam: 86, 148, 159;
-  --rp-iris: 144, 122, 169;
+  --rp-love: 235, 111, 146;
+  --rp-gold: 246, 193, 119;
+  --rp-rose: 234, 154, 151;
+  --rp-pine: 62, 143, 176;
+  --rp-foam: 156, 207, 216;
+  --rp-iris: 196, 167, 231;
 
-  --rp-highlight-low: 244, 237, 232;
-  --rp-highlight-med: 223, 218, 217;
-  --rp-highlight-high: 206, 202, 205;
+  --rp-highlight-low: 42, 40, 62;
+  --rp-highlight-med: 68, 65, 90;
+  --rp-highlight-high: 86, 82, 110;
 
 }
 

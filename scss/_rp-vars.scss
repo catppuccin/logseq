@@ -34,13 +34,14 @@
   --rp-secondary-border-color: rgb(var(--rp-highlight-high));
   --rp-tertiary-border-color: rgb(var(--rp-highlight-high), 10%);
 
-  --rp-guideline-color: rgb(var(var(--rp-highlight-high)));
+  --rp-guideline-color: rgb(var(--rp-highlight-high));
   --rp-menu-hover-color: var(--rp-color-level-3);
   --rp-primary-text-color: rgb(var(--rp-text));
   --rp-secondary-text-color: rgb(var(--rp-text));
   --rp-title-text-color: rgb(var(--rp-subtle));
 
-  --rp-link-text-color: rgb(var(--rp-accent, var(--rp-iris)));
+  //--rp-link-text-color: rgb(var(--rp-accent, var(--rp-iris))); // this makes links a bit more muted / not standing out so much
+  --rp-link-text-color: rgb(var(--rp-accent, var(--rp-blue)));
   --rp-link-text-hover-color: rgb(var(--rp-accent, var(--rp-pine))); // add underline on hover
   --rp-link-ref-text-color: rgb(var(--rp-accent, var(--rp-foam)));
   --rp-link-ref-text-hover-color: rgb(var(--rp-accent, var(--rp-foam))); // add unerline on hover

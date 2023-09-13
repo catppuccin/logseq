@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sass --watch scss:.",
-    "build:main": "sass scss/rose-pine-dawn.scss rose-pine.css --no-source-map",
-    "build:moon": "sass scss/rose-pine-dawn.scss rose-pine-moon.css --no-source-map",
+    "build:main": "sass scss/rose-pine.scss rose-pine.css --no-source-map",
+    "build:moon": "sass scss/rose-pine-moon.scss rose-pine-moon.css --no-source-map",
     "build:dawn": "sass scss/rose-pine-dawn.scss rose-pine-dawn.css --no-source-map",
     "build": "sass scss:. --no-source-map",
     "clean": "rimraf *.css*"
@@ -31,13 +31,13 @@
     "themes": [
       {
         "name": "Rose Pine",
-        "url": "./rose-pine-dawn.css",
+        "url": "./rose-pine.css",
         "description": "Rose Pine",
         "mode": "dark"
       },
       {
         "name": "Rose Pine Moon",
-        "url": "./rose-pine-dawn.css",
+        "url": "./rose-pine-moon.css",
         "description": "Rose Pine Moon",
         "mode": "dark"
       },
