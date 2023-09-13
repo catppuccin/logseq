@@ -1,4 +1,4 @@
-@use "codemirror/src/codemirror" as codemirror;
+@use "codemirror/codemirror" as codemirror;
 
 div.cm-s-solarized.CodeMirror {
   @include codemirror.variables;
@@ -16,11 +16,33 @@ div.cm-s-solarized.CodeMirror {
 }
 
 .cm-s-solarized.cm-s-dark.CodeMirror, .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background-color: var(--rp-secondary-background-color);
+  background-color: var(--ctp-secondary-background-color);
 }
 
 .embed.embed-page {
   .cm-s-solarized.cm-s-dark.CodeMirror, .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-    background-color: var(--rp-tertiary-background-color);
+    background-color: var(--ctp-tertiary-background-color);
+  }
+}
+
+.cm-s-solarized.cm-s-light {
+  @include codemirror.theme;
+}
+
+.cm-s-solarized.cm-s-light {
+    text-shadow: unset;
+}
+
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: unset;
+}
+
+.cm-s-solarized.cm-s-light.CodeMirror, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: var(--ctp-secondary-background-color);
+}
+
+.embed.embed-page {
+  .cm-s-solarized.cm-s-light.CodeMirror, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--ctp-tertiary-background-color);
   }
 }
