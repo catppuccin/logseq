@@ -1,110 +1,48 @@
-<h3 align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://logseq.com/">Logseq</a>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-</h3>
-
 <p align="center">
-	<a href="https://github.com/catppuccin/logseq/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/logseq?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/logseq/issues"><img src="https://img.shields.io/github/issues/catppuccin/logseq?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/logseq/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/logseq?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+    <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
+    <h2 align="center">Rosé Pine for Logseq</h2>
 </p>
 
+<p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
+
 <p align="center">
-	<img src="assets/preview.webp"/>
+    <a href="https://github.com/rose-pine/rose-pine-theme">
+        <img src="https://img.shields.io/badge/community-rosé%20pine-26233a?labelColor=191724&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIzNyIgdmlld0JveD0iMCAwIDI1MCAyMzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjEuMjI3IDE2MS4yNTFDMTMyLjE1NCAxNjkuMDQxIDExNC45MDEgMTk4LjkyNCAxMjIuNjkxIDIyNy45OTdDMTIzLjkyNSAyMzIuNjAzIDEyOC42NTkgMjM1LjMzNiAxMzMuMjY0IDIzNC4xMDJMMTg1LjkwNyAyMTkuOTk2QzIxOS41ODUgMjEwLjk3MiAyMzkuNTcgMTc2LjM1NCAyMzAuNTQ2IDE0Mi42NzdMMTYxLjIyNyAxNjEuMjUxWiIgZmlsbD0iIzI0NjI3QiIvPgo8cGF0aCBkPSJNODguMTgzNiAxNTkuOTg4QzExNy4yNTcgMTY3Ljc3OCAxMzQuNTEgMTk3LjY2MiAxMjYuNzIgMjI2LjczNUMxMjUuNDg2IDIzMS4zNCAxMjAuNzUyIDIzNC4wNzMgMTE2LjE0NyAyMzIuODM5TDYzLjUwNDEgMjE4LjczM0MyOS44MjY0IDIwOS43MSA5Ljg0MDk0IDE3NS4wOTIgMTguODY0OSAxNDEuNDE0TDg4LjE4MzYgMTU5Ljk4OFoiIGZpbGw9IiMyNDYyN0IiLz4KPHBhdGggZD0iTTE4Ni44NjcgMTcyLjk4QzE1Mi4wMDIgMTcyLjk4IDEyMy43MzcgMjAxLjI0NSAxMjMuNzM3IDIzNi4xMTFIMTg2Ljg3QzIyMS43MzYgMjM2LjExMSAyNTAgMjA3Ljg0NiAyNTAgMTcyLjk4TDE4Ni44NjcgMTcyLjk4WiIgZmlsbD0iIzMxNzQ4RiIvPgo8cGF0aCBkPSJNNjMuMTMyNyAxNzIuOThDOTcuOTk4NCAxNzIuOTggMTI2LjI2MyAyMDEuMjQ1IDEyNi4yNjMgMjM2LjExMUg2My4xM0MyOC4yNjQyIDIzNi4xMTEgLTEuNTI0MDNlLTA2IDIwNy44NDYgMCAxNzIuOThMNjMuMTMyNyAxNzIuOThaIiBmaWxsPSIjMzE3NDhGIi8+CjxwYXRoIGQ9Ik0xNzEuNzE3IDc1LjEyNjNDMTcxLjcxNyAxMDEuMjc2IDE1MC41MTggMTIyLjQ3NSAxMjQuMzY5IDEyMi40NzVDOTguMjE4OCAxMjIuNDc1IDc3LjAyMDIgMTAxLjI3NiA3Ny4wMjAyIDc1LjEyNjNDNzcuMDIwMiA0OC45NzY0IDk4LjIxODggMjcuNzc3OCAxMjQuMzY5IDI3Ljc3NzhDMTUwLjUxOCAyNy43Nzc4IDE3MS43MTcgNDguOTc2NCAxNzEuNzE3IDc1LjEyNjNaIiBmaWxsPSIjRUJCQ0JBIi8+CjxwYXRoIGQ9Ik0xNDQuMjE3IDg2LjIzNzlDMTYxLjY0OSA1Ni4wNDMyIDE1MS4zMDMgMTcuNDMyOSAxMjEuMTA4IDBMMTA2LjA2IDI2LjA2NDRDODguNjI3IDU2LjI1OSA5OC45NzM2IDk0Ljg2OTQgMTI5LjE2OCAxMTIuMzAyTDE0NC4yMTcgODYuMjM3OVoiIGZpbGw9IiNFQkJDQkEiLz4KPHBhdGggZD0iTTEyNS4yOTkgNjAuOTc4OUMxMTYuMjc1IDI3LjMwMTIgODEuNjU3NSA3LjMxNTY3IDQ3Ljk3OTcgMTYuMzM5Nkw2NC4zMTk3IDc3LjMyMTFDNzMuMzQzNiAxMTAuOTk5IDEwNy45NjEgMTMwLjk4NCAxNDEuNjM5IDEyMS45NkwxMjUuMjk5IDYwLjk3ODlaIiBmaWxsPSIjRUJCQ0JBIi8+CjxwYXRoIGQ9Ik0xMjQuOTI2IDYwLjk3ODlDMTMzLjk1IDI3LjMwMTIgMTY4LjU2NyA3LjMxNTY3IDIwMi4yNDUgMTYuMzM5NkwxODUuOTA1IDc3LjMyMTFDMTc2Ljg4MSAxMTAuOTk5IDE0Mi4yNjMgMTMwLjk4NCAxMDguNTg2IDEyMS45NkwxMjQuOTI2IDYwLjk3ODlaIiBmaWxsPSIjRUJCQ0JBIi8+Cjwvc3ZnPgo=&style=for-the-badge" />
+    </a>
 </p>
-
-## Previews
-
-<details>
-<summary>🌻 Latte</summary>
-<img src="assets/preview-latte.webp"/>
-<blockquote>Selected Accent: Red</blockquote>
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-<img src="assets/preview-frappe.webp"/>
-<blockquote>Selected Accent: Pink</blockquote>
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-<img src="assets/preview-macchiato.webp"/>
-<blockquote>Selected Accent: Yellow</blockquote>
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-<img src="assets/preview-mocha.webp"/>
-<blockquote>Selected Accent: Green</blockquote>
-</details>
 
 ## Usage
 
-### Installation
+1. Open App
+2. Under settings, import `rose-pine.theme`
+3. Select `Rosé Pine` from the themes dropdown
 
-There are couple of other methods you can use to set the theme up in Logseq. Later methods are more for development purpose.
+## Gallery
 
-1. Logseq Plugin Marketplace **(Recommended)**
-    1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
-    2. Choose the the appropriate theme variant from `Settings` > `Themes`.
-    
-<img src="assets/ctp-logseq-marketplace.webp"/>
-    
-2. Import theme stylesheet by setting it in your `config.edn` ([source](https://github.com/logseq/logseq/blob/master/templates/config.edn#L72)). Set one of the following in your config and restart Logseq.
+![Rosé Pine with App](https://user-images.githubusercontent.com/1474821/166155319-06796439-95a7-4aea-910e-927c1f24518e.png)
 
-```edn
-:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
-:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-frappe.css');"
-:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-macchiato.css');"
-:custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
+## Thanks to
+
+- [catppuccin/griimick](https://github.com/catppuccin/logseq)
+- [latenighticecream](https://github.com/latenighticecream)
+
+## Contributing
+
+> Prefer using [@rose-pine/build](https://github.com/rose-pine/build) when possible
+
+Modify `template.json` using Rosé Pine variables, then build variants:
+
+```sh
+npx @rose-pine/build@latest
 ```
 
-3. Add manually from GitHub Releases
-    1. Download `.zip` from latest release.
-    2. Extract it to desired location.
-    3. Enable `Developer Mode` under `Settings` > `Advanced`.
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
+## Style guide
 
-4. Clone Repository and add manually
-    1. Clone repository (including submodules)
-    2. Run `npm ci && npm run build`
-    3. Enable `Developer Mode` under `Settings` > `Advanced`
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing repo folder to install the theme.
+> Be sure to remove this section 😌
 
-### Switching Accent Color
-
-1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
-2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
-
-<img src="assets/ctp-logseq-switch-accent.webp"/>
-
-### Bonus: Oledppuccin
-
-> The _niche_ dark side
-
-You can choose this variant of dark theme under `Settings` > `Themes`. 
-
-<img src="assets/ctp-oledppuccin.webp"/>
-
-
-## 💝 Thanks to
-
-**Current Maintainer(s)**
-- [griimick](https://github.com/griimick)
-
-**Inspiration and Contribution**
-- [pengx17](https://github.com/pengx17) for [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme)
-
-&nbsp;
-
-<p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
-</p>
-
-<p align="center">
-	Copyright &copy; 2023-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
-</p>
-
-<p align="center">
-	<a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
-</p>
+- Lowercase meta files, eg. `readme.md`
+- Repo name should be the simplest version of the app name, eg. iterm instead of iTerm2
+- Add a description and topics to automatically show the theme on [rosepinetheme.com/themes](https://rosepinetheme.com/themes)
+    - Description should read "Soho vibes for App" where "App" is the display name
+    - Topics should include [existing categories](https://rosepinetheme.com/themes)
+    - Generate and upload social image via [Rosé Pine Images](https://rose-pine-images.vercel.app)
