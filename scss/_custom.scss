@@ -150,7 +150,7 @@ button.button.icon:hover {
 }
 
 
-// SideBar 
+// SideBar
 .cp__sidebar-left-layout a {
     color: inherit;
 }
@@ -181,7 +181,7 @@ html[data-theme=dark] .cp__right-sidebar-topbar button {
             color: var(--ctp-primary-text-color);
         }
     }
-    
+
 }
 
 .ls-block .with-bg-color:is(h1,h2,h3,h4,h5,h6) {
@@ -268,3 +268,96 @@ $pallete: (
 .ui__ac-group-name {
     background: var(--ctp-tertiary-background-color);
 }
+
+
+// Whiteboard
+
+// Whiteboard tool button
+.tl-button[data-selected=true] {
+  background: rgb(var(--ctp-wb-button-selected-background));
+  i {
+    color: var(--ctp-wb-button-selected-foreground);
+  }
+}
+
+
+.ti, .tie {
+  color: rgb(var(--ctp-wb-button-foreground));
+}
+.tl-context-bar {
+  .ti, .tie {
+    color: rgb(var(--ctp-wb-button-menu-foreground));
+  }
+}
+
+// double click or "add block or page" from toolbar -> icons
+// by default, bg color is hardcoded
+.tl-type-tag {
+  background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+  border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+  // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+
+  .tie {
+    color: rgb(var(--ctp-wb-button-type-tag-foreground));
+  }
+}
+
+html[data-theme=dark] .tl-type-tag[data-active=true] {
+
+  background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
+
+  border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
+
+  .tie {
+    color: rgb(var(--ctp-wb-button-type-tag-foreground));
+  }
+}
+
+// Whiteboard context menu button icon
+.tl-menu-item i {
+    color: rgb(var(--ctp-wb-button-menu-foreground));
+}
+
+// Button that appears below a page reference block (on hover)
+.tl-quick-links-row:first-child {
+  background-color: rgb(var(--ctp-wb-quick-links-button));
+
+  :hover {
+    background-color: rgb(var(--ctp-wb-quick-links-button-hover));
+  }
+}
+
+// selected item bg in e.g. a dropdown
+.tl-select-input-select-item[data-state=checked] {
+  background: rgb(var(--ctp-tl-select-input-select-item));
+}
+
+// align-buttons that appear when right clicking after
+// selecting multiple objects
+i[class*="ti-layout-"] {
+  color: rgb(var(--ctp-wb-layout-button-foreground));
+}
+
+// these are the colors that appear when selecting a color (e.g. for fill)
+.bg-gray-500 {
+  background-color: rgb(var(--ctp-gray));
+}
+.bg-red-500 {
+  background-color: rgb(var(--ctp-red));
+}
+.bg-yellow-500 {
+  background-color: rgb(var(--ctp-yellow));
+}
+.bg-green-500 {
+  background-color: rgb(var(--ctp-green));
+}
+.bg-blue-500 {
+  background-color: rgb(var(--ctp-blue));
+}
+.bg-purple-500 {
+  background-color: rgb(var(--ctp-mauve));
+}
+.bg-pink-500 {
+  background-color: rgb(var(--ctp-pink));
+}
+
