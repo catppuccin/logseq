@@ -1,8 +1,3 @@
-
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
-
 :root {
   // following are mapped to variables used in logseq
   --ctp-primary-background-color: rgb(var(--ctp-base));
@@ -99,49 +94,6 @@
   --ctp-success-color: var(--ctp-green);
   --ctp-info-color: var(--ctp-yellow);
 
-  /* Whiteboard */
-
-  /* Whiteboard object colors */
-
-  --ctp-wb-background-color-gray: color-mix(in srgb, rgb(var(--ctp-gray)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-red: color-mix(in srgb, rgb(var(--ctp-red)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-yellow: color-mix(in srgb, rgb(var(--ctp-yellow)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-green: color-mix(in srgb, rgb(var(--ctp-green)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-blue: color-mix(in srgb, rgb(var(--ctp-blue)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-purple: color-mix(in srgb, rgb(var(--ctp-mauve)), rgb(var(--ctp-base)) 60%);
-  --ctp-wb-background-color-pink: color-mix(in srgb, rgb(var(--ctp-pink)), rgb(var(--ctp-base)) 60%);
-
-  // NOTE: drawn lines with the pencil use the text color
-  // and not this stroke color
-  --ctp-wb-stroke-color-gray: rgb(var(--ctp-overlay2));
-  --ctp-wb-stroke-color-red: rgb(var(--ctp-red));
-  --ctp-wb-stroke-color-yellow: rgb(var(--ctp-yellow));
-  --ctp-wb-stroke-color-green: rgb(var(--ctp-green));
-  --ctp-wb-stroke-color-blue: rgb(var(--ctp-blue));
-  --ctp-wb-stroke-color-purple: rgb(var(--ctp-mauve));
-  --ctp-wb-stroke-color-pink: rgb(var(--ctp-pink));
-
-  --ctp-wb-text-color-gray: rgb(var(--ctp-overlay2));
-  --ctp-wb-text-color-red: rgb(var(--ctp-red));
-  --ctp-wb-text-color-yellow: rgb(var(--ctp-yellow));
-  --ctp-wb-text-color-green: rgb(var(--ctp-green));
-  --ctp-wb-text-color-blue: rgb(var(--ctp-blue));
-  --ctp-wb-text-color-purple: rgb(var(--ctp-mauve));
-  --ctp-wb-text-color-pink: rgb(var(--ctp-pink));
-
-  // since text and lines share a color, it is not possible to have a fill color
-  // with the regular ctp colors
-  // so the options are to either shade the fill/bg color or
-  // override the text color variable inside the shape labels
-
-  --ctp-wb-shape-label-color-gray: rgb(var(--ctp-gray));
-  --ctp-wb-shape-label-color-red: rgb(var(--ctp-red));
-  --ctp-wb-shape-label-color-yellow: rgb(var(--ctp-yellow));
-  --ctp-wb-shape-label-color-green: rgb(var(--ctp-green));
-  --ctp-wb-shape-label-color-blue: var(--ctp-blue);
-  --ctp-wb-shape-label-color-purple: rgb(var(--ctp-purple));
-  --ctp-wb-shape-label-color-pink: rgb(var(--ctp-pink));
-
   // following used in _custom.scss
 
   // Switches
@@ -164,7 +116,7 @@
   // Markdown
   --ctp-text-highlight: rgb(var(--ctp-yellow)); // settings?
   --ctp-bullet-thread-color: rgb(var(--ctp-accent, var(--ctp-teal)));
-
+  
   --ctp-dropdown-border-color: var(--color-base-50);
 
   // Full accent overrides
@@ -175,32 +127,4 @@
   --ctp-text-strikethrough: var(--ctp-accent, var(--ctp-maroon));
   --ctp-blockquote-line: var(--ctp-accent);
   --ctp-active-setting: var(--ctp-accent, var(--ctp-blue));
-
-  // Whiteboard Buttons
-
-  // selected tool button
-  --ctp-wb-button-selected-background: var(--ctp-accent, var(--ctp-mauve));
-  --ctp-wb-button-selected-foreground: var(--ctp-base-50);
-
-  // regular tool button
-  --ctp-wb-button-foreground: var(--ctp-text);
-  --ctp-wb-button-menu-foreground: var(--ctp-accent, var(--ctp-teal));
-
-  // double click or "add block or page" from toolbar -> bottom icons
-  --ctp-wb-button-type-tag-background-active: var(--ctp-accent, var(--ctp-mauve));
-  --ctp-wb-button-type-tag-background-inactive: var(--ctp-surface0);
-  --ctp-wb-button-type-tag-foreground: var(--ctp-text);
-
-  // page reference block -> hover -> below button to referenced page
-  --ctp-wb-quick-links-button: var(--ctp-accent, var(--ctp-blue));
-  --ctp-wb-quick-links-button-hover: var(--ctp-sky);
-
-  // select multiple objects -> right click -> align buttons on top
-  --ctp-wb-layout-button-foreground: var(--ctp-accent, var(--ctp-teal));
-
-  // selected item bg in e.g. a dropdown
-  --ctp-tl-select-input-select-item: var(--ctp-surface2);
-  --ctp-tl-selectFill: var(--ctp-accent, var(--ctp-blue));
-  --ctp-tl-selectStroke: var(--ctp-accent, var(--ctp-blue));
-
 }
