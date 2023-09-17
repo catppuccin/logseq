@@ -1,8 +1,3 @@
-
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
-
 :root {
   // following are mapped to variables used in logseq
   --ctp-primary-background-color: rgb(var(--ctp-base));
