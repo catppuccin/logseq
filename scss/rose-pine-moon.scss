@@ -1,0 +1,38 @@
+@use "main.scss";
+
+:root {
+  --rp-cm-theme: 'rp-moon';
+}
+
+:root,
+.theme-dark,
+.theme-dark.rp-moon {
+
+  --rp-base: 35, 33, 54;
+  --rp-surface: 42, 39, 63;
+  --rp-overlay: 57, 53, 82;
+  --rp-muted: 110, 106, 134;
+  --rp-subtle: 144, 140, 170;
+  --rp-text: 224, 222, 244;
+
+  --rp-love: 235, 111, 146;
+  --rp-gold: 246, 193, 119;
+  --rp-rose: 234, 154, 151;
+  --rp-pine: 62, 143, 176;
+  --rp-foam: 156, 207, 216;
+  --rp-iris: 196, 167, 231;
+
+  --rp-highlight-low: 42, 40, 62;
+  --rp-highlight-med: 68, 65, 90;
+  --rp-highlight-high: 86, 82, 110;
+
+}
+
+// custom check box checked image
+// css var works but does not trigger reloading data asset in browser
+// hence a sass variable
+$rp-base: 250, 244, 237;
+
+.form-checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='rgb(#{$rp-base})' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;
+}

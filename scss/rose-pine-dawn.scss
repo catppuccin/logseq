@@ -1,0 +1,38 @@
+@use "main.scss";
+
+:root {
+  --rp-cm-theme: 'rp-dawn';
+}
+
+:root,
+.theme-light,
+.theme-light.rp-dawn {
+
+	--rp-base    : 250, 244, 237;
+	--rp-surface : 255, 250, 243;
+	--rp-overlay : 242, 233, 222;
+	--rp-muted   : 152, 147, 165;
+	--rp-subtle  : 121, 117, 147;
+	--rp-text    : 87, 82, 121;
+
+	--rp-love    : 180, 99, 122;
+	--rp-gold    : 234, 157, 52;
+	--rp-rose    : 215, 130, 126;
+	--rp-pine    : 40, 105, 131;
+	--rp-foam    : 86, 148, 159;
+	--rp-iris    : 144, 122, 169;
+
+	--rp-highlight-low  : 244, 237, 232;
+	--rp-highlight-med  : 223, 218, 217;
+	--rp-highlight-high : 206, 202, 205;
+
+}
+
+// custom check box checked image
+// css var works but does not trigger reloading data asset in browser
+// hence a sass variable
+$rp-base: 250, 244, 237;
+
+.form-checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='rgb(#{$rp-base})' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;
+}

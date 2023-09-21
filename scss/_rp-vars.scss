@@ -1,0 +1,141 @@
+:root {
+  // following are mapped to variables used in logseq
+  --rp-primary-background-color: rgb(var(--rp-base));
+  --rp-secondary-background-color: rgb(var(--rp-surface));
+  --rp-tertiary-background-color: rgb(var(--rp-overlay));
+  --rp-quaternary-background-color: rgb(var(--rp-overlay));//rgb(var(--rp-surface0));
+
+  // TODO: not sure what exactly these do
+  --rp-color-level-1: rgb(var(--rp-surface));
+  --rp-color-level-2: rgb(var(--rp-overlay));
+  --rp-color-level-3: rgb(var(--rp-muted), 10%);
+  --rp-color-level-4: rgb(var(--rp-surface));
+  --rp-color-level-5: rgb(var(--rp-highlight-high));
+  --rp-color-level-6: var(var(--rp-highlight-med));
+
+  // for convenience
+  --rp-red: var(--rp-love);
+  --rp-yellow: var(--rp-gold);
+  --rp-pink: var(--rp-rose);
+  --rp-green: var(--rp-pine);
+  --rp-blue: var(--rp-foam);
+  --rp-purple: var(--rp-iris);
+
+  --rp-active-primary-color: rgb(var(--rp-accent));
+  --rp-active-secondary-color: rgb(var(--rp-accent), 0.9);
+
+  --rp-table-tr-even-background-color: var(--rp-secondary-background-color);
+  --rp-block-properties-background-color: var(--rp-secondary-background-color);
+  --rp-page-properties-background-color: var(--rp-secondary-background-color);
+  --rp-block-ref-link-text-color: rgb(var(--rp-subtle));
+  --rp-search-background-color: var(--rp-primary-background-color);
+
+  --rp-border-color: rgb(var(--rp-highlight-high));
+  --rp-secondary-border-color: rgb(var(--rp-highlight-high));
+  --rp-tertiary-border-color: rgb(var(--rp-highlight-high), 10%);
+
+  --rp-guideline-color: rgb(var(--rp-highlight-high));
+  --rp-menu-hover-color: var(--rp-color-level-3);
+  --rp-primary-text-color: rgb(var(--rp-text));
+  --rp-secondary-text-color: rgb(var(--rp-text));
+  --rp-title-text-color: rgb(var(--rp-subtle));
+
+  //--rp-link-text-color: rgb(var(--rp-accent, var(--rp-iris))); // this makes links a bit more muted / not standing out so much
+  --rp-link-text-color: rgb(var(--rp-accent, var(--rp-blue)));
+  --rp-link-text-hover-color: rgb(var(--rp-accent, var(--rp-pine))); // add underline on hover
+  --rp-link-ref-text-color: rgb(var(--rp-accent, var(--rp-foam)));
+  --rp-link-ref-text-hover-color: rgb(var(--rp-accent, var(--rp-foam))); // add unerline on hover
+  --rp-tag-text-color: rgb(var(--rp-accent, var(--rp-gold)));
+  --rp-tag-text-hover-color: rgb(var(--rp-accent, var(--rp-gold))); // add underline on hover
+
+  --rp-slide-background-color: var(--rp-primary-background-color);
+
+  --rp-block-bullet-border-color: rgba(var(--rp-accent, var(--rp-blue)), 0.4);
+  --rp-block-bullet-color: rgb(var(--rp-accent, var(--rp-blue)));
+  --rp-block-highlight-color: rgb(var(--rp-highlight-med), 38%);
+
+  --rp-selection-background-color: rgb(var(--rp-highlight-med, 0.9));
+  --rp-selection-text-color: rgb(var(--rp-text));
+
+  --rp-page-checkbox-color: rgb(var(--rp-accent, var(--rp-foam)));
+  --rp-page-checkbox-border-color: var(--rp-primary-background-color);
+  --rp-page-blockquote-color: var(--rp-primary-text-color);
+  --rp-page-blockquote-bg-color: var(--rp-secondary-background-color);
+  --rp-page-blockquote-border-color: var(--rp-border-color);
+  --rp-page-inline-code-color: var(--rp-primary-text-color);
+  --rp-page-inline-code-bg-color: rgb(var(--rp-highlight-med), 62%);
+
+  --rp-scrollbar-foreground-color: rgba(var(--rp-text), 0.2);
+  --rp-scrollbar-background-color: rgba(var(--rp-text), 0.05);
+  --rp-scrollbar-thumb-hover-color: rgba(var(--rp-text), 0.2);
+
+  --rp-head-text-color: var(--rp-link-text-color);
+  --rp-cloze-text-color: rgb(var(--rp-accent));
+  --rp-icon-color: var(--rp-link-text-color);
+  --rp-search-icon-color: var(--rp-link-text-color);
+  --rp-a-chosen-bg: var(--rp-quaternary-background-color); // e.g. inside the search
+  --rp-right-sidebar-code-bg-color: var(--color-muted); // TODO: what does this do?
+
+  --rp-pie-bg-color: var(--rp-primary-background-color);
+  --rp-pie-fg-color: var(--rp-secondary-background-color);
+
+  --rp-highlight-color-gray: rgb(var(--rp-muted));
+  --rp-highlight-color-red: rgb(var(--rp-red));
+  --rp-highlight-color-yellow: rgb(var(--rp-yellow));
+  --rp-highlight-color-green: rgb(var(--rp-green));
+  --rp-highlight-color-blue: rgb(var(--rp-blue));
+  --rp-highlight-color-purple: rgb(var(--rp-purple));
+  --rp-highlight-color-pink: rgb(var(--rp-pink));
+
+  --rp-error-text-color: var(--color-red-100);
+  --rp-error-background-color: var(--color-red-900);
+
+  --rp-warning-text-color: var(--color-yellow-100);
+  --rp-warning-background-color: var(--color-yellow-900);
+
+  --rp-success-text-color: var(--color-green-100);
+  --rp-success-background-color: var(--color-green-900);
+
+  --rp-focus-ring-color: rgb(var(--rp-highlight-high)); // TODO: what does this do?
+  --rp-header-button-background: rgb(var(--rp-text));
+
+  --rp-error-color: var(--rp-love);
+  --rp-warning-color: var(--rp-gold);
+  --rp-success-color: var(--rp-pine);
+  --rp-info-color: var(--rp-foam);
+
+  // following used in _custom.scss
+
+  // Switches
+  --rp-switch-background: rgb(var(--rp-overlay));
+  --rp-switch-handle-color: var(--rp-accent, var(--rp-foam));
+
+  // Buttons
+  // e.g. in the settings and plugins menu
+  --rp-button-background: var(--rp-accent, var(--rp-foam));
+  --rp-button-text: rgb(var(--rp-base));
+
+  --rp-tooltip-background: var(--rp-tertiary-background-color);
+  --rp-tooltip-text: rgb(var(--rp-text));
+
+  --rp-search-input-placeholder: rgb(var(--rp-text));
+
+  // Header
+  --rp-header-icon: rgb(var(--rp-accent));
+  --rp-header-icon-background: var(--rp-menu-hover-color);
+
+  // Markdown
+  --rp-text-highlight: rgb(var(--rp-gold)); // settings?
+  --rp-bullet-thread-color: rgb(var(--rp-accent, var(--rp-green)));
+
+  --rp-dropdown-border-color: rgb(var(--rp-highlight-high));
+
+  // Full accent overrides
+  --rp-text-bold: var(var(--rp-primary-text-color));
+  --rp-text-heading: var(--rp-accent, var(--rp-purple));
+  --rp-text-italics: var(--rp-accent, var(--rp-green));
+  --rp-text-underline: var(--rp-primary-text-color);
+  --rp-text-strikethrough: var(--rp-accent, var(--rp-primary-text-color));
+  --rp-blockquote-line: var(--rp-accent, var(--rp-highlight-high));
+  --rp-active-setting: var(--rp-accent, var(--rp-blue));
+}

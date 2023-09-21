@@ -1,4 +1,4 @@
-@use "codemirror/src/codemirror" as codemirror;
+@use "codemirror/codemirror" as codemirror;
 
 div.cm-s-solarized.CodeMirror {
   @include codemirror.variables;

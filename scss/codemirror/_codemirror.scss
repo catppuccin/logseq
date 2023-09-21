@@ -1,0 +1,141 @@
+// ported using https://codemirror.net/5/theme/gruvbox-dark.css
+
+@mixin variables {
+    // TODO: map to tokens
+    --bg0    : rgb(var(--rp-base));
+    --bg4    : rgb(var(--rp-muted));
+    --fg     : rgb(var(--rp-text));
+    --fg3    : rgb(var(--rp-subtle)); // parentheses, brackets
+    --gray   : rgb(var(--rp-muted));
+    --blue   : rgb(var(--rp-foam));
+    --yellow : rgb(var(--rp-gold));
+    --aqua   : rgb(var(--rp-foam));
+    --orange : rgb(var(--rp-rose));
+
+    // codemirror tokens
+    --primary-bg   : rgb(var(--rp-base));
+    --current-line : rgb(var(--rp-highlight-low));
+    --selection    : rgb(var(--rp-highlight-med));
+    --atom         : rgb(var(--rp-iris));
+    --cursor       : rgb(var(--rp-highlight-high));
+    --keyword      : rgb(var(--rp-foam));
+    --operator     : rgb(var(--rp-text));
+    --number       : rgb(var(--rp-gold));
+    --definition   : rgb(var(--rp-rose));
+    --string       : rgb(var(--rp-gold));
+}
+
+@mixin theme {
+
+    &.CodeMirror,
+    .CodeMirror-gutters {
+        background-color: var(--primary-bg);
+        color: var(--fg3);
+    }
+
+    .CodeMirror-gutters {
+        background: var(--primary-bg);
+        border-right: 0px;
+    }
+
+    .CodeMirror-linenumber {
+        color: var(--bg4)
+    }
+
+    .CodeMirror-cursor {
+        border-left: 1px solid var(--fg);
+    }
+
+    &.cm-fat-cursor .CodeMirror-cursor {
+        background-color: var(--cursor) !important;
+    }
+
+    .cm-animate-fat-cursor {
+        background-color: var(--cursor) !important;
+    }
+
+    div.CodeMirror-selected {
+        background: var(--selection);
+    }
+
+    span.cm-meta {
+        color: var(--blue);
+    }
+
+    span.cm-comment {
+        color: var(--gray);
+    }
+
+    span.cm-number {
+        color: var(--number);
+    }
+    span.cm-atom {
+        color: var(--atom)
+    }
+
+    span.cm-keyword {
+        color: var(--keyword);
+    }
+
+    span.cm-variable {
+        color: var(--fg);
+    }
+
+    span.cm-variable-2 {
+        color: var(--fg);
+    }
+
+    span.cm-variable-3,
+    .cm-s-gruvbox-dark span.cm-type {
+        color: var(--yellow);
+    }
+
+    span.cm-operator {
+        color: var(--operator);
+    }
+
+    span.cm-callee {
+        color: var(--fg);
+    }
+
+    span.cm-def {
+        color: var(--definition);
+    }
+
+    span.cm-property {
+        color: var(--fg);
+    }
+
+    span.cm-string {
+        color: var(--string);
+    }
+
+    span.cm-string-2 {
+        color: var(--aqua);
+    }
+
+    span.cm-qualifier {
+        color: var(--aqua);
+    }
+
+    span.cm-attribute {
+        color: var(--aqua);
+    }
+
+    .CodeMirror-activeline-background {
+        background: var(--current-line);
+    }
+
+    .CodeMirror-matchingbracket {
+        background: var(--gray);
+        color: var(--bg0) !important;
+    }
+
+    span.cm-builtin {
+        color: var(--orange);
+    }
+
+    span.cm-tag {
+        color: var(--orange);
+    }
+}
