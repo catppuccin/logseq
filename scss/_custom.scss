@@ -276,10 +276,9 @@ $pallete: (
 .tl-button[data-selected=true] {
   background: rgb(var(--ctp-wb-button-selected-background));
   i {
-    color: var(--ctp-wb-button-selected-foreground);
+    color: rgb(var(--ctp-wb-button-selected-foreground));
   }
 }
-
 
 .ti, .tie {
   color: rgb(var(--ctp-wb-button-foreground));
@@ -360,4 +359,3 @@ i[class*="ti-layout-"] {
 .bg-pink-500 {
   background-color: rgb(var(--ctp-pink));
 }
-

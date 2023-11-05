@@ -174,8 +174,8 @@
   // Whiteboard Buttons
 
   // selected tool button
-  --ctp-wb-button-selected-background: var(--ctp-accent, var(--ctp-mauve));
-  --ctp-wb-button-selected-foreground: var(--ctp-base-50);
+  --ctp-wb-button-selected-foreground: var(--ctp-accent, var(--ctp-mauve));
+  --ctp-wb-button-selected-background: var(--ctp-surface0);
 
   // regular tool button
   --ctp-wb-button-foreground: var(--ctp-text);
