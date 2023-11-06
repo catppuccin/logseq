@@ -12,29 +12,29 @@
 </p>
 
 <p align="center">
-	<img src="assets/preview.webp"/>
+	<img src="./assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="assets/preview-latte.webp"/>
+<img src="./assets/preview-latte.webp"/>
 <blockquote>Selected Accent: Red</blockquote>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="assets/preview-frappe.webp"/>
+<img src="./assets/preview-frappe.webp"/>
 <blockquote>Selected Accent: Pink</blockquote>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="assets/preview-macchiato.webp"/>
+<img src="./assets/preview-macchiato.webp"/>
 <blockquote>Selected Accent: Yellow</blockquote>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="assets/preview-mocha.webp"/>
+<img src="./assets/preview-mocha.webp"/>
 <blockquote>Selected Accent: Green</blockquote>
 </details>
 
@@ -48,7 +48,7 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
     1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
     2. Choose the the appropriate theme variant from `Settings` > `Themes`.
     
-<img src="assets/ctp-logseq-marketplace.webp"/>
+<img src="./assets/ctp-logseq-marketplace.webp"/>
     
 2. Import theme stylesheet by setting it in your `config.edn` ([source](https://github.com/logseq/logseq/blob/master/templates/config.edn#L72)). Set one of the following in your config and restart Logseq.
 
@@ -76,7 +76,7 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
 2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
 
-<img src="assets/ctp-logseq-switch-accent.webp"/>
+<img src="./assets/ctp-logseq-switch-accent.webp"/>
 
 ### Bonus: Oledppuccin
 
@@ -84,7 +84,7 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 
 You can choose this variant of dark theme under `Settings` > `Themes`. 
 
-<img src="assets/ctp-oledppuccin.webp"/>
+<img src="./assets/ctp-oledppuccin.webp"/>
 
 
 ## 💝 Thanks to
