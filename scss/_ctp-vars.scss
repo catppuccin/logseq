@@ -198,4 +198,21 @@
   --ctp-tl-selectFill: var(--ctp-accent, var(--ctp-blue));
   --ctp-tl-selectStroke: var(--ctp-accent, var(--ctp-blue));
 
+ // priorites variables
+  --ctp-priority-bg-color: var(--ctp-crust);
+  --ctp-priority-todo: var(--ctp-teal);
+  --ctp-priority-doing: var(--ctp-blue);
+  --ctp-priority-done: var(--ctp-green);
+  --ctp-priority-now: var(--ctp-teal);
+  --ctp-priority-later: var(--ctp-yellow);
+  --ctp-priority-waiting: var(--ctp-maroon);
+  --ctp-priority-a: var(--ctp-red);
+  --ctp-priority-b: var(--ctp-yellow);
+  --ctp-priority-c: var(--ctp-green);
+
+  --ctp-marker-border-radius: 4px;
+  --ctp-checkbox-color: var(--ctp-accent, var(--ctp-teal));
+  --ctp-marker-size: 16px;
 }
+
+
