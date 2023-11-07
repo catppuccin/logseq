@@ -359,3 +359,88 @@ i[class*="ti-layout-"] {
 .bg-pink-500 {
   background-color: rgb(var(--ctp-pink));
 }
+
+// Priorities custom styles
+
+.block-marker {
+  background-color: rgb(var(--ctp-priority-bg-color));
+  border-radius: var(--ctp-marker-border-radius);
+  font-size: 75%;
+  &.TODO {
+    color: rgb(var(--ctp-priority-todo));
+  }
+  &.DOING {
+    color: rgb(var(--ctp-priority-doing));
+  }
+  &.NOW {
+    color: rgb(var(--ctp-priority-now));
+  }
+  &.LATER {
+    color: rgb(var(--ctp-priority-later));
+  }
+  &.waiting {
+    color: rgb(var(--ctp-priority-waiting));
+  }
+}
+
+.form-checkbox, .form-checkbox:focus {
+    border-radius: var(--ctp-marker-border-radius);
+    border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
+    background-color: transparent !important;
+    height: var(--ctp-marker-size);
+    width: var(--ctp-marker-size);
+}
+
+.form-checkbox:checked {
+    background-color: rgb(var(--ctp-checkbox-color)) !important;
+}
+
+.form-checkbox:hover {
+    transform: scale(1.1);
+}
+
+a[priority], a.priority {
+    font-size: 0px;
+}
+
+a.priority[href="#/page/A" i], [href="#/page/B" i], [href="#/page/C" i] {
+    display: inline-flex;
+    opacity: 1 !important;
+}
+
+a[priority]::before, a.priority::before {
+    transform: translateY(-1px);
+    border: 1px solid rgb(var(--ctp-priority-bg-color));
+    border-radius: var(--ctp-marker-border-radius);
+    font-size: 12px;
+    font-weight: 600;
+    height: calc(var(--ctp-marker-size) + 4px);
+    width: calc(var(--ctp-marker-size) + 4px);
+    line-height: 1.5;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a[priority=A]::before, a.priority[href="#/page/A" i]:before {
+    content: "A";
+    background: rgb(var(--ctp-priority-a));
+    color: var(--ctp-primary-background-color);
+}
+
+a[priority=B]::before, a.priority[href="#/page/B" i]:before {
+    content: "B";
+    background: rgb(var(--ctp-priority-b));
+    color: var(--ctp-primary-background-color);
+}
+
+a[priority=C]::before, a.priority[href="#/page/C" i]:before {
+    content: "C";
+    background: rgb(var(--ctp-priority-c));
+    color: var(--ctp-primary-background-color);
+}
+
+a.priority:hover {
+    transform: scale(1.1);
+}
