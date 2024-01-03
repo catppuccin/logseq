@@ -50,7 +50,18 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
     
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-marketplace.webp"/>
     
-2. Import theme stylesheet by setting it in your `config.edn` ([source](https://github.com/logseq/logseq/blob/master/templates/config.edn#L72)). Set one of the following in your config and restart Logseq.
+
+2. Editing custom theme: **`custom.css`** (recommended for mobile). Choose one of the following and restart Logseq
+
+```css
+@import url('https://logseq.catppuccin.com/ctp-latte.css');
+@import url('https://logseq.catppuccin.com/ctp-frappe.css');
+@import url('https://logseq.catppuccin.com/ctp-macchiato.css');
+@import url('https://logseq.catppuccin.com/ctp-mocha.css');
+@import url('https://logseq.catppuccin.com/ctp-oled.css');
+```
+
+3. Editing custom configuration: **`config.edn`** ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) Set one of the following in your config and restart Logseq.
 
 ```edn
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
@@ -59,13 +70,13 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
 ```
 
-3. Add manually from GitHub Releases
+4. Add manually from GitHub Releases
     1. Download `.zip` from latest release.
     2. Extract it to desired location.
     3. Enable `Developer Mode` under `Settings` > `Advanced`.
     4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
 
-4. Clone Repository and add manually
+5. Clone Repository and add manually
     1. Clone repository (including submodules)
     2. Run `npm ci && npm run build`
     3. Enable `Developer Mode` under `Settings` > `Advanced`
