@@ -3,7 +3,7 @@
   --ls-error-color: var(--ctp-error-color);
   --ls-warning-color: var(--ctp-warning-color);
   --ls-success-color: var(--ctp-success-color);
-  --ls-text-on-accent: rgb(var(--ctp-base));
+  --ls-text-on-accent: rgb(var(--ctp-text));
   .logseq-tldraw {
     --tl-selectFill: rgba(var(--ctp-tl-selectFill), 0.05);
     --tl-selectStroke: rgb(var(--ctp-tl-selectStroke));
