@@ -118,6 +118,14 @@ div.nav-content-item:not(.is-expand) {
 
 mark {
     background: var(--ctp-text-highlight);
+    color: rgb(var(--ls-page-mark-color));
+    a, a:hover {
+        color: rgb(var(--ls-page-mark-color));
+        text-decoration: underline;
+    }
+    a:hover {
+        opacity: .55;
+    }
 }
 
 .form-input:focus {
