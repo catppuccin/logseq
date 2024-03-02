@@ -1,12 +1,7 @@
 @use "main.scss";
 
-:root {
+:root:not([data-color]), :root[data-color='none'] {
   --ctp-cm-theme: 'ctp-frappe';
-}
-
-:root,
-.theme-dark,
-.theme-dark.ctp-frappe {
   --ctp-rosewater: 242, 213, 207;
   --ctp-flamingo: 238, 190, 190;
   --ctp-pink: 244, 184, 228;

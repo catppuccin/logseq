@@ -1,264 +1,280 @@
-// place for selection to customise elements not supported by default variables
+html:not(html[data-color]),
+html[data-color='none'] {
+    // place for selection to customise elements not supported by default variables
 
-// Search bar placeholder
-div.input-wrap>input::placeholder {
-    color: var(--ctp-search-input-placeholder);
-}
-
-// search result page icon
-.recent-search {
-    a>div>div {
-        border-color: rgb(var(--ctp-text));
-    }
-}
-
-// Switches
-a.ui__toggle {
-    & .wrapper:focus {
-        --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+    // Search bar placeholder
+    div.input-wrap>input::placeholder {
+        color: var(--ctp-search-input-placeholder);
     }
 
-    &>span {
-        background-color: var(--ctp-switch-background);
-
-        &>span.switcher {
-            background-color: rgb(var(--ctp-switch-handle-color));
+    // search result page icon
+    .recent-search {
+        a>div>div {
+            border-color: rgb(var(--ctp-text));
         }
     }
-}
 
-// Buttons
+    // Switches
+    a.ui__toggle {
+        & .wrapper:focus {
+            --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+        }
 
-button.ui__button {
-    color: var(--ctp-button-text);
-    background-color: rgb(var(--ctp-button-background));
+        &>span {
+            background-color: var(--ctp-switch-background);
 
-    &[intent=logseq]:hover:not(.active) {
+            &>span.switcher {
+                background-color: rgb(var(--ctp-switch-handle-color));
+            }
+        }
+    }
+
+    // Buttons
+
+    button.ui__button {
         color: var(--ctp-button-text);
         background-color: rgb(var(--ctp-button-background));
+
+        &[intent=logseq]:hover:not(.active) {
+            color: var(--ctp-button-text);
+            background-color: rgb(var(--ctp-button-background));
+        }
+
+        &:hover {
+            background-color: rgb(var(--ctp-button-background));
+        }
     }
 
-    &:hover {
-        background-color: rgb(var(--ctp-button-background));
+    // Tooltip
+    .tippy-tooltip {
+        background: var(--ctp-tooltip-background);
+        color: var(--ctp-tooltip-text)
     }
-}
 
-// Tooltip
-.tippy-tooltip {
-    background: var(--ctp-tooltip-background);
-    color: var(--ctp-tooltip-text)
-}
-
-.tippy-popper .arrow-regular {
-    display: none;
-    /* Hide the arrow */
-}
+    .tippy-popper .arrow-regular {
+        display: none;
+        /* Hide the arrow */
+    }
 
 
-// Plugins page
-.dark .ui__button[intent=logseq]:hover {
-    color: var(--ls-link-text-color);
-}
+    // Plugins page
+    .dark .ui__button[intent=logseq]:hover {
+        color: var(--ls-link-text-color);
+    }
 
-svg.warning {
-    fill: rgb(var(--ctp-warning-color));
-}
+    svg.warning {
+        fill: rgb(var(--ctp-warning-color));
+    }
 
-svg.important {
-    fill: rgb(var(--ctp-error-color));
-}
+    svg.important {
+        fill: rgb(var(--ctp-error-color));
+    }
 
-svg.note {
-    fill: rgb(var(--ctp-info-color));
-}
+    svg.note {
+        fill: rgb(var(--ctp-info-color));
+    }
 
-// Global
+    // Global
 
-div.nav-content-item:not(.is-expand) {
-    .header {
+    div.nav-content-item:not(.is-expand) {
+        .header {
+            background-color: var(--ls-tertiary-background-color);
+        }
+
+        .header a {
+            color: var(--ctp-link-text-hover-color);
+        }
+    }
+
+    .left-sidebar-inner a.item.active,
+    .left-sidebar-inner a.item:active {
+        color: var(--ctp-link-text-hover-color);
+
+    }
+
+    .left-sidebar-inner a.item:hover {
+        background: var(--ctp-color-level-3);
+
+        span {
+            color: var(--ctp-blue);
+        }
+    }
+
+    .cp__sidebar-left-layout .header:hover a {
+        color: var(--ctp-link-text-hover-color);
+    }
+
+    .ui__modal-panel {
+        border: 1px solid;
+        border-color: var(--ctp-dropdown-border-color)
+    }
+
+    .dropdown-wrapper {
+        border: 1px solid;
+        border-color: var(--ctp-dropdown-border-color)
+    }
+
+    .block-children-left-border:hover {
+        width: 2px;
+        background-color: var(--ctp-bullet-thread-color);
+    }
+
+    mark {
+        background: var(--ctp-text-highlight);
+        color: rgb(var(--ls-page-mark-color));
+
+        a,
+        a:hover {
+            color: rgb(var(--ls-page-mark-color));
+            text-decoration: underline;
+        }
+
+        a:hover {
+            opacity: .55;
+        }
+    }
+
+    .form-input:focus {
+        box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+        border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+    }
+
+    .bullet-container.bullet-closed {
+        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+
+        &:hover {
+            background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
+        }
+    }
+
+    .bullet-container {
+        &:hover {
+            background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+        }
+    }
+
+    // Header
+    button.button.icon:hover {
+        color: rgb(var(--ctp-accent, var(--ctp-pink)));
+        background-color: var(--ctp-header-icon-background);
+
+        &>i {
+            color: var(--ctp-header-icon);
+        }
+    }
+
+
+    // SideBar
+    .cp__sidebar-left-layout a {
+        color: inherit;
+    }
+
+    .left-sidebar-inner .nav-content-item .header {
         background-color: var(--ls-tertiary-background-color);
     }
 
-    .header a {
-        color: var(--ctp-link-text-hover-color);
+    html[data-theme=dark] .cp__header a,
+    html[data-theme=dark] .cp__header button,
+    html[data-theme=dark] .cp__right-sidebar-topbar button {
+        opacity: 1;
     }
-}
 
-.left-sidebar-inner a.item.active,
-.left-sidebar-inner a.item:active {
-    color: var(--ctp-link-text-hover-color);
-
-}
-
-.left-sidebar-inner a.item:hover {
-    background: var(--ctp-color-level-3);
-    span {
-        color: var(--ctp-blue);
+    // selection
+    ::selection {
+        color: var(--ls-text-on-accent);
     }
-}
 
-.cp__sidebar-left-layout .header:hover a {
-    color: var(--ctp-link-text-hover-color);
-}
+    .inline.with-bg-color {
+        color: var(--ctp-primary-background-color);
 
-.ui__modal-panel {
-    border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
-}
+        b,
+        .page-ref {
+            color: var(--ctp-primary-background-color);
+        }
 
-.dropdown-wrapper {
-    border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
-}
+        .page-reference:hover {
+            color: var(--ctp-primary-text-color);
 
-.block-children-left-border:hover {
-    width: 2px;
-    background-color: var(--ctp-bullet-thread-color);
-}
+            b,
+            .page-ref,
+            span {
+                color: var(--ctp-primary-text-color);
+            }
+        }
 
-mark {
-    background: var(--ctp-text-highlight);
-    color: rgb(var(--ls-page-mark-color));
-    a, a:hover {
-        color: rgb(var(--ls-page-mark-color));
-        text-decoration: underline;
     }
-    a:hover {
-        opacity: .55;
-    }
-}
 
-.form-input:focus {
-    box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
-    border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
-}
-
-.bullet-container.bullet-closed {
-    background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
-
-    &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
-    }
-}
-
-.bullet-container {
-    &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
-    }
-}
-
-// Header
-button.button.icon:hover {
-    color: rgb(var(--ctp-accent, var(--ctp-pink)));
-    background-color: var(--ctp-header-icon-background);
-
-    &>i {
-        color: var(--ctp-header-icon);
-    }
-}
-
-
-// SideBar
-.cp__sidebar-left-layout a {
-    color: inherit;
-}
-
-.left-sidebar-inner .nav-content-item .header {
-    background-color: var(--ls-tertiary-background-color);
-}
-
-html[data-theme=dark] .cp__header a,
-html[data-theme=dark] .cp__header button,
-html[data-theme=dark] .cp__right-sidebar-topbar button {
-    opacity: 1;
-}
-
-// selection
-::selection {
-    color: var(--ls-text-on-accent);
-}
-
-.inline.with-bg-color {
-    color: var(--ctp-primary-background-color);
-    b, .page-ref {
+    .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6) {
         color: var(--ctp-primary-background-color);
     }
-    .page-reference:hover {
-        color: var(--ctp-primary-text-color);
-        b, .page-ref, span {
-            color: var(--ctp-primary-text-color);
+
+
+    // menu-links and dropdowns
+
+    .menu-links-wrapper,
+    .menu-link {
+        background-color: var(--ctp-secondary-background-color);
+    }
+
+    .menu-link,
+    .menu-link:hover {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .cp__settings-inner>aside ul>li>a>strong {
+        color: rgb(var(--ctp-primary-text-color));
+    }
+
+    .cp__settings-inner>aside ul>li.active {
+
+        .ui__icon,
+        strong {
+            color: rgb(var(--ctp-active-setting));
         }
     }
 
-}
-
-.ls-block .with-bg-color:is(h1,h2,h3,h4,h5,h6) {
-	color: var(--ctp-primary-background-color);
-}
-
-
-// menu-links and dropdowns
-
-.menu-links-wrapper,
-.menu-link {
-    background-color: var(--ctp-secondary-background-color);
-}
-
-.menu-link,
-.menu-link:hover {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border-radius: 5px;
-}
-
-.cp__settings-inner>aside ul>li>a>strong {
-    color: rgb(var(--ctp-primary-text-color));
-}
-
-.cp__settings-inner>aside ul>li.active {
-    .ui__icon, strong {
-        color: rgb(var(--ctp-active-setting));
+    .cp__all_pages_table td>span {
+        color: rgb(var(--ctp-primary-text-color));
     }
-}
 
-.cp__all_pages_table td>span {
-    color: rgb(var(--ctp-primary-text-color));
-}
+    // full pallete overrides
+    .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+    .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+    .ls-block :is(h1, h2, h3, h4, h5, h6) {
+        color: rgb(var(--ctp-text-heading))
+    }
 
-// full pallete overrides
-.editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
-.editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
-.ls-block :is(h1, h2, h3, h4, h5, h6) {
-    color:rgb(var(--ctp-text-heading))
-}
+    b,
+    strong {
+        color: rgb(var(--ctp-text-bold));
+    }
 
-b, strong {
-    color: rgb(var(--ctp-text-bold));
-}
+    i {
+        color: rgb(var(--ctp-text-italics));
+    }
 
-i {
-    color: rgb(var(--ctp-text-italics));
-}
+    del {
+        color: rgb(var(--ctp-text-strikethrough));
+    }
 
-del {
-    color: rgb(var(--ctp-text-strikethrough));
-}
-blockquote {
-    border-left: 2px solid;
-    border-left-color: rgb(var(--ctp-blockquote-line));
-}
+    blockquote {
+        border-left: 2px solid;
+        border-left-color: rgb(var(--ctp-blockquote-line));
+    }
 
-$pallete: (
-    "Yellow": var(--ls-highlight-color-yellow),
-    "Red": var(--ls-highlight-color-red),
-    "Pink": var(--ls-highlight-color-pink),
-    "Green": var(--ls-highlight-color-green),
-    "Blue": var(--ls-highlight-color-blue),
-    "Purple": var(--ls-highlight-color-purple),
-    "Gray": var(--ls-highlight-color-gray),
-);
+    $pallete: (
+        "Yellow": var(--ls-highlight-color-yellow),
+        "Red": var(--ls-highlight-color-red),
+        "Pink": var(--ls-highlight-color-pink),
+        "Green": var(--ls-highlight-color-green),
+        "Blue": var(--ls-highlight-color-blue),
+        "Purple": var(--ls-highlight-color-purple),
+        "Gray": var(--ls-highlight-color-gray),
+    );
 
 // highlight color pallete in dropdown
 @each $title, $value in $pallete {
@@ -282,42 +298,47 @@ $pallete: (
 
 // Whiteboard tool button
 .tl-button[data-selected=true] {
-  background: rgb(var(--ctp-wb-button-selected-background));
-  i {
-    color: rgb(var(--ctp-wb-button-selected-foreground));
-  }
+    background: rgb(var(--ctp-wb-button-selected-background));
+
+    i {
+        color: rgb(var(--ctp-wb-button-selected-foreground));
+    }
 }
 
-.ti, .tie {
-  color: rgb(var(--ctp-wb-button-foreground));
+.ti,
+.tie {
+    color: rgb(var(--ctp-wb-button-foreground));
 }
+
 .tl-context-bar {
-  .ti, .tie {
-    color: rgb(var(--ctp-wb-button-menu-foreground));
-  }
+
+    .ti,
+    .tie {
+        color: rgb(var(--ctp-wb-button-menu-foreground));
+    }
 }
 
 // double click or "add block or page" from toolbar -> icons
 // by default, bg color is hardcoded
 .tl-type-tag {
-  background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-  border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-  // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+    background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+    border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+    // color: #ff00ff; // fg color has to be set on inner i element (.tie)
 
-  .tie {
-    color: rgb(var(--ctp-wb-button-type-tag-foreground));
-  }
+    .tie {
+        color: rgb(var(--ctp-wb-button-type-tag-foreground));
+    }
 }
 
 html[data-theme=dark] .tl-type-tag[data-active=true] {
 
-  background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
+    background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
 
-  border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
+    border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
 
-  .tie {
-    color: rgb(var(--ctp-wb-button-type-tag-foreground));
-  }
+    .tie {
+        color: rgb(var(--ctp-wb-button-type-tag-foreground));
+    }
 }
 
 // Whiteboard context menu button icon
@@ -327,71 +348,83 @@ html[data-theme=dark] .tl-type-tag[data-active=true] {
 
 // Button that appears below a page reference block (on hover)
 .tl-quick-links-row:first-child {
-  background-color: rgb(var(--ctp-wb-quick-links-button));
+    background-color: rgb(var(--ctp-wb-quick-links-button));
 
-  :hover {
-    background-color: rgb(var(--ctp-wb-quick-links-button-hover));
-  }
+    :hover {
+        background-color: rgb(var(--ctp-wb-quick-links-button-hover));
+    }
 }
 
 // selected item bg in e.g. a dropdown
 .tl-select-input-select-item[data-state=checked] {
-  background: rgb(var(--ctp-tl-select-input-select-item));
+    background: rgb(var(--ctp-tl-select-input-select-item));
 }
 
 // align-buttons that appear when right clicking after
 // selecting multiple objects
 i[class*="ti-layout-"] {
-  color: rgb(var(--ctp-wb-layout-button-foreground));
+    color: rgb(var(--ctp-wb-layout-button-foreground));
 }
 
 // these are the colors that appear when selecting a color (e.g. for fill)
 .bg-gray-500 {
-  background-color: rgb(var(--ctp-gray));
+    background-color: rgb(var(--ctp-gray));
 }
+
 .bg-red-500 {
-  background-color: rgb(var(--ctp-red));
+    background-color: rgb(var(--ctp-red));
 }
+
 .bg-yellow-500 {
-  background-color: rgb(var(--ctp-yellow));
+    background-color: rgb(var(--ctp-yellow));
 }
+
 .bg-green-500 {
-  background-color: rgb(var(--ctp-green));
+    background-color: rgb(var(--ctp-green));
 }
+
 .bg-blue-500 {
-  background-color: rgb(var(--ctp-blue));
+    background-color: rgb(var(--ctp-blue));
 }
+
 .bg-purple-500 {
-  background-color: rgb(var(--ctp-mauve));
+    background-color: rgb(var(--ctp-mauve));
 }
+
 .bg-pink-500 {
-  background-color: rgb(var(--ctp-pink));
+    background-color: rgb(var(--ctp-pink));
 }
 
 // Priorities custom styles
 
 .block-marker {
-  background-color: rgb(var(--ctp-priority-bg-color));
-  border-radius: var(--ctp-marker-border-radius);
-  font-size: 75%;
-  &.TODO {
-    color: rgb(var(--ctp-priority-todo));
-  }
-  &.DOING {
-    color: rgb(var(--ctp-priority-doing));
-  }
-  &.NOW {
-    color: rgb(var(--ctp-priority-now));
-  }
-  &.LATER {
-    color: rgb(var(--ctp-priority-later));
-  }
-  &.waiting {
-    color: rgb(var(--ctp-priority-waiting));
-  }
+    background-color: rgb(var(--ctp-priority-bg-color));
+    border-radius: var(--ctp-marker-border-radius);
+    font-size: 75%;
+
+    &.TODO {
+        color: rgb(var(--ctp-priority-todo));
+    }
+
+    &.DOING {
+        color: rgb(var(--ctp-priority-doing));
+    }
+
+    &.NOW {
+        color: rgb(var(--ctp-priority-now));
+    }
+
+    &.LATER {
+        color: rgb(var(--ctp-priority-later));
+    }
+
+    &.waiting {
+        color: rgb(var(--ctp-priority-waiting));
+    }
 }
 
-.form-checkbox, .form-checkbox:focus {
+.form-checkbox,
+.form-checkbox:focus {
     border-radius: var(--ctp-marker-border-radius);
     border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
     background-color: transparent !important;
@@ -407,16 +440,20 @@ i[class*="ti-layout-"] {
     transform: scale(1.1);
 }
 
-a[priority], a.priority {
+a[priority],
+a.priority {
     font-size: 0px;
 }
 
-a.priority[href="#/page/A" i], [href="#/page/B" i], [href="#/page/C" i] {
+a.priority[href="#/page/A" i],
+[href="#/page/B" i],
+[href="#/page/C" i] {
     display: inline-flex;
     opacity: 1 !important;
 }
 
-a[priority]::before, a.priority::before {
+a[priority]::before,
+a.priority::before {
     transform: translateY(-1px);
     border: 1px solid rgb(var(--ctp-priority-bg-color));
     border-radius: var(--ctp-marker-border-radius);
@@ -431,19 +468,22 @@ a[priority]::before, a.priority::before {
     justify-content: center;
 }
 
-a[priority=A]::before, a.priority[href="#/page/A" i]:before {
+a[priority=A]::before,
+a.priority[href="#/page/A" i]:before {
     content: "A";
     background: rgb(var(--ctp-priority-a));
     color: var(--ctp-primary-background-color);
 }
 
-a[priority=B]::before, a.priority[href="#/page/B" i]:before {
+a[priority=B]::before,
+a.priority[href="#/page/B" i]:before {
     content: "B";
     background: rgb(var(--ctp-priority-b));
     color: var(--ctp-primary-background-color);
 }
 
-a[priority=C]::before, a.priority[href="#/page/C" i]:before {
+a[priority=C]::before,
+a.priority[href="#/page/C" i]:before {
     content: "C";
     background: rgb(var(--ctp-priority-c));
     color: var(--ctp-primary-background-color);
@@ -451,4 +491,5 @@ a[priority=C]::before, a.priority[href="#/page/C" i]:before {
 
 a.priority:hover {
     transform: scale(1.1);
+}
 }
