@@ -127,10 +127,8 @@ html[data-color='none'] {
         background: var(--ctp-text-highlight);
         color: rgb(var(--ls-page-mark-color));
 
-        a,
-        a:hover {
+        a {
             color: rgb(var(--ls-page-mark-color));
-            text-decoration: underline;
         }
 
         a:hover {
