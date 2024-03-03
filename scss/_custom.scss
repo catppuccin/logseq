@@ -31,7 +31,7 @@ html[data-color='none'] {
 
     // Buttons
 
-    button.ui__button {
+    a.ui__button, button.ui__button {
         color: var(--ctp-button-text);
         background-color: rgb(var(--ctp-button-background));
 
@@ -217,7 +217,7 @@ html[data-color='none'] {
 
     .menu-links-wrapper,
     .menu-link {
-        background-color: var(--ctp-tertiary-background-color);
+        background-color: var(--ctp-secondary-background-color);
     }
 
     .menu-link {
@@ -508,9 +508,65 @@ html[data-color='none'] {
             background-color: var(--ctp-menu-hover-color);
         }
     }
-    ul.favorites {
+    div.favorites, div.recent {
         button.ui__button {
             background: transparent;
         }
+    }
+
+    button.ui__button {
+        .ui__icon {
+            color: var(--ctp-button-text);
+        }
+    }
+
+    .form-input:focus, .form-multiselect:focus, .form-select:focus, .form-textarea:focus {
+        --tw-ring-color: rgba(var(--ctp-accent, var(--ctp-sapphire)));
+        border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)));
+    }
+
+    div[data-radix-popper-content-wrapper] div[role=menuitem]:focus {
+        background-color: var(--ctp-menu-hover-color);
+    }
+
+    div.ui__dropdown-menu-content {
+        border-color: var(--ctp-dropdown-border-color);
+    }
+
+    .form-input {
+        background-color: var(--ls-primary-background-color);
+        border-color: var(--ls-border-color);
+        color: var(--ls-primary-text-color);
+    }
+
+    .dropdown-wrapper {
+        background-color: var(--ls-primary-background-color);
+    }
+
+    .cp__settings-inner aside {
+        background-color: var(--ctp-tertiary-background-color);
+    }
+
+    label[for='toggle_radix_theme']+div.text-xs {
+        color: var(--ls-primary-text-color);
+        opacity: 0.6;
+    }
+
+    .cp__plugins-page {
+        .tabs-inner, div.secondary-tabs, .control-tabs {
+            .ui__button, .ui__icon {
+                color: var(--ls-primary-text-color);
+                background-color: transparent;
+                &:hover {
+                    background-color: var(--ctp-menu-hover-color);
+                }
+            }
+            .ui__button {
+                &.bg-primary\/90, &.active {
+                    background-color: var(--color-level-4);
+                }
+            }
+        }
+
     }
 }

@@ -78,13 +78,13 @@
   --ctp-highlight-color-pink: rgb(var(--ctp-pink));
 
   --ctp-error-text-color: var(--color-red-100);
-  --ctp-error-background-color: var(--color-red-900);
+  --ctp-error-background-color: rgb(var(--ctp-red));
 
   --ctp-warning-text-color: var(--color-yellow-100);
-  --ctp-warning-background-color: var(--color-yellow-900);
+  --ctp-warning-background-color: rgb(var(--ctp-yellow));
 
   --ctp-success-text-color: var(--color-green-100);
-  --ctp-success-background-color: var(--color-green-900);
+  --ctp-success-background-color: rgb(var(--ctp-green));
 
   --ctp-focus-ring-color: rgb(var(--ctp-overlay2));
   --ctp-header-button-background: rgb(var(--ctp-text));

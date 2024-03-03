@@ -1,3 +1,3 @@
 :root:not([data-color]), :root[data-color='none'] {
-    
+    --lx-popover-bg: var(--ctp-secondary-background-color);
 }
