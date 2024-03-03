@@ -1,0 +1,8 @@
+@use "@catppuccin/highlightjs/sass/catppuccin.variables";
+
+html:not(html[data-color]),
+html[data-color='none'] {
+    code.hljs {
+        background-color: var(--ctp-tertiary-background-color);
+    }
+}

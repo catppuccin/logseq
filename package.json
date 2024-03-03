@@ -4,13 +4,8 @@
   "description": "🦫 Soothing pastel theme for Logseq",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass --watch scss:.",
-    "build:latte": "sass scss/ctp-latte.scss ctp-latte.css --no-source-map",
-    "build:frappe": "sass scss/ctp-frappe.scss ctp-frappe.css --no-source-map",
-    "build:macchiato": "sass scss/ctp-macchiato.scss ctp-macchiato.css --no-source-map",
-    "build:mocha": "sass scss/ctp-mocha.scss ctp-mocha.css --no-source-map",
-    "build": "sass scss:. --no-source-map",
+    "start": "sass -I node_modules --watch scss:.",
+    "build": "sass -I node_modules --no-charset --no-source-map scss:.",
     "clean": "rimraf *.css*"
   },
   "repository": {
@@ -25,6 +20,8 @@
   },
   "homepage": "https://github.com/catppuccin/logseq#readme",
   "devDependencies": {
+    "@catppuccin/highlightjs": "^0.1.4",
+    "@catppuccin/palette": "^1.1.0",
     "rimraf": "^3.0.2",
     "sass": "^1.55.0"
   },
@@ -61,7 +58,7 @@
         "mode": "dark"
       }
     ],
-	"title": "Catppuccin",
+    "title": "Catppuccin",
     "id": "logseq-catppuccin",
     "icon": "./assets/icon.png"
   }
