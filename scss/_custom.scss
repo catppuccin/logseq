@@ -1,446 +1,570 @@
-// place for selection to customise elements not supported by default variables
+html:not(html[data-color]),
+html[data-color='none'] {
+    // place for selection to customise elements not supported by default variables
 
-// Search bar placeholder
-div.input-wrap>input::placeholder {
-    color: var(--ctp-search-input-placeholder);
-}
-
-// search result page icon
-.recent-search {
-    a>div>div {
-        border-color: rgb(var(--ctp-text));
-    }
-}
-
-// Switches
-a.ui__toggle {
-    & .wrapper:focus {
-        --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+    // Search bar placeholder
+    div.input-wrap>input::placeholder {
+        color: var(--ctp-search-input-placeholder);
     }
 
-    &>span {
-        background-color: var(--ctp-switch-background);
-
-        &>span.switcher {
-            background-color: rgb(var(--ctp-switch-handle-color));
+    // search result page icon
+    .recent-search {
+        a>div>div {
+            border-color: rgb(var(--ctp-text));
         }
     }
-}
 
-// Buttons
+    // Switches
+    a.ui__toggle {
+        & .wrapper:focus {
+            --tw-shadow: 0 0 0 3px rgba(var(--ctp-switch-handle-color), 0.5)
+        }
 
-button.ui__button {
-    color: var(--ctp-button-text);
-    background-color: rgb(var(--ctp-button-background));
+        &>span {
+            background-color: var(--ctp-switch-background);
 
-    &[intent=logseq]:hover:not(.active) {
+            &>span.switcher {
+                background-color: rgb(var(--ctp-switch-handle-color));
+            }
+        }
+    }
+
+    // Buttons
+
+    a.ui__button, button.ui__button {
         color: var(--ctp-button-text);
         background-color: rgb(var(--ctp-button-background));
+
+        &[intent=logseq]:hover:not(.active) {
+            color: var(--ctp-button-text);
+            background-color: rgb(var(--ctp-button-background));
+        }
+
+        &:hover {
+            background-color: rgb(var(--ctp-button-background));
+        }
     }
 
-    &:hover {
-        background-color: rgb(var(--ctp-button-background));
+    // Tooltip
+    .tippy-tooltip {
+        background: var(--ctp-tooltip-background);
+        color: var(--ctp-tooltip-text)
     }
-}
 
-// Tooltip
-.tippy-tooltip {
-    background: var(--ctp-tooltip-background);
-    color: var(--ctp-tooltip-text)
-}
-
-.tippy-popper .arrow-regular {
-    display: none;
-    /* Hide the arrow */
-}
+    .tippy-popper .arrow-regular {
+        display: none;
+        /* Hide the arrow */
+    }
 
 
-// Plugins page
-.dark .ui__button[intent=logseq]:hover {
-    color: var(--ls-link-text-color);
-}
+    // Plugins page
+    .dark .ui__button[intent=logseq]:hover {
+        color: var(--ls-link-text-color);
+    }
 
-svg.warning {
-    fill: rgb(var(--ctp-warning-color));
-}
+    svg.tip {
+        fill: rgb(var(--ctp-blue));
+    }
 
-svg.important {
-    fill: rgb(var(--ctp-error-color));
-}
+    svg.warning {
+        fill: rgb(var(--ctp-warning-color));
+    }
 
-svg.note {
-    fill: rgb(var(--ctp-info-color));
-}
+    svg.important {
+        fill: rgb(var(--ctp-error-color));
+    }
 
-// Global
+    svg.note {
+        fill: rgb(var(--ctp-info-color));
+    }
 
-div.nav-content-item:not(.is-expand) {
-    .header {
+    // Global
+
+    div.nav-content-item:not(.is-expand) {
+        .header {
+            background-color: var(--ls-tertiary-background-color);
+        }
+
+        .header a {
+            color: var(--ctp-link-text-hover-color);
+        }
+    }
+
+    .left-sidebar-inner a.item.active,
+    .left-sidebar-inner a.item:active {
+        color: var(--ctp-link-text-hover-color);
+
+    }
+
+    .left-sidebar-inner a.item:hover {
+        background: var(--ctp-color-level-3);
+
+        span {
+            color: var(--ctp-blue);
+        }
+    }
+
+    .cp__sidebar-left-layout .header:hover a {
+        color: var(--ctp-link-text-hover-color);
+    }
+
+    .ui__modal-panel {
+        border: 1px solid;
+        border-color: var(--ctp-dropdown-border-color)
+    }
+
+    .dropdown-wrapper {
+        border: 1px solid;
+        border-color: var(--ctp-dropdown-border-color)
+    }
+
+    .block-children-left-border:hover {
+        width: 2px;
+        background-color: var(--ctp-bullet-thread-color);
+    }
+
+    mark {
+        background: var(--ctp-text-highlight);
+        color: rgb(var(--ls-page-mark-color));
+
+        a {
+            color: rgb(var(--ls-page-mark-color));
+        }
+
+        a:hover {
+            opacity: .55;
+        }
+    }
+
+    .form-input:focus {
+        box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+        border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
+    }
+
+    .bullet-container.bullet-closed {
+        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+
+        &:hover {
+            background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
+        }
+    }
+
+    .bullet-container {
+        &:hover {
+            background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
+        }
+    }
+
+    // Header
+    button.button.icon:hover {
+        color: rgb(var(--ctp-accent, var(--ctp-pink)));
+        background-color: var(--ctp-header-icon-background);
+
+        &>i {
+            color: var(--ctp-header-icon);
+        }
+    }
+
+
+    // SideBar
+    .cp__sidebar-left-layout a {
+        color: inherit;
+    }
+
+    .left-sidebar-inner .nav-content-item .header {
         background-color: var(--ls-tertiary-background-color);
     }
 
-    .header a {
-        color: var(--ctp-link-text-hover-color);
+    html[data-theme=dark] .cp__header a,
+    html[data-theme=dark] .cp__header button,
+    html[data-theme=dark] .cp__right-sidebar-topbar button {
+        opacity: 1;
     }
-}
 
-.left-sidebar-inner a.item.active,
-.left-sidebar-inner a.item:active {
-    color: var(--ctp-link-text-hover-color);
-
-}
-
-.left-sidebar-inner a.item:hover {
-    background: var(--ctp-color-level-3);
-    span {
-        color: var(--ctp-blue);
+    // selection
+    ::selection {
+        color: var(--ls-text-on-accent);
     }
-}
 
-.cp__sidebar-left-layout .header:hover a {
-    color: var(--ctp-link-text-hover-color);
-}
+    .inline.with-bg-color {
+        color: var(--ctp-primary-background-color);
 
-.ui__modal-panel {
-    border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
-}
+        b,
+        .page-ref {
+            color: var(--ctp-primary-background-color);
+        }
 
-.dropdown-wrapper {
-    border: 1px solid;
-    border-color: var(--ctp-dropdown-border-color)
-}
+        .page-reference:hover {
+            color: var(--ctp-primary-text-color);
 
-.block-children-left-border:hover {
-    width: 2px;
-    background-color: var(--ctp-bullet-thread-color);
-}
+            b,
+            .page-ref,
+            span {
+                color: var(--ctp-primary-text-color);
+            }
+        }
 
-mark {
-    background: var(--ctp-text-highlight);
-}
-
-.form-input:focus {
-    box-shadow: 0 0 0 2px rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
-    border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)), .5);
-}
-
-.bullet-container.bullet-closed {
-    background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
-
-    &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .65);
     }
-}
 
-.bullet-container {
-    &:hover {
-        background-color: rgb(var(--ctp-accent, var(--ctp-blue)), .15);
-    }
-}
-
-// Header
-button.button.icon:hover {
-    color: rgb(var(--ctp-accent, var(--ctp-pink)));
-    background-color: var(--ctp-header-icon-background);
-
-    &>i {
-        color: var(--ctp-header-icon);
-    }
-}
-
-
-// SideBar
-.cp__sidebar-left-layout a {
-    color: inherit;
-}
-
-.left-sidebar-inner .nav-content-item .header {
-    background-color: var(--ls-tertiary-background-color);
-}
-
-html[data-theme=dark] .cp__header a,
-html[data-theme=dark] .cp__header button,
-html[data-theme=dark] .cp__right-sidebar-topbar button {
-    opacity: 1;
-}
-
-// selection
-::selection {
-    color: var(--ls-text-on-accent);
-}
-
-.inline.with-bg-color {
-    color: var(--ctp-primary-background-color);
-    b, .page-ref {
+    .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6) {
         color: var(--ctp-primary-background-color);
     }
-    .page-reference:hover {
-        color: var(--ctp-primary-text-color);
-        b, .page-ref, span {
-            color: var(--ctp-primary-text-color);
+
+
+    // menu-links and dropdowns
+
+    .menu-links-wrapper,
+    .menu-link {
+        background-color: var(--ctp-secondary-background-color);
+    }
+
+    .menu-link {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .menu-link:hover {
+        background-color: var(--ctp-menu-hover-color);
+    }
+
+    .cp__settings-inner>aside ul>li>a>strong {
+        color: rgb(var(--ctp-primary-text-color));
+    }
+
+    .cp__settings-inner>aside ul>li.active {
+
+        .ui__icon,
+        strong {
+            color: rgb(var(--ctp-active-setting));
         }
     }
 
-}
-
-.ls-block .with-bg-color:is(h1,h2,h3,h4,h5,h6) {
-	color: var(--ctp-primary-background-color);
-}
-
-
-// menu-links and dropdowns
-
-.menu-links-wrapper,
-.menu-link {
-    background-color: var(--ctp-secondary-background-color);
-}
-
-.menu-link,
-.menu-link:hover {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border-radius: 5px;
-}
-
-.cp__settings-inner>aside ul>li>a>strong {
-    color: rgb(var(--ctp-primary-text-color));
-}
-
-.cp__settings-inner>aside ul>li.active {
-    .ui__icon, strong {
-        color: rgb(var(--ctp-active-setting));
+    .cp__all_pages_table td>span {
+        color: rgb(var(--ctp-primary-text-color));
     }
-}
 
-.cp__all_pages_table td>span {
-    color: rgb(var(--ctp-primary-text-color));
-}
-
-// full pallete overrides
-.editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
-.editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
-.ls-block :is(h1, h2, h3, h4, h5, h6) {
-    color:rgb(var(--ctp-text-heading))
-}
-
-b, strong {
-    color: rgb(var(--ctp-text-bold));
-}
-
-i {
-    color: rgb(var(--ctp-text-italics));
-}
-
-del {
-    color: rgb(var(--ctp-text-strikethrough));
-}
-blockquote {
-    border-left: 2px solid;
-    border-left-color: rgb(var(--ctp-blockquote-line));
-}
-
-$pallete: (
-    "Yellow": var(--ls-highlight-color-yellow),
-    "Red": var(--ls-highlight-color-red),
-    "Pink": var(--ls-highlight-color-pink),
-    "Green": var(--ls-highlight-color-green),
-    "Blue": var(--ls-highlight-color-blue),
-    "Purple": var(--ls-highlight-color-purple),
-    "Gray": var(--ls-highlight-color-gray),
-);
-
-// highlight color pallete in dropdown
-@each $title, $value in $pallete {
-    a[title=#{$title}].shadow-sm>.heading-bg {
-        background-color: #{$value} !important;
+    // full pallete overrides
+    .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+    .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+    .ls-block :is(h1, h2, h3, h4, h5, h6) {
+        color: rgb(var(--ctp-text-heading))
     }
-}
+
+    b,
+    strong {
+        color: rgb(var(--ctp-text-bold));
+    }
+
+    i {
+        color: rgb(var(--ctp-text-italics));
+    }
+
+    del {
+        color: rgb(var(--ctp-text-strikethrough));
+    }
+
+    blockquote {
+        border-left: 2px solid;
+        border-left-color: rgb(var(--ctp-blockquote-line));
+    }
+
+    $pallete: (
+        "Yellow": var(--ls-highlight-color-yellow),
+        "Red": var(--ls-highlight-color-red),
+        "Pink": var(--ls-highlight-color-pink),
+        "Green": var(--ls-highlight-color-green),
+        "Blue": var(--ls-highlight-color-blue),
+        "Purple": var(--ls-highlight-color-purple),
+        "Gray": var(--ls-highlight-color-gray),
+    );
+
+    // highlight color pallete in dropdown
+    @each $title, $value in $pallete {
+        a[title=#{$title}].shadow-sm>.heading-bg {
+            background-color: #{$value} !important;
+        }
+    }
 
 
-// Dropdown option group
-#ui__ac-inner {
-    background: var(--ctp-secondary-background-color);
-}
+    // Dropdown option group
+    #ui__ac-inner {
+        background: var(--ctp-secondary-background-color);
+    }
 
-.ui__ac-group-name {
-    background: var(--ctp-tertiary-background-color);
-}
+    .ui__ac-group-name {
+        background: var(--ctp-tertiary-background-color);
+    }
 
 
-// Whiteboard
+    // Whiteboard
 
-// Whiteboard tool button
-.tl-button[data-selected=true] {
-  background: rgb(var(--ctp-wb-button-selected-background));
-  i {
-    color: rgb(var(--ctp-wb-button-selected-foreground));
-  }
-}
+    // Whiteboard tool button
+    .tl-button[data-selected=true] {
+        background: rgb(var(--ctp-wb-button-selected-background));
 
-.ti, .tie {
-  color: rgb(var(--ctp-wb-button-foreground));
-}
-.tl-context-bar {
-  .ti, .tie {
-    color: rgb(var(--ctp-wb-button-menu-foreground));
-  }
-}
+        i {
+            color: rgb(var(--ctp-wb-button-selected-foreground));
+        }
+    }
 
-// double click or "add block or page" from toolbar -> icons
-// by default, bg color is hardcoded
-.tl-type-tag {
-  background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-  border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-  // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+    .ti,
+    .tie {
+        color: rgb(var(--ctp-wb-button-foreground));
+    }
 
-  .tie {
-    color: rgb(var(--ctp-wb-button-type-tag-foreground));
-  }
-}
+    .tl-context-bar {
 
-html[data-theme=dark] .tl-type-tag[data-active=true] {
+        .ti,
+        .tie {
+            color: rgb(var(--ctp-wb-button-menu-foreground));
+        }
+    }
 
-  background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
+    // double click or "add block or page" from toolbar -> icons
+    // by default, bg color is hardcoded
+    .tl-type-tag {
+        background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+        border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+        // color: #ff00ff; // fg color has to be set on inner i element (.tie)
 
-  border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
+        .tie {
+            color: rgb(var(--ctp-wb-button-type-tag-foreground));
+        }
+    }
 
-  .tie {
-    color: rgb(var(--ctp-wb-button-type-tag-foreground));
-  }
-}
+    html[data-theme=dark] .tl-type-tag[data-active=true] {
 
-// Whiteboard context menu button icon
-.tl-menu-item i {
-    color: rgb(var(--ctp-wb-button-menu-foreground));
-}
+        background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
 
-// Button that appears below a page reference block (on hover)
-.tl-quick-links-row:first-child {
-  background-color: rgb(var(--ctp-wb-quick-links-button));
+        border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
 
-  :hover {
-    background-color: rgb(var(--ctp-wb-quick-links-button-hover));
-  }
-}
+        .tie {
+            color: rgb(var(--ctp-wb-button-type-tag-foreground));
+        }
+    }
 
-// selected item bg in e.g. a dropdown
-.tl-select-input-select-item[data-state=checked] {
-  background: rgb(var(--ctp-tl-select-input-select-item));
-}
+    // Whiteboard context menu button icon
+    .tl-menu-item i {
+        color: rgb(var(--ctp-wb-button-menu-foreground));
+    }
 
-// align-buttons that appear when right clicking after
-// selecting multiple objects
-i[class*="ti-layout-"] {
-  color: rgb(var(--ctp-wb-layout-button-foreground));
-}
+    // Button that appears below a page reference block (on hover)
+    .tl-quick-links-row:first-child {
+        background-color: rgb(var(--ctp-wb-quick-links-button));
 
-// these are the colors that appear when selecting a color (e.g. for fill)
-.bg-gray-500 {
-  background-color: rgb(var(--ctp-gray));
-}
-.bg-red-500 {
-  background-color: rgb(var(--ctp-red));
-}
-.bg-yellow-500 {
-  background-color: rgb(var(--ctp-yellow));
-}
-.bg-green-500 {
-  background-color: rgb(var(--ctp-green));
-}
-.bg-blue-500 {
-  background-color: rgb(var(--ctp-blue));
-}
-.bg-purple-500 {
-  background-color: rgb(var(--ctp-mauve));
-}
-.bg-pink-500 {
-  background-color: rgb(var(--ctp-pink));
-}
+        :hover {
+            background-color: rgb(var(--ctp-wb-quick-links-button-hover));
+        }
+    }
 
-// Priorities custom styles
+    // selected item bg in e.g. a dropdown
+    .tl-select-input-select-item[data-state=checked] {
+        background: rgb(var(--ctp-tl-select-input-select-item));
+    }
 
-.block-marker {
-  background-color: rgb(var(--ctp-priority-bg-color));
-  border-radius: var(--ctp-marker-border-radius);
-  font-size: 75%;
-  &.TODO {
-    color: rgb(var(--ctp-priority-todo));
-  }
-  &.DOING {
-    color: rgb(var(--ctp-priority-doing));
-  }
-  &.NOW {
-    color: rgb(var(--ctp-priority-now));
-  }
-  &.LATER {
-    color: rgb(var(--ctp-priority-later));
-  }
-  &.waiting {
-    color: rgb(var(--ctp-priority-waiting));
-  }
-}
+    // align-buttons that appear when right clicking after
+    // selecting multiple objects
+    i[class*="ti-layout-"] {
+        color: rgb(var(--ctp-wb-layout-button-foreground));
+    }
 
-.form-checkbox, .form-checkbox:focus {
-    border-radius: var(--ctp-marker-border-radius);
-    border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
-    background-color: transparent !important;
-    height: var(--ctp-marker-size);
-    width: var(--ctp-marker-size);
-}
+    // these are the colors that appear when selecting a color (e.g. for fill)
+    .bg-gray-500 {
+        background-color: rgb(var(--ctp-gray));
+    }
 
-.form-checkbox:checked {
-    background-color: rgb(var(--ctp-checkbox-color)) !important;
-}
+    .bg-red-500 {
+        background-color: rgb(var(--ctp-red));
+    }
 
-.form-checkbox:hover {
-    transform: scale(1.1);
-}
+    .bg-yellow-500 {
+        background-color: rgb(var(--ctp-yellow));
+    }
 
-a[priority], a.priority {
-    font-size: 0px;
-}
+    .bg-green-500 {
+        background-color: rgb(var(--ctp-green));
+    }
 
-a.priority[href="#/page/A" i], [href="#/page/B" i], [href="#/page/C" i] {
-    display: inline-flex;
-    opacity: 1 !important;
-}
+    .bg-blue-500 {
+        background-color: rgb(var(--ctp-blue));
+    }
 
-a[priority]::before, a.priority::before {
-    transform: translateY(-1px);
-    border: 1px solid rgb(var(--ctp-priority-bg-color));
-    border-radius: var(--ctp-marker-border-radius);
-    font-size: 12px;
-    font-weight: 600;
-    height: calc(var(--ctp-marker-size) + 4px);
-    width: calc(var(--ctp-marker-size) + 4px);
-    line-height: 1.5;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+    .bg-purple-500 {
+        background-color: rgb(var(--ctp-mauve));
+    }
 
-a[priority=A]::before, a.priority[href="#/page/A" i]:before {
-    content: "A";
-    background: rgb(var(--ctp-priority-a));
-    color: var(--ctp-primary-background-color);
-}
+    .bg-pink-500 {
+        background-color: rgb(var(--ctp-pink));
+    }
 
-a[priority=B]::before, a.priority[href="#/page/B" i]:before {
-    content: "B";
-    background: rgb(var(--ctp-priority-b));
-    color: var(--ctp-primary-background-color);
-}
+    // Priorities custom styles
 
-a[priority=C]::before, a.priority[href="#/page/C" i]:before {
-    content: "C";
-    background: rgb(var(--ctp-priority-c));
-    color: var(--ctp-primary-background-color);
-}
+    .block-marker {
+        background-color: rgb(var(--ctp-priority-bg-color));
+        border-radius: var(--ctp-marker-border-radius);
+        font-size: 75%;
 
-a.priority:hover {
-    transform: scale(1.1);
+        &.TODO {
+            color: rgb(var(--ctp-priority-todo));
+        }
+
+        &.DOING {
+            color: rgb(var(--ctp-priority-doing));
+        }
+
+        &.NOW {
+            color: rgb(var(--ctp-priority-now));
+        }
+
+        &.LATER {
+            color: rgb(var(--ctp-priority-later));
+        }
+
+        &.waiting {
+            color: rgb(var(--ctp-priority-waiting));
+        }
+    }
+
+    .form-checkbox,
+    .form-checkbox:focus {
+        border-radius: var(--ctp-marker-border-radius);
+        border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
+        background-color: transparent !important;
+        height: var(--ctp-marker-size);
+        width: var(--ctp-marker-size);
+    }
+
+    .form-checkbox:checked {
+        background-color: rgb(var(--ctp-checkbox-color)) !important;
+    }
+
+    .form-checkbox:hover {
+        transform: scale(1.1);
+    }
+
+    a[priority],
+    a.priority {
+        font-size: 0px;
+    }
+
+    a.priority[href="#/page/A" i],
+    [href="#/page/B" i],
+    [href="#/page/C" i] {
+        display: inline-flex;
+        opacity: 1 !important;
+    }
+
+    a[priority]::before,
+    a.priority::before {
+        transform: translateY(-1px);
+        border: 1px solid rgb(var(--ctp-priority-bg-color));
+        border-radius: var(--ctp-marker-border-radius);
+        font-size: 12px;
+        font-weight: 600;
+        height: calc(var(--ctp-marker-size) + 4px);
+        width: calc(var(--ctp-marker-size) + 4px);
+        line-height: 1.5;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a[priority=A]::before,
+    a.priority[href="#/page/A" i]:before {
+        content: "A";
+        background: rgb(var(--ctp-priority-a));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a[priority=B]::before,
+    a.priority[href="#/page/B" i]:before {
+        content: "B";
+        background: rgb(var(--ctp-priority-b));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a[priority=C]::before,
+    a.priority[href="#/page/C" i]:before {
+        content: "C";
+        background: rgb(var(--ctp-priority-c));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a.priority:hover {
+        transform: scale(1.1);
+    }
+
+    .sidebar-item-header .item-actions {
+        button {
+            background-color: transparent;
+        }
+        button:hover {
+            background-color: var(--ctp-menu-hover-color);
+        }
+    }
+    div.favorites, div.recent {
+        button.ui__button {
+            background: transparent;
+        }
+    }
+
+    button.ui__button {
+        .ui__icon {
+            color: var(--ctp-button-text);
+        }
+    }
+
+    .form-input:focus, .form-multiselect:focus, .form-select:focus, .form-textarea:focus {
+        --tw-ring-color: rgba(var(--ctp-accent, var(--ctp-sapphire)));
+        border-color: rgba(var(--ctp-accent, var(--ctp-sapphire)));
+    }
+
+    div[data-radix-popper-content-wrapper] div[role=menuitem]:focus {
+        background-color: var(--ctp-menu-hover-color);
+    }
+
+    div.ui__dropdown-menu-content {
+        border-color: var(--ctp-dropdown-border-color);
+    }
+
+    .form-input {
+        background-color: var(--ls-primary-background-color);
+        border-color: var(--ls-border-color);
+        color: var(--ls-primary-text-color);
+    }
+
+    .dropdown-wrapper {
+        background-color: var(--ls-primary-background-color);
+    }
+
+    .cp__settings-inner aside {
+        background-color: var(--ctp-tertiary-background-color);
+    }
+
+    label[for='toggle_radix_theme']+div.text-xs {
+        color: var(--ls-primary-text-color);
+        opacity: 0.6;
+    }
+
+    .cp__plugins-page {
+        .tabs-inner, div.secondary-tabs, .control-tabs {
+            .ui__button, .ui__icon {
+                color: var(--ls-primary-text-color);
+                background-color: transparent;
+                &:hover {
+                    background-color: var(--ctp-menu-hover-color);
+                }
+            }
+            .ui__button {
+                &.bg-primary\/90, &.active {
+                    background-color: var(--color-level-4);
+                }
+            }
+        }
+
+    }
 }

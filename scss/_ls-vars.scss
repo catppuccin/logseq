@@ -1,13 +1,15 @@
 // Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
-:root {
+:root:not([data-color]), :root[data-color='none'] {
   --ls-error-color: var(--ctp-error-color);
   --ls-warning-color: var(--ctp-warning-color);
   --ls-success-color: var(--ctp-success-color);
   --ls-text-on-accent: rgb(var(--ctp-text));
+
   .logseq-tldraw {
     --tl-selectFill: rgba(var(--ctp-tl-selectFill), 0.05);
     --tl-selectStroke: rgb(var(--ctp-tl-selectStroke));
   }
+
   .tl-text-label-inner-wrapper {
     // this is for overriding the text colors inside shapes (e.g. the label color of a rectangle)
     --ls-wb-text-color-gray: var(--ctp-wb-shape-label-color-gray);
@@ -21,7 +23,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+
+  html:not(html[data-color]),
+  html[data-color='none'] {
     background-color: rgb(var(--ctp-primary-background-color));
   }
 
@@ -30,10 +34,8 @@
   }
 }
 
-.light-theme,
-.dark-theme,
-html[data-theme="light"],
-html[data-theme="dark"] {
+html:not(html[data-color]),
+html[data-color='none'] {
   --ls-primary-background-color: var(--ctp-primary-background-color);
   --ls-secondary-background-color: var(--ctp-secondary-background-color);
   --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
@@ -90,6 +92,8 @@ html[data-theme="dark"] {
   --ls-page-inline-code-color: var(--ctp-page-inline-code-color);
   --ls-page-inline-code-bg-color: var(--ctp-page-inline-code-bg-color);
 
+  --ls-page-mark-color: var(--ctp-base);
+
   --ls-scrollbar-foreground-color: var(--ctp-scrollbar-foreground-color);
   --ls-scrollbar-background-color: var(--ctp-scrollbar-background-color);
   --ls-scrollbar-thumb-hover-color: var(--ctp-scrollbar-thumb-hover-color);
@@ -124,6 +128,8 @@ html[data-theme="dark"] {
   --ls-focus-ring-color: var(--ctp-focus-ring-color);
   --ls-header-button-background: var(--ctp-header-button-background);
 
+  --ls-left-sidebar-active-background: var(--ls-active-primary-color);
+
   /* Whiteboard */
 
   /* Whiteboard object colors */
@@ -152,4 +158,7 @@ html[data-theme="dark"] {
   --ls-wb-text-color-purple: var(--ctp-wb-text-color-purple);
   --ls-wb-text-color-pink: var(--ctp-wb-text-color-pink);
 
-}
+  --ls-color-file-sync-error: rgb(var(--ctp-red));
+  --ls-color-file-sync-pending: rgb(var(--ctp-yellow));
+  --ls-color-file-sync-idle: rgb(var(--ctp-green));
+;}

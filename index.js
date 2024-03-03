@@ -1,4 +1,3 @@
-let timer = null;
 const accentMap = {
     "Full palette" : "unset", // undefined css var name
     "Rosewater"    : "var(--ctp-rosewater)",
@@ -23,26 +22,20 @@ const accentNames = Object.keys(accentMap);
 const settings = [
     {
         key: "CtpAccent",
-        title: "Select Catppuccin theme accent color",
-        description: "Select Catppuccin theme accent color",
+        title: "Select accent color",
+        description: "Note: Logseq's accent color should be disabled under Setting > General",
         type: "enum",
         enumPicker: "select",
         enumChoices: accentNames,
         default: "Full palette"
     },
-    {
-        key: "CtpReloadCss",
-        title: "Developer Mode: Reload CSS",
-        type: "boolean",
-        default: false
-    }
 ];
 
 function setAccent(accentName) {
     logseq.provideStyle({
         key: 'ctp-accent',
         style: `
-          :root {
+          :root:not([data-color]), :root[data-color='none'] {
             --ctp-accent: ${accentMap[accentName]};
           }
         `,
@@ -60,12 +53,6 @@ async function main() {
     logseq.onSettingsChanged(updatedSettings => {
         if (setAccent(updatedSettings.CtpAccent)) {
             console.log(`Applied ${updatedSettings.CtpAccent} accent✨`);
-        }
-        if (updatedSettings.CtpReloadCss && !timer) {
-            timer = setInterval(reloadCss, 5000)
-        } else if (!updatedSettings.CtpReloadCss && timer) {
-            clearInterval(timer);
-            timer = null;
         }
     });
 }

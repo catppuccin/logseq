@@ -1,12 +1,7 @@
 @use "main.scss";
 
-:root {
+:root:not([data-color]), :root[data-color='none'] {
   --ctp-cm-theme: 'ctp-latte';
-}
-
-:root,
-.theme-light,
-.theme-light.ctp-latte {
   --ctp-rosewater: 222, 149, 132;
   --ctp-flamingo: 221, 120, 120;
   --ctp-pink: 236, 131, 208;
