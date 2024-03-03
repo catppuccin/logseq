@@ -22,8 +22,8 @@ const accentNames = Object.keys(accentMap);
 const settings = [
     {
         key: "CtpAccent",
-        title: "Accent color",
-        description: "Select Catppuccin theme accent color",
+        title: "Select accent color",
+        description: "Note: Logseq's accent color should be disabled under Setting > General",
         type: "enum",
         enumPicker: "select",
         enumChoices: accentNames,

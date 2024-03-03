@@ -62,6 +62,10 @@ html[data-color='none'] {
         color: var(--ls-link-text-color);
     }
 
+    svg.tip {
+        fill: rgb(var(--ctp-blue));
+    }
+
     svg.warning {
         fill: rgb(var(--ctp-warning-color));
     }
@@ -213,16 +217,19 @@ html[data-color='none'] {
 
     .menu-links-wrapper,
     .menu-link {
-        background-color: var(--ctp-secondary-background-color);
+        background-color: var(--ctp-tertiary-background-color);
     }
 
-    .menu-link,
-    .menu-link:hover {
+    .menu-link {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         border-radius: 5px;
+    }
+
+    .menu-link:hover {
+        background-color: var(--ctp-menu-hover-color);
     }
 
     .cp__settings-inner>aside ul>li>a>strong {
@@ -276,220 +283,234 @@ html[data-color='none'] {
         "Gray": var(--ls-highlight-color-gray),
     );
 
-// highlight color pallete in dropdown
-@each $title, $value in $pallete {
-    a[title=#{$title}].shadow-sm>.heading-bg {
-        background-color: #{$value} !important;
+    // highlight color pallete in dropdown
+    @each $title, $value in $pallete {
+        a[title=#{$title}].shadow-sm>.heading-bg {
+            background-color: #{$value} !important;
+        }
     }
-}
 
 
-// Dropdown option group
-#ui__ac-inner {
-    background: var(--ctp-secondary-background-color);
-}
-
-.ui__ac-group-name {
-    background: var(--ctp-tertiary-background-color);
-}
-
-
-// Whiteboard
-
-// Whiteboard tool button
-.tl-button[data-selected=true] {
-    background: rgb(var(--ctp-wb-button-selected-background));
-
-    i {
-        color: rgb(var(--ctp-wb-button-selected-foreground));
+    // Dropdown option group
+    #ui__ac-inner {
+        background: var(--ctp-secondary-background-color);
     }
-}
 
-.ti,
-.tie {
-    color: rgb(var(--ctp-wb-button-foreground));
-}
+    .ui__ac-group-name {
+        background: var(--ctp-tertiary-background-color);
+    }
 
-.tl-context-bar {
+
+    // Whiteboard
+
+    // Whiteboard tool button
+    .tl-button[data-selected=true] {
+        background: rgb(var(--ctp-wb-button-selected-background));
+
+        i {
+            color: rgb(var(--ctp-wb-button-selected-foreground));
+        }
+    }
 
     .ti,
     .tie {
+        color: rgb(var(--ctp-wb-button-foreground));
+    }
+
+    .tl-context-bar {
+
+        .ti,
+        .tie {
+            color: rgb(var(--ctp-wb-button-menu-foreground));
+        }
+    }
+
+    // double click or "add block or page" from toolbar -> icons
+    // by default, bg color is hardcoded
+    .tl-type-tag {
+        background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+        border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+        // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+
+        .tie {
+            color: rgb(var(--ctp-wb-button-type-tag-foreground));
+        }
+    }
+
+    html[data-theme=dark] .tl-type-tag[data-active=true] {
+
+        background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
+
+        border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
+
+        .tie {
+            color: rgb(var(--ctp-wb-button-type-tag-foreground));
+        }
+    }
+
+    // Whiteboard context menu button icon
+    .tl-menu-item i {
         color: rgb(var(--ctp-wb-button-menu-foreground));
     }
-}
 
-// double click or "add block or page" from toolbar -> icons
-// by default, bg color is hardcoded
-.tl-type-tag {
-    background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-    border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
-    // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+    // Button that appears below a page reference block (on hover)
+    .tl-quick-links-row:first-child {
+        background-color: rgb(var(--ctp-wb-quick-links-button));
 
-    .tie {
-        color: rgb(var(--ctp-wb-button-type-tag-foreground));
-    }
-}
-
-html[data-theme=dark] .tl-type-tag[data-active=true] {
-
-    background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
-
-    border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
-
-    .tie {
-        color: rgb(var(--ctp-wb-button-type-tag-foreground));
-    }
-}
-
-// Whiteboard context menu button icon
-.tl-menu-item i {
-    color: rgb(var(--ctp-wb-button-menu-foreground));
-}
-
-// Button that appears below a page reference block (on hover)
-.tl-quick-links-row:first-child {
-    background-color: rgb(var(--ctp-wb-quick-links-button));
-
-    :hover {
-        background-color: rgb(var(--ctp-wb-quick-links-button-hover));
-    }
-}
-
-// selected item bg in e.g. a dropdown
-.tl-select-input-select-item[data-state=checked] {
-    background: rgb(var(--ctp-tl-select-input-select-item));
-}
-
-// align-buttons that appear when right clicking after
-// selecting multiple objects
-i[class*="ti-layout-"] {
-    color: rgb(var(--ctp-wb-layout-button-foreground));
-}
-
-// these are the colors that appear when selecting a color (e.g. for fill)
-.bg-gray-500 {
-    background-color: rgb(var(--ctp-gray));
-}
-
-.bg-red-500 {
-    background-color: rgb(var(--ctp-red));
-}
-
-.bg-yellow-500 {
-    background-color: rgb(var(--ctp-yellow));
-}
-
-.bg-green-500 {
-    background-color: rgb(var(--ctp-green));
-}
-
-.bg-blue-500 {
-    background-color: rgb(var(--ctp-blue));
-}
-
-.bg-purple-500 {
-    background-color: rgb(var(--ctp-mauve));
-}
-
-.bg-pink-500 {
-    background-color: rgb(var(--ctp-pink));
-}
-
-// Priorities custom styles
-
-.block-marker {
-    background-color: rgb(var(--ctp-priority-bg-color));
-    border-radius: var(--ctp-marker-border-radius);
-    font-size: 75%;
-
-    &.TODO {
-        color: rgb(var(--ctp-priority-todo));
+        :hover {
+            background-color: rgb(var(--ctp-wb-quick-links-button-hover));
+        }
     }
 
-    &.DOING {
-        color: rgb(var(--ctp-priority-doing));
+    // selected item bg in e.g. a dropdown
+    .tl-select-input-select-item[data-state=checked] {
+        background: rgb(var(--ctp-tl-select-input-select-item));
     }
 
-    &.NOW {
-        color: rgb(var(--ctp-priority-now));
+    // align-buttons that appear when right clicking after
+    // selecting multiple objects
+    i[class*="ti-layout-"] {
+        color: rgb(var(--ctp-wb-layout-button-foreground));
     }
 
-    &.LATER {
-        color: rgb(var(--ctp-priority-later));
+    // these are the colors that appear when selecting a color (e.g. for fill)
+    .bg-gray-500 {
+        background-color: rgb(var(--ctp-gray));
     }
 
-    &.waiting {
-        color: rgb(var(--ctp-priority-waiting));
+    .bg-red-500 {
+        background-color: rgb(var(--ctp-red));
     }
-}
 
-.form-checkbox,
-.form-checkbox:focus {
-    border-radius: var(--ctp-marker-border-radius);
-    border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
-    background-color: transparent !important;
-    height: var(--ctp-marker-size);
-    width: var(--ctp-marker-size);
-}
+    .bg-yellow-500 {
+        background-color: rgb(var(--ctp-yellow));
+    }
 
-.form-checkbox:checked {
-    background-color: rgb(var(--ctp-checkbox-color)) !important;
-}
+    .bg-green-500 {
+        background-color: rgb(var(--ctp-green));
+    }
 
-.form-checkbox:hover {
-    transform: scale(1.1);
-}
+    .bg-blue-500 {
+        background-color: rgb(var(--ctp-blue));
+    }
 
-a[priority],
-a.priority {
-    font-size: 0px;
-}
+    .bg-purple-500 {
+        background-color: rgb(var(--ctp-mauve));
+    }
 
-a.priority[href="#/page/A" i],
-[href="#/page/B" i],
-[href="#/page/C" i] {
-    display: inline-flex;
-    opacity: 1 !important;
-}
+    .bg-pink-500 {
+        background-color: rgb(var(--ctp-pink));
+    }
 
-a[priority]::before,
-a.priority::before {
-    transform: translateY(-1px);
-    border: 1px solid rgb(var(--ctp-priority-bg-color));
-    border-radius: var(--ctp-marker-border-radius);
-    font-size: 12px;
-    font-weight: 600;
-    height: calc(var(--ctp-marker-size) + 4px);
-    width: calc(var(--ctp-marker-size) + 4px);
-    line-height: 1.5;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+    // Priorities custom styles
 
-a[priority=A]::before,
-a.priority[href="#/page/A" i]:before {
-    content: "A";
-    background: rgb(var(--ctp-priority-a));
-    color: var(--ctp-primary-background-color);
-}
+    .block-marker {
+        background-color: rgb(var(--ctp-priority-bg-color));
+        border-radius: var(--ctp-marker-border-radius);
+        font-size: 75%;
 
-a[priority=B]::before,
-a.priority[href="#/page/B" i]:before {
-    content: "B";
-    background: rgb(var(--ctp-priority-b));
-    color: var(--ctp-primary-background-color);
-}
+        &.TODO {
+            color: rgb(var(--ctp-priority-todo));
+        }
 
-a[priority=C]::before,
-a.priority[href="#/page/C" i]:before {
-    content: "C";
-    background: rgb(var(--ctp-priority-c));
-    color: var(--ctp-primary-background-color);
-}
+        &.DOING {
+            color: rgb(var(--ctp-priority-doing));
+        }
 
-a.priority:hover {
-    transform: scale(1.1);
-}
+        &.NOW {
+            color: rgb(var(--ctp-priority-now));
+        }
+
+        &.LATER {
+            color: rgb(var(--ctp-priority-later));
+        }
+
+        &.waiting {
+            color: rgb(var(--ctp-priority-waiting));
+        }
+    }
+
+    .form-checkbox,
+    .form-checkbox:focus {
+        border-radius: var(--ctp-marker-border-radius);
+        border: 2px solid rgb(var(--ctp-checkbox-color)) !important;
+        background-color: transparent !important;
+        height: var(--ctp-marker-size);
+        width: var(--ctp-marker-size);
+    }
+
+    .form-checkbox:checked {
+        background-color: rgb(var(--ctp-checkbox-color)) !important;
+    }
+
+    .form-checkbox:hover {
+        transform: scale(1.1);
+    }
+
+    a[priority],
+    a.priority {
+        font-size: 0px;
+    }
+
+    a.priority[href="#/page/A" i],
+    [href="#/page/B" i],
+    [href="#/page/C" i] {
+        display: inline-flex;
+        opacity: 1 !important;
+    }
+
+    a[priority]::before,
+    a.priority::before {
+        transform: translateY(-1px);
+        border: 1px solid rgb(var(--ctp-priority-bg-color));
+        border-radius: var(--ctp-marker-border-radius);
+        font-size: 12px;
+        font-weight: 600;
+        height: calc(var(--ctp-marker-size) + 4px);
+        width: calc(var(--ctp-marker-size) + 4px);
+        line-height: 1.5;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a[priority=A]::before,
+    a.priority[href="#/page/A" i]:before {
+        content: "A";
+        background: rgb(var(--ctp-priority-a));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a[priority=B]::before,
+    a.priority[href="#/page/B" i]:before {
+        content: "B";
+        background: rgb(var(--ctp-priority-b));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a[priority=C]::before,
+    a.priority[href="#/page/C" i]:before {
+        content: "C";
+        background: rgb(var(--ctp-priority-c));
+        color: var(--ctp-primary-background-color);
+    }
+
+    a.priority:hover {
+        transform: scale(1.1);
+    }
+
+    .sidebar-item-header .item-actions {
+        button {
+            background-color: transparent;
+        }
+        button:hover {
+            background-color: var(--ctp-menu-hover-color);
+        }
+    }
+    ul.favorites {
+        button.ui__button {
+            background: transparent;
+        }
+    }
 }

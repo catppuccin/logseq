@@ -157,4 +157,8 @@ html[data-color='none'] {
   --ls-wb-text-color-blue: var(--ctp-wb-text-color-blue);
   --ls-wb-text-color-purple: var(--ctp-wb-text-color-purple);
   --ls-wb-text-color-pink: var(--ctp-wb-text-color-pink);
-}
+
+  --ls-color-file-sync-error: rgb(var(--ctp-red));
+  --ls-color-file-sync-pending: rgb(var(--ctp-yellow));
+  --ls-color-file-sync-idle: rgb(var(--ctp-green));
+;}
