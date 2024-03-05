@@ -1,5 +1,4 @@
-html:not(html[data-color]),
-html[data-color='none'] {
+html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
     // place for selection to customise elements not supported by default variables
 
     // Search bar placeholder
@@ -566,5 +565,12 @@ html[data-color='none'] {
             }
         }
 
+    }
+
+    .tl-container {
+        --ls-primary-background-color: var(--ctp-primary-background-color);
+        --ls-secondary-background-color: var(--ctp-secondary-background-color);
+        --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
+        --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
     }
 }

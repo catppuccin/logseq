@@ -1,6 +1,6 @@
 @use "main.scss";
 
-:root:not([data-color]), :root[data-color='none'] {
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
   --ctp-cm-theme: 'ctp-latte';
   --ctp-rosewater: 222, 149, 132;
   --ctp-flamingo: 221, 120, 120;

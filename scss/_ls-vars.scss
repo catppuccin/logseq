@@ -1,5 +1,5 @@
 // Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
-:root:not([data-color]), :root[data-color='none'] {
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
   --ls-error-color: var(--ctp-error-color);
   --ls-warning-color: var(--ctp-warning-color);
   --ls-success-color: var(--ctp-success-color);
@@ -24,8 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
 
-  html:not(html[data-color]),
-  html[data-color='none'] {
+html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
     background-color: rgb(var(--ctp-primary-background-color));
   }
 
@@ -34,8 +33,7 @@
   }
 }
 
-html:not(html[data-color]),
-html[data-color='none'] {
+html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
   --ls-primary-background-color: var(--ctp-primary-background-color);
   --ls-secondary-background-color: var(--ctp-secondary-background-color);
   --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
