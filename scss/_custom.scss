@@ -509,6 +509,9 @@ html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
         button.ui__button {
             background: transparent;
         }
+        span.ui__icon {
+            color: var(--ctp-primary-text-color);
+        }
     }
 
     button.ui__button {
