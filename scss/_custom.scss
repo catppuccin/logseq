@@ -576,4 +576,9 @@ html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
         --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
         --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
     }
+
+    .cp__themes-installed .it.is-active, .cp__themes-installed .it:hover {
+        background-color: var(--ctp-menu-hover-color);
+        opacity: 1;
+    }
 }
