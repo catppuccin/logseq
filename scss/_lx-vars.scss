@@ -1,4 +1,5 @@
 :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+    /*
     --background: 192 100% 11%;
     --foreground: 0 0% 95%;
     --accent: 192 80% 10%;
@@ -14,6 +15,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 192 100% 11%;
     --input: 203 35% 25%;
+    */
 
     --lx-popover-bg: var(--ctp-secondary-background-color);
 }
