@@ -1,33 +1,10 @@
 @use "main.scss";
+@use "utils.scss" as utils;
 
-:root:not([data-color]), :root[data-color='none'] {
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
   --ctp-cm-theme: 'ctp-mocha';
-  --ctp-rosewater: 245, 224, 220;
-  --ctp-flamingo: 242, 205, 205;
-  --ctp-pink: 245, 194, 231;
-  --ctp-mauve: 203, 166, 247;
-  --ctp-red: 243, 139, 168;
-  --ctp-maroon: 235, 160, 172;
-  --ctp-peach: 250, 179, 135;
-  --ctp-yellow: 249, 226, 175;
-  --ctp-green: 166, 227, 161;
-  --ctp-teal: 148, 226, 213;
-  --ctp-sky: 137, 220, 235;
-  --ctp-sapphire: 116, 199, 236;
-  --ctp-blue: 135, 176, 249;
-  --ctp-lavender: 180, 190, 254;
-  --ctp-text: 198, 208, 245;
-  --ctp-subtext1: 179, 188, 223;
-  --ctp-subtext0: 161, 168, 201;
-  --ctp-overlay2: 142, 149, 179;
-  --ctp-overlay1: 123, 129, 157;
-  --ctp-overlay0: 105, 109, 134;
-  --ctp-surface2: 86, 89, 112;
-  --ctp-surface1: 67, 70, 90;
-  --ctp-surface0: 49, 50, 68;
-  --ctp-base: 30, 30, 46;
-  --ctp-mantle: 24, 24, 37;
-  --ctp-crust: 17, 17, 27;
+  @include utils.ctp-rgb-vars(mocha);
+  @include utils.ctp-hsl-vars(mocha);
 }
 
 

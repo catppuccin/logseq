@@ -1,7 +1,6 @@
 @use "@catppuccin/highlightjs/sass/catppuccin.variables";
 
-html:not(html[data-color]),
-html[data-color='none'] {
+html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
     code.hljs {
         background-color: var(--ctp-tertiary-background-color);
     }

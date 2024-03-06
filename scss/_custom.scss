@@ -1,4 +1,6 @@
 html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
 html[data-color='none'] {
     // place for selection to customise elements not supported by default variables
 
@@ -176,7 +178,7 @@ html[data-color='none'] {
     }
 
     html[data-theme=dark] .cp__header a,
-    html[data-theme=dark] .cp__header button,
+    html[data-theme=dark] .cp__header button.button,
     html[data-theme=dark] .cp__right-sidebar-topbar button {
         opacity: 1;
     }
@@ -510,6 +512,9 @@ html[data-color='none'] {
         button.ui__button {
             background: transparent;
         }
+        span.ui__icon {
+            color: var(--ctp-primary-text-color);
+        }
     }
 
     button.ui__button {
@@ -566,5 +571,21 @@ html[data-color='none'] {
             }
         }
 
+    }
+
+    .tl-container {
+        --ls-primary-background-color: var(--ctp-primary-background-color);
+        --ls-secondary-background-color: var(--ctp-secondary-background-color);
+        --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
+        --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
+    }
+
+    .tl-button:hover {
+        background-color: var(--ctp-tertiary-background-color);
+    }
+
+    .cp__themes-installed .it.is-active, .cp__themes-installed .it:hover {
+        background-color: var(--ctp-menu-hover-color);
+        opacity: 1;
     }
 }
