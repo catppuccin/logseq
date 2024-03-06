@@ -19,3 +19,40 @@
 
     --lx-popover-bg: var(--ctp-secondary-background-color);
 }
+
+html[data-color=logseq][data-theme=light] {
+    /*
+    --primary: 200 97% 37%;
+    --primary-foreground: 255 92% 100%;
+    --accent: 200 97% 37%;
+    --accent-foreground: 255 92% 100%;
+    --ring: 200 97% 37%;
+    */
+    --lx-gray-01: initial;
+    --lx-gray-02: initial;
+    --lx-gray-03: initial;
+    --lx-gray-04: initial;
+    --lx-gray-05: initial;
+    --lx-gray-06: initial;
+    --lx-gray-07: initial;
+    --lx-gray-08: initial;
+    --lx-gray-09: initial;
+    --lx-gray-10: initial;
+    --lx-gray-11: initial;
+    --lx-gray-12: initial;
+}
+
+html[data-color=logseq] {
+    --lx-accent-01: initial;
+    --lx-accent-02: initial;
+    --lx-accent-03: initial;
+    --lx-accent-04: initial;
+    --lx-accent-05: initial;
+    --lx-accent-06: initial;
+    --lx-accent-07: initial;
+    --lx-accent-08: initial;
+    --lx-accent-09: initial;
+    --lx-accent-10: initial;
+    --lx-accent-11: initial;
+    --lx-accent-12: initial;
+}
