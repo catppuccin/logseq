@@ -1,33 +1,10 @@
 @use "main.scss";
+@use "utils.scss" as utils;
 
 :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
   --ctp-cm-theme: 'ctp-macchiato';
-  --ctp-rosewater: 244, 219, 214;
-  --ctp-flamingo: 240, 198, 198;
-  --ctp-pink: 245, 189, 230;
-  --ctp-mauve: 198, 160, 246;
-  --ctp-red: 237, 135, 150;
-  --ctp-maroon: 238, 153, 160;
-  --ctp-peach: 245, 169, 127;
-  --ctp-yellow: 238, 212, 159;
-  --ctp-green: 166, 218, 149;
-  --ctp-teal: 139, 213, 202;
-  --ctp-sky: 145, 215, 227;
-  --ctp-sapphire: 125, 196, 228;
-  --ctp-blue: 138, 173, 244;
-  --ctp-lavender: 183, 189, 248;
-  --ctp-text: 197, 207, 245;
-  --ctp-subtext1: 179, 188, 224;
-  --ctp-subtext0: 161, 170, 203;
-  --ctp-overlay2: 143, 151, 183;
-  --ctp-overlay1: 125, 132, 162;
-  --ctp-overlay0: 108, 114, 141;
-  --ctp-surface2: 90, 95, 120;
-  --ctp-surface1: 72, 76, 100;
-  --ctp-surface0: 54, 58, 79;
-  --ctp-base: 36, 39, 58;
-  --ctp-mantle: 30, 32, 48;
-  --ctp-crust: 24, 25, 38;
+  @include utils.ctp-rgb-vars(macchiato);
+  @include utils.ctp-hsl-vars(macchiato);
 }
 
 // custom check box checked image

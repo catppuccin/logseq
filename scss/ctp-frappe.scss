@@ -1,33 +1,10 @@
 @use "main.scss";
+@use "utils.scss" as utils;
 
 :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
   --ctp-cm-theme: 'ctp-frappe';
-  --ctp-rosewater: 242, 213, 207;
-  --ctp-flamingo: 238, 190, 190;
-  --ctp-pink: 244, 184, 228;
-  --ctp-mauve: 202, 158, 230;
-  --ctp-red: 231, 130, 132;
-  --ctp-maroon: 234, 153, 156;
-  --ctp-peach: 239, 159, 118;
-  --ctp-yellow: 229, 200, 144;
-  --ctp-green: 166, 209, 137;
-  --ctp-teal: 129, 200, 190;
-  --ctp-sky: 153, 209, 219;
-  --ctp-sapphire: 133, 193, 220;
-  --ctp-blue: 140, 170, 238;
-  --ctp-lavender: 186, 187, 241;
-  --ctp-text: 198, 206, 239;
-  --ctp-subtext1: 181, 189, 220;
-  --ctp-subtext0: 165, 172, 201;
-  --ctp-overlay2: 148, 155, 183;
-  --ctp-overlay1: 131, 138, 164;
-  --ctp-overlay0: 115, 120, 145;
-  --ctp-surface2: 98, 103, 126;
-  --ctp-surface1: 81, 86, 108;
-  --ctp-surface0: 65, 69, 89;
-  --ctp-base: 48, 52, 70;
-  --ctp-mantle: 41, 44, 60;
-  --ctp-crust: 35, 38, 52;
+  @include utils.ctp-rgb-vars(frappe);
+  @include utils.ctp-hsl-vars(frappe);
 }
 
 // custom check box checked image

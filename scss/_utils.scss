@@ -1,0 +1,26 @@
+@use "@catppuccin/palette/scss/catppuccin" as catppuccin;
+@use 'sass:math';
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function hex-to-hsl($hexColor) {
+    @return #{math.round(strip-unit(hue($hexColor)))}, #{math.round(saturation($hexColor))}, #{math.round(lightness($hexColor))}
+}
+
+@function hex-to-rgb($hexColor) {
+    @return #{red($hexColor)}, #{green($hexColor)}, #{blue($hexColor)}
+}
+
+@mixin ctp-hsl-vars ($flavor) {
+    @each $color, $hex in map-get(catppuccin.$palette, $flavor) {
+        --ctp-#{$color}-hsl: #{hex-to-hsl($hex)};
+    }
+}
+
+@mixin ctp-rgb-vars ($flavor) {
+    @each $color, $hex in map-get(catppuccin.$palette, $flavor) {
+        --ctp-#{$color}: #{hex-to-rgb($hex)};
+    }
+}
