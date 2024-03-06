@@ -1,4 +1,7 @@
-html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
+html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
+html[data-color='none'] {
     // place for selection to customise elements not supported by default variables
 
     // Search bar placeholder
@@ -175,7 +178,7 @@ html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
     }
 
     html[data-theme=dark] .cp__header a,
-    html[data-theme=dark] .cp__header button,
+    html[data-theme=dark] .cp__header button.button,
     html[data-theme=dark] .cp__right-sidebar-topbar button {
         opacity: 1;
     }

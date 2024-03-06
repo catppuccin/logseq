@@ -35,7 +35,7 @@ function setAccent(accentName) {
     logseq.provideStyle({
         key: 'ctp-accent',
         style: `
-          :root:not([data-color]), :root[data-color='none'] {
+          :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
             --ctp-accent: ${accentMap[accentName]};
           }
         `,

@@ -33,7 +33,13 @@ html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
   }
 }
 
-html:not(html[data-color]), html[data-theme='dark'][data-color='logseq'], html[data-color='none'] {
+.light-theme,
+.dark-theme,
+html:not(html[data-color]),
+html[data-theme='dark'][data-color='logseq'],
+html[data-theme='dark'],
+html[data-theme='light'],
+html[data-color='none'] {
   --ls-primary-background-color: var(--ctp-primary-background-color);
   --ls-secondary-background-color: var(--ctp-secondary-background-color);
   --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
