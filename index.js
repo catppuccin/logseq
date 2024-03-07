@@ -29,7 +29,23 @@ const settings = [
         enumChoices: accentNames,
         default: "Full palette"
     },
+    {
+        key: "CtpWhiteboard",
+        title: "Override Whiteboard theme to light theme?",
+        description: "  Override whiteboard theme to use Latte theme flavor",
+        type: "boolean",
+        default: false,
+    },
 ];
+
+function setWhiteboardOverride(bool) {
+    const rootContainer = parent.document.querySelector(`html`);
+    if (bool) {
+        rootContainer.classList.add('whiteboard-latte');
+    } else {
+        rootContainer.classList.remove('whiteboard-latte');
+    }
+}
 
 function setAccent(accentName) {
     logseq.provideStyle({
@@ -53,6 +69,9 @@ async function main() {
     logseq.onSettingsChanged(updatedSettings => {
         if (setAccent(updatedSettings.CtpAccent)) {
             console.log(`Applied ${updatedSettings.CtpAccent} accent✨`);
+        }
+        if (setWhiteboardOverride(updatedSettings.CtpWhiteboard)) {
+            console.log(`${updatedSettings.CtpWhiteboard ? 'Applied' : 'Removed'} Latte whiteboard flavor✨`);
         }
     });
 }
