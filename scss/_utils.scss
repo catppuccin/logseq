@@ -6,11 +6,20 @@
 }
 
 @function hex-to-hsl($hexColor) {
-    @return #{math.round(strip-unit(hue($hexColor)))}, #{math.round(saturation($hexColor))}, #{math.round(lightness($hexColor))}
+    @return #{math.round(strip-unit(hue($hexColor)))}, #{math.round(saturation($hexColor))}, #{math.round(lightness($hexColor))};
 }
 
 @function hex-to-rgb($hexColor) {
-    @return #{red($hexColor)}, #{green($hexColor)}, #{blue($hexColor)}
+    @return #{red($hexColor)}, #{green($hexColor)}, #{blue($hexColor)};
+}
+
+@function get-flavor-color($flavor, $name) {
+    $map: map-get(catppuccin.$palette, $flavor);
+    @return map-get($map, $name);
+}
+
+@function get-flavor-color-rgb($flavor, $name) {
+    @return #{hex-to-rgb(get-flavor-color($flavor, $name))};
 }
 
 @mixin ctp-hsl-vars ($flavor) {
