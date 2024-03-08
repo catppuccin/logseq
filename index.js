@@ -54,6 +54,13 @@ function setAccent(accentName) {
           :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
             --ctp-accent: ${accentMap[accentName]};
           }
+          html.whiteboard-latte div.whiteboard-page {
+            --ctp-accent: ${accentMap[accentName]};
+          }
+          html.whiteboard-latte div.dashboard-card {
+            --ctp-accent: ${accentMap[accentName]};
+
+          }
         `,
     });
 }

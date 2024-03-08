@@ -1,5 +1,5 @@
-:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
-  // following are mapped to variables used in logseq
+@mixin variables {
+  // following are custom ctp variables mapped to logseq variables
   --ctp-primary-background-color: rgb(var(--ctp-base));
   --ctp-secondary-background-color: rgb(var(--ctp-mantle));
   --ctp-tertiary-background-color: rgb(var(--ctp-crust));
@@ -143,6 +143,10 @@
   --ctp-marker-border-radius: 4px;
   --ctp-checkbox-color: var(--ctp-accent, var(--ctp-teal));
   --ctp-marker-size: 16px;
+}
+
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+  @include variables;
 }
 
 

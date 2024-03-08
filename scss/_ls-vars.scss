@@ -1,12 +1,4 @@
-// Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
-.light-theme,
-.dark-theme,
-html:not(html[data-color]),
-html[data-theme='dark'][data-color='logseq'],
-html[data-theme='light'][data-color='logseq'],
-html[data-theme='dark'],
-html[data-theme='light'],
-html[data-color='none'] {
+@mixin variables {
   --ls-primary-background-color: var(--ctp-primary-background-color);
   --ls-secondary-background-color: var(--ctp-secondary-background-color);
   --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
@@ -101,37 +93,21 @@ html[data-color='none'] {
 
   --ls-left-sidebar-active-background: var(--ctp-color-level-4);
 
-  /* Whiteboard */
-
-  /* Whiteboard object colors */
-
-  --ls-wb-background-color-gray: var(--ctp-wb-background-color-gray);
-  --ls-wb-background-color-red: var(--ctp-wb-background-color-red);
-  --ls-wb-background-color-yellow: var(--ctp-wb-background-color-yellow);
-  --ls-wb-background-color-green: var(--ctp-wb-background-color-green);
-  --ls-wb-background-color-blue: var(--ctp-wb-background-color-blue);
-  --ls-wb-background-color-purple: var(--ctp-wb-background-color-purple);
-  --ls-wb-background-color-pink: var(--ctp-wb-background-color-pink);
-
-  --ls-wb-stroke-color-gray: var(--ctp-wb-stroke-color-gray);
-  --ls-wb-stroke-color-red: var(--ctp-wb-stroke-color-red);
-  --ls-wb-stroke-color-yellow: var(--ctp-wb-stroke-color-yellow);
-  --ls-wb-stroke-color-green: var(--ctp-wb-stroke-color-green);
-  --ls-wb-stroke-color-blue: var(--ctp-wb-stroke-color-blue);
-  --ls-wb-stroke-color-purple: var(--ctp-wb-stroke-color-purple);
-  --ls-wb-stroke-color-pink: var(--ctp-wb-stroke-color-pink);
-
-  --ls-wb-text-color-gray: var(--ctp-wb-text-color-gray);
-  --ls-wb-text-color-red: var(--ctp-wb-text-color-red);
-  --ls-wb-text-color-yellow: var(--ctp-wb-text-color-yellow);
-  --ls-wb-text-color-green: var(--ctp-wb-text-color-green);
-  --ls-wb-text-color-blue: var(--ctp-wb-text-color-blue);
-  --ls-wb-text-color-purple: var(--ctp-wb-text-color-purple);
-  --ls-wb-text-color-pink: var(--ctp-wb-text-color-pink);
-
   --ls-color-file-sync-error: rgb(var(--ctp-red));
   --ls-color-file-sync-pending: rgb(var(--ctp-yellow));
   --ls-color-file-sync-idle: rgb(var(--ctp-green));
+}
+
+// Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
+.light-theme,
+.dark-theme,
+html:not(html[data-color]),
+html[data-theme='dark'][data-color='logseq'],
+html[data-theme='light'][data-color='logseq'],
+html[data-theme='dark'],
+html[data-theme='light'],
+html[data-color='none'] {
+  @include variables;
 }
 
 :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
@@ -140,21 +116,6 @@ html[data-color='none'] {
   --ls-success-color: var(--ctp-success-color);
   --ls-text-on-accent: rgb(var(--ctp-text));
 
-  .logseq-tldraw {
-    --tl-selectFill: rgba(var(--ctp-tl-selectFill), 0.05);
-    --tl-selectStroke: rgb(var(--ctp-tl-selectStroke));
-  }
-
-  .tl-text-label-inner-wrapper {
-    // this is for overriding the text colors inside shapes (e.g. the label color of a rectangle)
-    --ls-wb-text-color-gray: var(--ctp-wb-shape-label-color-gray);
-    --ls-wb-text-color-red: var(--ctp-wb-shape-label-color-red);
-    --ls-wb-text-color-yellow: var(--ctp-wb-shape-label-color-yellow);
-    --ls-wb-text-color-green: var(--ctp-wb-shape-label-color-green);
-    --ls-wb-text-color-blue: var(--ctp-wb-shape-label-color-blue);
-    --ls-wb-text-color-purple: var(--ctp-wb-shape-label-color-purple);
-    --ls-wb-text-color-pink: var(--ctp-wb-shape-label-color-pink);
-  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -471,17 +471,6 @@ html[data-color='none'] {
 
     }
 
-    .tl-container {
-        --ls-primary-background-color: var(--ctp-primary-background-color);
-        --ls-secondary-background-color: var(--ctp-secondary-background-color);
-        --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
-        --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
-    }
-
-    .tl-button:hover {
-        background-color: var(--ctp-tertiary-background-color);
-    }
-
     .cp__themes-installed .it.is-active, .cp__themes-installed .it:hover {
         background-color: var(--ctp-menu-hover-color);
         opacity: 1;
