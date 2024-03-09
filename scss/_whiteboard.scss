@@ -3,7 +3,16 @@
 @use "ls-vars" as ls;
 @use "theme" as theme;
 
+@mixin latte-override-vars {
+    @include utils.ctp-rgb-vars(latte);
+    @include utils.ctp-hsl-vars(latte);
+    @include ctp.variables;
+    @include ls.variables;
+    @include theme.variables;
+}
+
 @mixin variables {
+    /* Color swatches */
     --ctp-wb-color-gray: rgb(var(--ctp-overlay2));
     --ctp-wb-color-red: rgb(var(--ctp-red));
     --ctp-wb-color-yellow: rgb(var(--ctp-yellow));
@@ -31,6 +40,7 @@
     --ctp-wb-stroke-color-purple: var(--ctp-wb-color-purple);
     --ctp-wb-stroke-color-pink: var(--ctp-wb-color-pink);
 
+    /* Pen path color */
     --ctp-wb-text-color-gray: var(--ctp-wb-color-gray);
     --ctp-wb-text-color-red: var(--ctp-wb-color-red);
     --ctp-wb-text-color-yellow: var(--ctp-wb-color-yellow);
@@ -39,11 +49,7 @@
     --ctp-wb-text-color-purple: var(--ctp-wb-color-purple);
     --ctp-wb-text-color-pink: var(--ctp-wb-color-pink);
 
-    // since text and lines share a color, it is not possible to have a fill color
-    // with the regular ctp colors
-    // so the options are to either shade the fill/bg color or
-    // override the text color variable inside the shape labels
-
+    /* Shape label color */
     --ctp-wb-shape-label-color-gray: var(--ctp-wb-color-gray);
     --ctp-wb-shape-label-color-red: var(--ctp-wb-color-red);
     --ctp-wb-shape-label-color-yellow: var(--ctp-wb-color-yellow);
@@ -75,11 +81,12 @@
     --ctp-wb-layout-button-foreground: var(--ctp-accent, var(--ctp-teal));
 
     // selected item bg in e.g. a dropdown
-    --ctp-tl-select-input-select-item: var(--ctp-surface2);
+    --ctp-tl-select-input-select-item: var(--ctp-link-text-hover-color);
     --ctp-tl-selectFill: var(--ctp-accent, var(--ctp-blue));
     --ctp-tl-selectStroke: var(--ctp-accent, var(--ctp-blue));
 
     /* logseq variables for whiteboard */
+    /* Shape background color */
     --ls-wb-background-color-gray: var(--ctp-wb-background-color-gray);
     --ls-wb-background-color-red: var(--ctp-wb-background-color-red);
     --ls-wb-background-color-yellow: var(--ctp-wb-background-color-yellow);
@@ -88,6 +95,7 @@
     --ls-wb-background-color-purple: var(--ctp-wb-background-color-purple);
     --ls-wb-background-color-pink: var(--ctp-wb-background-color-pink);
 
+    /* Shape outline color */
     --ls-wb-stroke-color-gray: var(--ctp-wb-stroke-color-gray);
     --ls-wb-stroke-color-red: var(--ctp-wb-stroke-color-red);
     --ls-wb-stroke-color-yellow: var(--ctp-wb-stroke-color-yellow);
@@ -96,6 +104,7 @@
     --ls-wb-stroke-color-purple: var(--ctp-wb-stroke-color-purple);
     --ls-wb-stroke-color-pink: var(--ctp-wb-stroke-color-pink);
 
+    /* Pen path color */
     --ls-wb-text-color-gray: var(--ctp-wb-text-color-gray);
     --ls-wb-text-color-red: var(--ctp-wb-text-color-red);
     --ls-wb-text-color-yellow: var(--ctp-wb-text-color-yellow);
@@ -107,19 +116,18 @@
     --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
     --ls-wb-text-color-default: var(--ls-primary-text-color);
     --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+    --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+    --ls-whiteboard-select-background-selected: var(--ctp-color-level-5);
 }
 
 /* Below related to whiteboard latte override feature */
 html.whiteboard-latte  {
     div.dashboard-card, div.whiteboard-page {
-        @include utils.ctp-rgb-vars(latte);
-        @include utils.ctp-hsl-vars(latte);
-        @include ctp.variables;
-        @include ls.variables;
-        @include theme.variables;
+        @include latte-override-vars;
         @include variables;
 
         background-color: var(--ls-primary-background-color);
+        color: var(--ls-primary-text-color);
 
         .tl-button:hover {
             background-color: var(--ls-menu-hover-color);
@@ -128,6 +136,14 @@ html.whiteboard-latte  {
         .dashboard-card-title {
             color: rgb(var(--ctp-text));
         }
+    }
+    .tl-select-input-content {
+        @include latte-override-vars;
+        @include variables;
+    }
+    .tl-tooltip-content {
+        @include latte-override-vars;
+        @include variables;
     }
 }
 /* Above related to whiteboard latte override feature */
@@ -143,6 +159,12 @@ html:not(html[data-color]),
 html[data-theme=light][data-color='logseq'],
 html[data-theme=dark][data-color='logseq'],
 html[data-color='none'] {
+    // selected item bg in e.g. a dropdown
+    .tl-select-input-select-item[data-state=checked] {
+        background: rgb(var(--ctp-wb-button-selected-background));
+        color: var(--ctp-link-text-hover-color);
+    }
+
     div.whiteboard-page {
 
         // these are the colors that appear when selecting a color (e.g. for fill)
@@ -209,9 +231,7 @@ html[data-color='none'] {
         }
 
         html[data-theme=dark] .tl-type-tag[data-active=true] {
-
             background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
-
             border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
 
             .tie {
@@ -220,6 +240,9 @@ html[data-color='none'] {
         }
 
         // Whiteboard context menu button icon
+        .tl-menu {
+            background-color: var(--ctp-secondary-background-color);
+        }
         .tl-menu-item i {
             color: rgb(var(--ctp-wb-button-menu-foreground));
         }
@@ -231,11 +254,6 @@ html[data-color='none'] {
             :hover {
                 background-color: rgb(var(--ctp-wb-quick-links-button-hover));
             }
-        }
-
-        // selected item bg in e.g. a dropdown
-        .tl-select-input-select-item[data-state=checked] {
-            background: rgb(var(--ctp-tl-select-input-select-item));
         }
 
         // align-buttons that appear when right clicking after

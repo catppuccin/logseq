@@ -59,7 +59,12 @@ function setAccent(accentName) {
           }
           html.whiteboard-latte div.dashboard-card {
             --ctp-accent: ${accentMap[accentName]};
-
+          }
+          html.whiteboard-latte div.tl-tooltip-content {
+            --ctp-accent: ${accentMap[accentName]};
+          }
+          html.whiteboard-latte div.tl-select-input-content {
+            --ctp-accent: ${accentMap[accentName]};
           }
         `,
     });
