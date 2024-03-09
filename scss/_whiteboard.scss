@@ -148,6 +148,7 @@ html.whiteboard-latte  {
 }
 /* Above related to whiteboard latte override feature */
 
+.light-theme, .white-theme, html[data-theme=light],
 .dark-theme, html[data-theme=dark],
 html:not(.whiteboard-latte),
 :root:not([data-color]),
