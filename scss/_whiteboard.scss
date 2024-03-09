@@ -1,0 +1,294 @@
+@use "utils.scss" as utils;
+@use "ctp-vars" as ctp;
+@use "ls-vars" as ls;
+@use "theme" as theme;
+
+@mixin latte-override-vars {
+    @include utils.ctp-rgb-vars(latte);
+    @include utils.ctp-hsl-vars(latte);
+    @include ctp.variables;
+    @include ls.variables;
+    @include theme.variables;
+}
+
+@mixin variables {
+    /* Color swatches */
+    --ctp-wb-color-gray: rgb(var(--ctp-overlay2));
+    --ctp-wb-color-red: rgb(var(--ctp-red));
+    --ctp-wb-color-yellow: rgb(var(--ctp-yellow));
+    --ctp-wb-color-green: rgb(var(--ctp-green));
+    --ctp-wb-color-blue: rgb(var(--ctp-blue));
+    --ctp-wb-color-purple: rgb(var(--ctp-mauve));
+    --ctp-wb-color-pink: rgb(var(--ctp-pink));
+
+    /* Whiteboard object colors */
+    --ctp-wb-background-color-gray: color-mix(in srgb, var(--ctp-wb-color-gray), rgb(var(--ctp-base)) 70%);
+    --ctp-wb-background-color-red: color-mix(in srgb, var(--ctp-wb-color-red), rgb(var(--ctp-base)) 60%);
+    --ctp-wb-background-color-yellow: color-mix(in srgb, var(--ctp-wb-color-yellow), rgb(var(--ctp-base)) 60%);
+    --ctp-wb-background-color-green: color-mix(in srgb, var(--ctp-wb-color-green), rgb(var(--ctp-base)) 60%);
+    --ctp-wb-background-color-blue: color-mix(in srgb, var(--ctp-wb-color-blue), rgb(var(--ctp-base)) 60%);
+    --ctp-wb-background-color-purple: color-mix(in srgb, var(--ctp-wb-color-purple), rgb(var(--ctp-base)) 60%);
+    --ctp-wb-background-color-pink: color-mix(in srgb, var(--ctp-wb-color-pink), rgb(var(--ctp-base)) 60%);
+
+    // NOTE: drawn lines with the pencil use the text color
+    // and not this stroke color
+    --ctp-wb-stroke-color-gray: var(--ctp-wb-color-gray);
+    --ctp-wb-stroke-color-red: var(--ctp-wb-color-red);
+    --ctp-wb-stroke-color-yellow: var(--ctp-wb-color-yellow);
+    --ctp-wb-stroke-color-green: var(--ctp-wb-color-green);
+    --ctp-wb-stroke-color-blue: var(--ctp-wb-color-blue);
+    --ctp-wb-stroke-color-purple: var(--ctp-wb-color-purple);
+    --ctp-wb-stroke-color-pink: var(--ctp-wb-color-pink);
+
+    /* Pen path color */
+    --ctp-wb-text-color-gray: var(--ctp-wb-color-gray);
+    --ctp-wb-text-color-red: var(--ctp-wb-color-red);
+    --ctp-wb-text-color-yellow: var(--ctp-wb-color-yellow);
+    --ctp-wb-text-color-green: var(--ctp-wb-color-green);
+    --ctp-wb-text-color-blue: var(--ctp-wb-color-blue);
+    --ctp-wb-text-color-purple: var(--ctp-wb-color-purple);
+    --ctp-wb-text-color-pink: var(--ctp-wb-color-pink);
+
+    /* Shape label color */
+    --ctp-wb-shape-label-color-gray: var(--ctp-wb-color-gray);
+    --ctp-wb-shape-label-color-red: var(--ctp-wb-color-red);
+    --ctp-wb-shape-label-color-yellow: var(--ctp-wb-color-yellow);
+    --ctp-wb-shape-label-color-green: var(--ctp-wb-color-green);
+    --ctp-wb-shape-label-color-blue: var(--ctp-wb-color-blue);
+    --ctp-wb-shape-label-color-purple: var(--ctp-wb-color-purple);
+    --ctp-wb-shape-label-color-pink: var(--ctp-wb-color-pink);
+
+    // Whiteboard Buttons
+
+    // selected tool button
+    --ctp-wb-button-selected-foreground: var(--ctp-accent, var(--ctp-mauve));
+    --ctp-wb-button-selected-background: var(--ctp-surface0);
+
+    // regular tool button
+    --ctp-wb-button-foreground: var(--ctp-text);
+    --ctp-wb-button-menu-foreground: var(--ctp-accent, var(--ctp-teal));
+
+    // double click or "add block or page" from toolbar -> bottom icons
+    --ctp-wb-button-type-tag-background-active: var(--ctp-accent, var(--ctp-mauve));
+    --ctp-wb-button-type-tag-background-inactive: var(--ctp-surface0);
+    --ctp-wb-button-type-tag-foreground: var(--ctp-text);
+
+    // page reference block -> hover -> below button to referenced page
+    --ctp-wb-quick-links-button: var(--ctp-accent, var(--ctp-blue));
+    --ctp-wb-quick-links-button-hover: var(--ctp-sky);
+
+    // select multiple objects -> right click -> align buttons on top
+    --ctp-wb-layout-button-foreground: var(--ctp-accent, var(--ctp-teal));
+
+    // selected item bg in e.g. a dropdown
+    --ctp-tl-select-input-select-item: var(--ctp-link-text-hover-color);
+    --ctp-tl-selectFill: var(--ctp-accent, var(--ctp-blue));
+    --ctp-tl-selectStroke: var(--ctp-accent, var(--ctp-blue));
+
+    /* logseq variables for whiteboard */
+    /* Shape background color */
+    --ls-wb-background-color-gray: var(--ctp-wb-background-color-gray);
+    --ls-wb-background-color-red: var(--ctp-wb-background-color-red);
+    --ls-wb-background-color-yellow: var(--ctp-wb-background-color-yellow);
+    --ls-wb-background-color-green: var(--ctp-wb-background-color-green);
+    --ls-wb-background-color-blue: var(--ctp-wb-background-color-blue);
+    --ls-wb-background-color-purple: var(--ctp-wb-background-color-purple);
+    --ls-wb-background-color-pink: var(--ctp-wb-background-color-pink);
+
+    /* Shape outline color */
+    --ls-wb-stroke-color-gray: var(--ctp-wb-stroke-color-gray);
+    --ls-wb-stroke-color-red: var(--ctp-wb-stroke-color-red);
+    --ls-wb-stroke-color-yellow: var(--ctp-wb-stroke-color-yellow);
+    --ls-wb-stroke-color-green: var(--ctp-wb-stroke-color-green);
+    --ls-wb-stroke-color-blue: var(--ctp-wb-stroke-color-blue);
+    --ls-wb-stroke-color-purple: var(--ctp-wb-stroke-color-purple);
+    --ls-wb-stroke-color-pink: var(--ctp-wb-stroke-color-pink);
+
+    /* Pen path color */
+    --ls-wb-text-color-gray: var(--ctp-wb-text-color-gray);
+    --ls-wb-text-color-red: var(--ctp-wb-text-color-red);
+    --ls-wb-text-color-yellow: var(--ctp-wb-text-color-yellow);
+    --ls-wb-text-color-green: var(--ctp-wb-text-color-green);
+    --ls-wb-text-color-blue: var(--ctp-wb-text-color-blue);
+    --ls-wb-text-color-purple: var(--ctp-wb-text-color-purple);
+    --ls-wb-text-color-pink: var(--ctp-wb-text-color-pink);
+
+    --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+    --ls-wb-text-color-default: var(--ls-primary-text-color);
+    --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+    --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+    --ls-whiteboard-select-background-selected: var(--ctp-color-level-5);
+}
+
+/* Below related to whiteboard latte override feature */
+html.whiteboard-latte  {
+    div.dashboard-card, div.whiteboard-page {
+        @include latte-override-vars;
+        @include variables;
+
+        background-color: var(--ls-primary-background-color);
+        color: var(--ls-primary-text-color);
+
+        .tl-button:hover {
+            background-color: var(--ls-menu-hover-color);
+        }
+
+        .dashboard-card-title {
+            color: rgb(var(--ctp-text));
+        }
+    }
+    .tl-select-input-content {
+        @include latte-override-vars;
+        @include variables;
+    }
+    .tl-tooltip-content {
+        @include latte-override-vars;
+        @include variables;
+    }
+}
+/* Above related to whiteboard latte override feature */
+
+.light-theme, .white-theme, html[data-theme=light],
+.dark-theme, html[data-theme=dark],
+html:not(.whiteboard-latte),
+:root:not([data-color]),
+:root[data-color='none'],
+:root[data-color='logseq'] {
+    @include variables;
+}
+
+html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
+html[data-color='none'] {
+    // selected item bg in e.g. a dropdown
+    .tl-select-input-select-item[data-state=checked] {
+        background: rgb(var(--ctp-wb-button-selected-background));
+        color: var(--ctp-link-text-hover-color);
+    }
+
+    div.whiteboard-page {
+
+        // these are the colors that appear when selecting a color (e.g. for fill)
+        .bg-gray-500 {
+            background-color: var(--ctp-wb-color-gray);
+        }
+
+        .bg-red-500 {
+            background-color: var(--ctp-wb-color-red);
+        }
+
+        .bg-yellow-500 {
+            background-color: var(--ctp-wb-color-yellow);
+        }
+
+        .bg-green-500 {
+            background-color: var(--ctp-wb-color-green);
+        }
+
+        .bg-blue-500 {
+            background-color: var(--ctp-wb-color-blue);
+        }
+
+        .bg-purple-500 {
+            background-color: var(--ctp-wb-color-purple);
+        }
+
+        .bg-pink-500 {
+            background-color: var(--ctp-wb-color-pink);
+        }
+
+        // Whiteboard tool button
+        .tl-button[data-selected=true] {
+            background: rgb(var(--ctp-wb-button-selected-background));
+
+            i {
+                color: rgb(var(--ctp-wb-button-selected-foreground));
+            }
+        }
+
+        .ti,
+        .tie {
+            color: rgb(var(--ctp-wb-button-foreground));
+        }
+
+        .tl-context-bar {
+
+            .ti,
+            .tie {
+                color: rgb(var(--ctp-wb-button-menu-foreground));
+            }
+        }
+
+        // double click or "add block or page" from toolbar -> icons
+        // by default, bg color is hardcoded
+        .tl-type-tag {
+            background-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+            border-color: rgb(var(--ctp-wb-button-type-tag-background-inactive));
+            // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+
+            .tie {
+                color: rgb(var(--ctp-wb-button-type-tag-foreground));
+            }
+        }
+
+        html[data-theme=dark] .tl-type-tag[data-active=true] {
+            background-color: rgba(var(--ctp-wb-button-type-tag-background-active), 0.8);
+            border-color: rgb(var(--ctp-wb-button-type-tag-background-active));
+
+            .tie {
+                color: rgb(var(--ctp-wb-button-type-tag-foreground));
+            }
+        }
+
+        // Whiteboard context menu button icon
+        .tl-menu {
+            background-color: var(--ctp-secondary-background-color);
+        }
+        .tl-menu-item i {
+            color: rgb(var(--ctp-wb-button-menu-foreground));
+        }
+
+        // Button that appears below a page reference block (on hover)
+        .tl-quick-links-row:first-child {
+            background-color: rgb(var(--ctp-wb-quick-links-button));
+
+            :hover {
+                background-color: rgb(var(--ctp-wb-quick-links-button-hover));
+            }
+        }
+
+        // align-buttons that appear when right clicking after
+        // selecting multiple objects
+        i[class*="ti-layout-"] {
+            color: rgb(var(--ctp-wb-layout-button-foreground));
+        }
+
+        .tl-container {
+            --ls-primary-background-color: var(--ctp-primary-background-color);
+            --ls-secondary-background-color: var(--ctp-secondary-background-color);
+            --ls-tertiary-background-color: var(--ctp-tertiary-background-color);
+            --ls-quaternary-background-color: var(--ctp-quaternary-background-color);
+        }
+
+        .tl-button:hover {
+            background-color: var(--ctp-tertiary-background-color);
+        }
+
+        .tl-text-label-inner-wrapper {
+            // this is for overriding the text colors inside shapes (e.g. the label color of a rectangle)
+            --ls-wb-text-color-gray: var(--ctp-wb-shape-label-color-gray);
+            --ls-wb-text-color-red: var(--ctp-wb-shape-label-color-red);
+            --ls-wb-text-color-yellow: var(--ctp-wb-shape-label-color-yellow);
+            --ls-wb-text-color-green: var(--ctp-wb-shape-label-color-green);
+            --ls-wb-text-color-blue: var(--ctp-wb-shape-label-color-blue);
+            --ls-wb-text-color-purple: var(--ctp-wb-shape-label-color-purple);
+            --ls-wb-text-color-pink: var(--ctp-wb-shape-label-color-pink);
+        }
+
+        .logseq-tldraw {
+            --tl-selectFill: rgba(var(--ctp-tl-selectFill), 0.05);
+            --tl-selectStroke: rgb(var(--ctp-tl-selectStroke));
+        }
+    }
+}

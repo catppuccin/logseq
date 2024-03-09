@@ -1,20 +1,18 @@
 @use "main.scss";
 @use "utils.scss" as utils;
 
+$flavor: mocha;
+
 :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
-  --ctp-cm-theme: 'ctp-oled';
-  @include utils.ctp-rgb-vars(mocha);
-  @include utils.ctp-hsl-vars(mocha);
+  --ctp-cm-theme: 'ctp-#{$flavor}';
+  @include utils.ctp-rgb-vars($flavor);
+  @include utils.ctp-hsl-vars($flavor);
   --ctp-base: 02, 02, 02;
   --ctp-mantle: 01, 01, 01;
   --ctp-crust: 00, 00, 00;
 }
 
-
-// custom check box checked image
-// css var works but does not trigger reloading data asset in browser
-// hence a sass variable
-$ctp-base: 02, 02, 02;
+$ctp-base: utils.get-flavor-color-rgb($flavor, base);
 
 .form-checkbox:checked {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='rgb(#{$ctp-base})' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;
