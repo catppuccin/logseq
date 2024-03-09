@@ -4,6 +4,9 @@ html[data-theme=dark][data-color='logseq'],
 html[data-color='none'] {
     // place for selection to customise elements not supported by default variables
 
+    #left-sidebar {
+        background-color: var(--ctp-secondary-background-color);
+    }
     // Search bar placeholder
     div.input-wrap>input::placeholder {
         color: var(--ctp-search-input-placeholder);
@@ -233,7 +236,7 @@ html[data-color='none'] {
     }
 
     .cp__settings-inner>aside ul>li>a>strong {
-        color: rgb(var(--ctp-primary-text-color));
+        color: var(--ctp-primary-text-color);
     }
 
     .cp__settings-inner>aside ul>li.active {
@@ -245,7 +248,7 @@ html[data-color='none'] {
     }
 
     .cp__all_pages_table td>span {
-        color: rgb(var(--ctp-primary-text-color));
+        color: var(--ctp-primary-text-color);
     }
 
     // full pallete overrides
@@ -257,7 +260,7 @@ html[data-color='none'] {
 
     b,
     strong {
-        color: rgb(var(--ctp-text-bold));
+        color: var(--ctp-text-bold);
     }
 
     i {
@@ -401,6 +404,9 @@ html[data-color='none'] {
     .sidebar-item-header .item-actions {
         button {
             background-color: transparent;
+            .ui__icon {
+                color: var(--ctp-primary-text-color);
+            }
         }
         button:hover {
             background-color: var(--ctp-menu-hover-color);
@@ -474,5 +480,11 @@ html[data-color='none'] {
     .cp__themes-installed .it.is-active, .cp__themes-installed .it:hover {
         background-color: var(--ctp-menu-hover-color);
         opacity: 1;
+    }
+
+    .search-results {
+        .text-gray-12 {
+            color: var(--ctp-text-primary-color);
+        }
     }
 }

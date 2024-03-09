@@ -120,7 +120,7 @@
   --ctp-dropdown-border-color: var(--color-base-50);
 
   // Full accent overrides
-  --ctp-text-bold: var(var(--ctp-primary-text-color));
+  --ctp-text-bold: var(--ctp-primary-text-color);
   --ctp-text-heading: var(--ctp-accent, var(--ctp-lavender));
   --ctp-text-italics: var(--ctp-accent, var(--ctp-green));
   --ctp-text-underline: var(--ctp-primary-text-color);
