@@ -1,6 +1,7 @@
 @use "utils.scss" as utils;
 @use "ctp-vars" as ctp;
 @use "ls-vars" as ls;
+@use "theme" as theme;
 
 @mixin variables {
     --ctp-wb-color-gray: rgb(var(--ctp-overlay2));
@@ -102,6 +103,10 @@
     --ls-wb-text-color-blue: var(--ctp-wb-text-color-blue);
     --ls-wb-text-color-purple: var(--ctp-wb-text-color-purple);
     --ls-wb-text-color-pink: var(--ctp-wb-text-color-pink);
+
+    --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+    --ls-wb-text-color-default: var(--ls-primary-text-color);
+    --ls-wb-background-color-default: var(--ls-tertiary-background-color);
 }
 
 /* Below related to whiteboard latte override feature */
@@ -111,6 +116,7 @@ html.whiteboard-latte  {
         @include utils.ctp-hsl-vars(latte);
         @include ctp.variables;
         @include ls.variables;
+        @include theme.variables;
         @include variables;
 
         background-color: var(--ls-primary-background-color);

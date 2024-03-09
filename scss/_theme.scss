@@ -1,4 +1,4 @@
-:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+@mixin variables {
     // darkest -> lightest (dark theme)
   --color-base-00: rgb(var(--ctp-crust));
   --color-base-10: rgb(var(--ctp-mantle));
@@ -11,4 +11,9 @@
   --color-base-80: rgb(var(--ctp-overlay2));
   --color-base-90: rgb(var(--ctp-subtext0));
   --color-base-100: rgb(var(--ctp-text));
+}
+
+
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+  @include variables;
 }
