@@ -12,9 +12,9 @@
     --muted: 192 100% 13%;
     --card: 192 100% 10%;
     --card-foreground: 0 0% 95%;
-    --popover: 192 100% 11%;
     --input: 203 35% 25%;
     */
+    --popover: var(--ctp-mantle-hsl);
     --border: var(--ctp-surface0-hsl);
 
     --lx-popover-bg: var(--ctp-secondary-background-color);
