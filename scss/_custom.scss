@@ -235,6 +235,10 @@ html[data-color='none'] {
         background-color: var(--ctp-menu-hover-color);
     }
 
+    .menu-link.chosen {
+        background-color: var(--ls-menu-hover-color);
+    }
+
     .cp__settings-inner>aside ul>li>a>strong {
         color: var(--ctp-primary-text-color);
     }
