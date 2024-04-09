@@ -491,4 +491,10 @@ html[data-color='none'] {
             color: var(--ctp-text-primary-color);
         }
     }
+
+    .input-wrap > input {
+        background-color: var(--ls-primary-background-color);
+        border-color: var(--ls-border-color);
+        color: var(--ls-primary-text-color);
+    }
 }
