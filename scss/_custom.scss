@@ -498,7 +498,29 @@ html[data-color='none'] {
         color: var(--ls-primary-text-color);
     }
 
+    /* #35 make bold+italics text color same as italics */
     i b {
         color: rgb(var(--ctp-text-italics));
+    }
+
+    /* #35 make plugin icons in header consistent with other icons in header */
+    .ui-items-container,
+    .toolbar-plugin-manager {
+        .button {
+            i {
+                color: var(--ls-header-button-background);
+            }
+
+            color: var(--ls-header-button-background);
+
+            &:hover {
+                i {
+                    color: rgb(var(--ctp-accent, var(--ctp-pink)));
+                }
+
+                color: rgb(var(--ctp-accent, var(--ctp-pink)));
+                background-color: var(--ctp-header-icon-background);
+            }
+        }
     }
 }
