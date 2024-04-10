@@ -497,4 +497,8 @@ html[data-color='none'] {
         border-color: var(--ls-border-color);
         color: var(--ls-primary-text-color);
     }
+
+    i b {
+        color: rgb(var(--ctp-text-italics));
+    }
 }
