@@ -45,7 +45,7 @@ html[data-color='none'] {
             background-color: rgb(var(--ctp-button-background));
         }
 
-        &:hover {
+        &.as-ghost:hover, &:hover {
             background-color: rgb(var(--ctp-button-background));
         }
     }
@@ -419,6 +419,9 @@ html[data-color='none'] {
     div.favorites, div.recent {
         button.ui__button {
             background: transparent;
+            &.as-ghost:hover, &:hover {
+                background: transparent;
+            }
         }
         span.ui__icon {
             color: var(--ctp-primary-text-color);
@@ -488,7 +491,7 @@ html[data-color='none'] {
 
     .search-results {
         .text-gray-12 {
-            color: var(--ctp-text-primary-color);
+            color: var(--ctp-primary-text-color);
         }
     }
 
@@ -514,7 +517,7 @@ html[data-color='none'] {
             color: var(--ls-header-button-background);
 
             &:hover {
-                i {
+                i, span.ui__icon {
                     color: rgb(var(--ctp-accent, var(--ctp-pink)));
                 }
 
@@ -522,5 +525,24 @@ html[data-color='none'] {
                 background-color: var(--ctp-header-icon-background);
             }
         }
+    }
+
+    /* #32 theme search modal */
+    .ui__modal[label="ls-modal-search"] {
+        color: var(--ctp-primary-text-color);
+        // TODO: port all the new design system variables once its stable
+        .text-gray-12, .text-gray-11, input {
+            color: var(--ctp-primary-text-color);
+        }
+        input::placeholder {
+            color: var(--ctp-primary-text-color);
+            opacity: .75;
+
+        }
+    }
+    
+    .cp__settings-inner {
+        min-height: 70dvh;
+        max-height: 70dvh;
     }
 }
