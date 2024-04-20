@@ -186,11 +186,6 @@ html[data-color='none'] {
         opacity: 1;
     }
 
-    // selection
-    ::selection {
-        color: var(--ls-text-on-accent);
-    }
-
     .inline.with-bg-color {
         color: var(--ctp-primary-background-color);
 
@@ -544,5 +539,10 @@ html[data-color='none'] {
     .cp__settings-inner {
         min-height: 70dvh;
         max-height: 70dvh;
+    }
+
+    ::selection {
+        background-color: var(--ls-selection-background-color);
+        color: var(--ls-selection-text-color);
     }
 }

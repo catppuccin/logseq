@@ -99,8 +99,6 @@
 }
 
 // Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
-.light-theme,
-.dark-theme,
 html:not(html[data-color]),
 html[data-theme='dark'][data-color='logseq'],
 html[data-theme='light'][data-color='logseq'],
@@ -114,7 +112,6 @@ html[data-color='none'] {
   --ls-error-color: var(--ctp-error-color);
   --ls-warning-color: var(--ctp-warning-color);
   --ls-success-color: var(--ctp-success-color);
-  --ls-text-on-accent: rgb(var(--ctp-text));
 
 }
 
