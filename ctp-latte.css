@@ -49,7 +49,7 @@
   --ctp-block-bullet-color: rgb(var(--ctp-accent, var(--ctp-sky)));
   --ctp-block-highlight-color: var(--color-base-30);
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
-  --ctp-selection-text-color: rgb(var(--color-base-00));
+  --ctp-selection-text-color: var(--color-base-00);
   --ctp-page-checkbox-color: rgb(var(--ctp-accent, var(--ctp-blue)));
   --ctp-page-checkbox-border-color: var(--ctp-primary-background-color);
   --ctp-page-blockquote-color: var(--ctp-primary-text-color);
@@ -121,8 +121,6 @@
   --ctp-marker-size: 16px;
 }
 
-.light-theme,
-.dark-theme,
 html:not(html[data-color]),
 html[data-theme=dark][data-color=logseq],
 html[data-theme=light][data-color=logseq],
@@ -210,7 +208,6 @@ html[data-color=none] {
   --ls-error-color: var(--ctp-error-color);
   --ls-warning-color: var(--ctp-warning-color);
   --ls-success-color: var(--ctp-success-color);
-  --ls-text-on-accent: rgb(var(--ctp-text));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -545,12 +542,6 @@ html[data-color=none] html[data-theme=dark] .cp__header a,
 html[data-color=none] html[data-theme=dark] .cp__header button.button,
 html[data-color=none] html[data-theme=dark] .cp__right-sidebar-topbar button {
   opacity: 1;
-}
-html:not(html[data-color]) ::selection,
-html[data-theme=light][data-color=logseq] ::selection,
-html[data-theme=dark][data-color=logseq] ::selection,
-html[data-color=none] ::selection {
-  color: var(--ls-text-on-accent);
 }
 html:not(html[data-color]) .inline.with-bg-color,
 html[data-theme=light][data-color=logseq] .inline.with-bg-color,
@@ -1183,6 +1174,13 @@ html[data-color=none] .cp__settings-inner {
   min-height: 70dvh;
   max-height: 70dvh;
 }
+html:not(html[data-color]) ::selection,
+html[data-theme=light][data-color=logseq] ::selection,
+html[data-theme=dark][data-color=logseq] ::selection,
+html[data-color=none] ::selection {
+  background-color: var(--ls-selection-background-color);
+  color: var(--ls-selection-text-color);
+}
 
 div.cm-s-solarized.CodeMirror, div.cm-s-lsradix.CodeMirror {
   --bg0: rgb(var(--ctp-base));
@@ -1551,7 +1549,7 @@ html.whiteboard-latte div.dashboard-card, html.whiteboard-latte div.whiteboard-p
   --ctp-block-bullet-color: rgb(var(--ctp-accent, var(--ctp-sky)));
   --ctp-block-highlight-color: var(--color-base-30);
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
-  --ctp-selection-text-color: rgb(var(--color-base-00));
+  --ctp-selection-text-color: var(--color-base-00);
   --ctp-page-checkbox-color: rgb(var(--ctp-accent, var(--ctp-blue)));
   --ctp-page-checkbox-border-color: var(--ctp-primary-background-color);
   --ctp-page-blockquote-color: var(--ctp-primary-text-color);
@@ -1887,7 +1885,7 @@ html.whiteboard-latte .tl-select-input-content {
   --ctp-block-bullet-color: rgb(var(--ctp-accent, var(--ctp-sky)));
   --ctp-block-highlight-color: var(--color-base-30);
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
-  --ctp-selection-text-color: rgb(var(--color-base-00));
+  --ctp-selection-text-color: var(--color-base-00);
   --ctp-page-checkbox-color: rgb(var(--ctp-accent, var(--ctp-blue)));
   --ctp-page-checkbox-border-color: var(--ctp-primary-background-color);
   --ctp-page-blockquote-color: var(--ctp-primary-text-color);
@@ -2215,7 +2213,7 @@ html.whiteboard-latte .tl-tooltip-content {
   --ctp-block-bullet-color: rgb(var(--ctp-accent, var(--ctp-sky)));
   --ctp-block-highlight-color: var(--color-base-30);
   --ctp-selection-background-color: rgba(var(--ctp-yellow, 0.9));
-  --ctp-selection-text-color: rgb(var(--color-base-00));
+  --ctp-selection-text-color: var(--color-base-00);
   --ctp-page-checkbox-color: rgb(var(--ctp-accent, var(--ctp-blue)));
   --ctp-page-checkbox-border-color: var(--ctp-primary-background-color);
   --ctp-page-blockquote-color: var(--ctp-primary-text-color);
