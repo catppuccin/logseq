@@ -1,0 +1,40 @@
+name: Bug Report
+description: Report your bugs with the theme here!
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue outlining your problem?
+      description: Please search to see if an issue already exists for your problem.
+      options:
+        - label: I have searched the existing issues and they do not solve my problem.
+          required: true
+  - type: textarea
+    attributes:
+      label: Describe your problem.
+      description: Also tell us what you expect to see.
+      placeholder: The highlighted text color is hard to read...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Attach screenshots.
+      description: If applicable, attach screenshots that highlight the issue.
+  - type: input
+    attributes:
+      label: What Logseq version do you see the issue on?
+      description: "You can find your Logseq version under Settings > General > Current Version"
+      placeholder: 0.10.9
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: What theme version do you see the issue on?
+      description: "You can find your theme version under Plugins > Installed > Themes if installed as a plugin"
+      placeholder: 0.6.3
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Any additional comments?
+      description: Add any information not covered in the previous sections!
