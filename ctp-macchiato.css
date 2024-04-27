@@ -239,6 +239,17 @@ html[data-color=none] {
   --lx-popover-bg: var(--ctp-secondary-background-color);
 }
 
+:root:not([data-color]) .light-theme,
+:root:not([data-color]) .white-theme, :root[data-color=none] .light-theme,
+:root[data-color=none] .white-theme {
+  --color-level-1: var(--color-base-10);
+  --color-level-2: var(--color-base-20);
+  --color-level-3: var(--color-base-30);
+  --color-level-4: var(--color-base-40);
+  --color-level-5: var(--color-base-50);
+  --color-level-6: var(--color-base-60);
+}
+
 html[data-color=logseq][data-theme=light] {
   /*
   --primary: 200 97% 37%;
