@@ -38,18 +38,25 @@
 <blockquote>Selected Accent: Green</blockquote>
 </details>
 
+
 ## Usage
 
-There are couple of other methods you can use to set the theme up in Logseq. Later methods are more for development purpose.
+> [!WARNING]
+> Logseq now officially supports accents for its default theme. Catppuccin Theme **DOES NOT** support the new accent colors.
+> Select **no accent color or Logseq classical color** (one of the first two) for maximum theme compatibility.
+> 
+> ![accent-no-support](https://github.com/user-attachments/assets/d26f0194-a260-4c90-9d75-ca8a86327077)
+
 
 ### Logseq Plugin Marketplace **(Recommended)**
-    1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
-    2. Choose the the appropriate theme variant from `Settings` > `Themes`.
+
+1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
+2. Choose the the appropriate theme variant from `Settings` > `Themes`.
     
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-marketplace.webp"/>
     
 
-### Importing external css (recommended for mobile). 
+### Importing external CSS (Recommended for mobile)
 
 A. Add one of the following lines in your `custom.css` and restart Logseq
 
@@ -62,7 +69,7 @@ A. Add one of the following lines in your `custom.css` and restart Logseq
 ```
 OR
 
-B. Add one of the following in your custom **`config.edn`** ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) and restart Logseq.
+B. Add one of the following in your custom `config.edn` ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) and restart Logseq.
 
 ```edn
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
@@ -71,18 +78,20 @@ B. Add one of the following in your custom **`config.edn`** ([source](https://gi
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
 ```
 
-### Switching Accent Color
+## Switching Accent Color
+
+This option is only available when the theme installed through the Plugins Marketplace
 
 1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
-2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
+2. Select an accent color from the dropdown under `CtpAccent` setting.
 
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-switch-accent.webp"/>
 
-### Bonus: Oledppuccin
+## Bonus: Oledppuccin
 
 > The _niche_ dark side
 
-You can choose this variant of dark theme under `Settings` > `Themes`. 
+You can choose this dark theme variant under `Settings` > `Themes`. 
 
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-oledppuccin.webp"/>
 
