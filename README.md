@@ -58,7 +58,10 @@
 
 ### Importing external CSS (Recommended for mobile)
 
-A. Add one of the following lines in your `custom.css` and restart Logseq
+A. Add one of the following lines at the start of your `custom.css` and restart Logseq
+
+> [!NOTE]
+> `@import` statement works only when defined at the top of CSS files ([ref](https://developer.mozilla.org/en-US/docs/Web/CSS/@import))
 
 ```css
 @import url('https://logseq.catppuccin.com/ctp-latte.css');
