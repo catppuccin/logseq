@@ -40,18 +40,18 @@
 
 ## Usage
 
-### Installation
-
 There are couple of other methods you can use to set the theme up in Logseq. Later methods are more for development purpose.
 
-1. Logseq Plugin Marketplace **(Recommended)**
+### Logseq Plugin Marketplace **(Recommended)**
     1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
     2. Choose the the appropriate theme variant from `Settings` > `Themes`.
     
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-marketplace.webp"/>
     
 
-2. Editing custom theme: **`custom.css`** (recommended for mobile). Choose one of the following and restart Logseq
+### Importing external css (recommended for mobile). 
+
+A. Add one of the following lines in your `custom.css` and restart Logseq
 
 ```css
 @import url('https://logseq.catppuccin.com/ctp-latte.css');
@@ -60,8 +60,9 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 @import url('https://logseq.catppuccin.com/ctp-mocha.css');
 @import url('https://logseq.catppuccin.com/ctp-oled.css');
 ```
+OR
 
-3. Editing custom configuration: **`config.edn`** ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) Set one of the following in your config and restart Logseq.
+B. Add one of the following in your custom **`config.edn`** ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) and restart Logseq.
 
 ```edn
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
@@ -69,18 +70,6 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-macchiato.css');"
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
 ```
-
-4. Add manually from GitHub Releases
-    1. Download `.zip` from latest release.
-    2. Extract it to desired location.
-    3. Enable `Developer Mode` under `Settings` > `Advanced`.
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
-
-5. Clone Repository and add manually
-    1. Clone repository (including submodules)
-    2. Run `npm ci && npm run build`
-    3. Enable `Developer Mode` under `Settings` > `Advanced`
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing repo folder to install the theme.
 
 ### Switching Accent Color
 
