@@ -49,13 +49,14 @@
 
 
 ### Logseq Plugin Marketplace **(Recommended)**
-    1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
-    2. Choose the the appropriate theme variant from `Settings` > `Themes`.
+
+1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
+2. Choose the the appropriate theme variant from `Settings` > `Themes`.
     
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-marketplace.webp"/>
     
 
-### Importing external CSS (Recommended for mobile). 
+### Importing external CSS (Recommended for mobile)
 
 A. Add one of the following lines in your `custom.css` and restart Logseq
 
@@ -78,6 +79,8 @@ B. Add one of the following in your custom `config.edn` ([source](https://github
 ```
 
 ## Switching Accent Color
+
+This option is only available when the theme installed through the Plugins Marketplace
 
 1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
 2. Select an accent color from the dropdown under `CtpAccent` setting.
