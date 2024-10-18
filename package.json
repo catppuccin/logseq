@@ -22,7 +22,7 @@
   "devDependencies": {
     "@catppuccin/highlightjs": "^0.1.4",
     "@catppuccin/palette": "^1.1.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.0.0",
     "sass": "^1.55.0"
   },
   "logseq": {
