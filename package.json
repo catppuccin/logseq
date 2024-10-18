@@ -1,6 +1,6 @@
 {
   "name": "logseq-catppuccin",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "🦫 Soothing pastel theme for Logseq",
   "main": "index.html",
   "scripts": {
