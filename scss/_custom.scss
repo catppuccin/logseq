@@ -505,19 +505,19 @@ html[data-color='none'] {
     .ui-items-container,
     .toolbar-plugin-manager {
         .button {
+            color: var(--ls-header-button-background);
+
             i {
                 color: var(--ls-header-button-background);
             }
 
-            color: var(--ls-header-button-background);
-
             &:hover {
+                color: rgb(var(--ctp-accent, var(--ctp-pink)));
+                background-color: var(--ctp-header-icon-background);
+
                 i, span.ui__icon {
                     color: rgb(var(--ctp-accent, var(--ctp-pink)));
                 }
-
-                color: rgb(var(--ctp-accent, var(--ctp-pink)));
-                background-color: var(--ctp-header-icon-background);
             }
         }
     }
@@ -535,7 +535,7 @@ html[data-color='none'] {
 
         }
     }
-    
+
     .cp__settings-inner {
         min-height: 70dvh;
         max-height: 70dvh;

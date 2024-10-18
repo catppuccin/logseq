@@ -1,4 +1,4 @@
-@use "@catppuccin/highlightjs/sass/catppuccin.variables";
+@use "@catppuccin/highlightjs/sass/catppuccin-variables";
 
 html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
     code.hljs {
