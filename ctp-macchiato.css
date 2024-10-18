@@ -1323,147 +1323,148 @@ div.cm-s-solarized.CodeMirror, div.cm-s-lsradix.CodeMirror {
   background-color: var(--ctp-tertiary-background-color);
 }
 
+/* https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html */
 code.hljs {
-  color: rgb(var(--ctp-text));
-  background: rgb(var(--ctp-base));
+  color: var(--ctp-text);
+  background: var(--ctp-base);
 }
 code .hljs-keyword {
-  color: rgb(var(--ctp-mauve));
+  color: var(--ctp-mauve);
 }
 code .hljs-built_in {
-  color: rgb(var(--ctp-red));
+  color: var(--ctp-red);
 }
 code .hljs-type {
-  color: rgb(var(--ctp-yellow));
+  color: var(--ctp-yellow);
 }
 code .hljs-literal {
-  color: rgb(var(--ctp-peach));
+  color: var(--ctp-peach);
 }
 code .hljs-number {
-  color: rgb(var(--ctp-peach));
+  color: var(--ctp-peach);
 }
 code .hljs-operator {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-sky);
 }
 code .hljs-punctuation {
-  color: rgb(var(--ctp-subtext1));
+  color: var(--ctp-subtext1);
 }
 code .hljs-property {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-teal);
 }
 code .hljs-regexp {
-  color: rgb(var(--ctp-pink));
+  color: var(--ctp-pink);
 }
 code .hljs-string {
-  color: rgb(var(--ctp-green));
+  color: var(--ctp-green);
 }
 code .hljs-char.escape_ {
-  color: rgb(var(--ctp-green));
+  color: var(--ctp-green);
 }
 code .hljs-subst {
-  color: rgb(var(--ctp-subtext0));
+  color: var(--ctp-subtext0);
 }
 code .hljs-symbol {
-  color: rgb(var(--ctp-flamingo));
+  color: var(--ctp-flamingo);
 }
 code .hljs-variable {
-  color: rgb(var(--ctp-mauve));
+  color: var(--ctp-mauve);
 }
 code .hljs-variable.language_ {
-  color: rgb(var(--ctp-mauve));
+  color: var(--ctp-mauve);
 }
 code .hljs-variable.constant_ {
-  color: rgb(var(--ctp-peach));
+  color: var(--ctp-peach);
 }
 code .hljs-title {
-  color: rgb(var(--ctp-blue));
+  color: var(--ctp-blue);
 }
 code .hljs-title.class_ {
-  color: rgb(var(--ctp-yellow));
+  color: var(--ctp-yellow);
 }
 code .hljs-title.function_ {
-  color: rgb(var(--ctp-blue));
+  color: var(--ctp-blue);
 }
 code .hljs-params {
-  color: rgb(var(--ctp-text));
+  color: var(--ctp-text);
 }
 code .hljs-comment {
-  color: rgb(var(--ctp-surface2));
+  color: var(--ctp-overlay2);
 }
 code .hljs-doctag {
-  color: rgb(var(--ctp-red));
+  color: var(--ctp-red);
 }
 code .hljs-meta {
-  color: rgb(var(--ctp-peach));
+  color: var(--ctp-peach);
 }
 code .hljs-section {
-  color: rgb(var(--ctp-blue));
+  color: var(--ctp-blue);
 }
 code .hljs-tag {
-  color: rgb(var(--ctp-subtext0));
+  color: var(--ctp-teal);
 }
 code .hljs-name {
-  color: rgb(var(--ctp-mauve));
+  color: var(--ctp-mauve);
 }
 code .hljs-attr {
-  color: rgb(var(--ctp-blue));
+  color: var(--ctp-blue);
 }
 code .hljs-attribute {
-  color: rgb(var(--ctp-green));
+  color: var(--ctp-green);
 }
 code .hljs-bullet {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-teal);
 }
 code .hljs-code {
-  color: rgb(var(--ctp-green));
+  color: var(--ctp-green);
 }
 code .hljs-emphasis {
-  color: rgb(var(--ctp-red));
+  color: var(--ctp-red);
   font-style: italic;
 }
 code .hljs-strong {
-  color: rgb(var(--ctp-red));
+  color: var(--ctp-red);
   font-weight: bold;
 }
 code .hljs-formula {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-teal);
 }
 code .hljs-link {
-  color: rgb(var(--ctp-sapphire));
+  color: var(--ctp-sapphire);
   font-style: italic;
 }
 code .hljs-quote {
-  color: rgb(var(--ctp-green));
+  color: var(--ctp-green);
   font-style: italic;
 }
 code .hljs-selector-tag {
-  color: rgb(var(--ctp-yellow));
+  color: var(--ctp-yellow);
 }
 code .hljs-selector-id {
-  color: rgb(var(--ctp-blue));
+  color: var(--ctp-blue);
 }
 code .hljs-selector-class {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-teal);
 }
 code .hljs-selector-attr {
-  color: rgb(var(--ctp-mauve));
+  color: var(--ctp-mauve);
 }
 code .hljs-selector-pseudo {
-  color: rgb(var(--ctp-teal));
+  color: var(--ctp-teal);
 }
 code .hljs-template-tag {
-  color: rgb(var(--ctp-flamingo));
+  color: var(--ctp-flamingo);
 }
 code .hljs-template-variable {
-  color: rgb(var(--ctp-flamingo));
+  color: var(--ctp-flamingo);
 }
 code .hljs-addition {
-  color: rgb(var(--ctp-green));
-  background: rgba(var(--ctp-green), 15%);
+  color: var(--ctp-green);
+  background: rgb(from var(--ctp-green) r g b/15%);
 }
 code .hljs-deletion {
-  color: rgb(var(--ctp-red));
-  background: rgba(var(--ctp-red), 15%);
+  color: var(--ctp-red);
+  background: rgb(from var(--ctp-red) r g b/15%);
 }
 
 html:not(html[data-color]) code.hljs, html[data-color=logseq] code.hljs, html[data-color=none] code.hljs {

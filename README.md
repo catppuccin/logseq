@@ -38,20 +38,30 @@
 <blockquote>Selected Accent: Green</blockquote>
 </details>
 
+
 ## Usage
 
-### Installation
+> [!WARNING]
+> Logseq now officially supports accents for its default theme. Catppuccin Theme **DOES NOT** support the new accent colors.
+> Select **no accent color or Logseq classical color** (one of the first two) for maximum theme compatibility.
+> 
+> ![accent-no-support](https://github.com/user-attachments/assets/d26f0194-a260-4c90-9d75-ca8a86327077)
 
-There are couple of other methods you can use to set the theme up in Logseq. Later methods are more for development purpose.
 
-1. Logseq Plugin Marketplace **(Recommended)**
-    1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
-    2. Choose the the appropriate theme variant from `Settings` > `Themes`.
+### Logseq Plugin Marketplace **(Recommended)**
+
+1. Search for 'catppuccin' in `Plugins` > `Marketplace` > `Themes` and install the plugin. 
+2. Choose the the appropriate theme variant from `Settings` > `Themes`.
     
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-marketplace.webp"/>
     
 
-2. Editing custom theme: **`custom.css`** (recommended for mobile). Choose one of the following and restart Logseq
+### Importing external CSS (Recommended for mobile)
+
+A. Add one of the following lines at the start of your `custom.css` and restart Logseq
+
+> [!NOTE]
+> `@import` statement works only when defined at the top of CSS files ([ref](https://developer.mozilla.org/en-US/docs/Web/CSS/@import))
 
 ```css
 @import url('https://logseq.catppuccin.com/ctp-latte.css');
@@ -60,8 +70,9 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 @import url('https://logseq.catppuccin.com/ctp-mocha.css');
 @import url('https://logseq.catppuccin.com/ctp-oled.css');
 ```
+OR
 
-3. Editing custom configuration: **`config.edn`** ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) Set one of the following in your config and restart Logseq.
+B. Add one of the following in your custom `config.edn` ([source](https://github.com/logseq/logseq/blob/master/src/resources/templates/config.edn#97)) and restart Logseq.
 
 ```edn
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-latte.css');"
@@ -70,30 +81,20 @@ There are couple of other methods you can use to set the theme up in Logseq. Lat
 :custom-css-url "@import url('https://logseq.catppuccin.com/ctp-mocha.css');"
 ```
 
-4. Add manually from GitHub Releases
-    1. Download `.zip` from latest release.
-    2. Extract it to desired location.
-    3. Enable `Developer Mode` under `Settings` > `Advanced`.
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing extracted folder to install the theme.
+## Switching Accent Color
 
-5. Clone Repository and add manually
-    1. Clone repository (including submodules)
-    2. Run `npm ci && npm run build`
-    3. Enable `Developer Mode` under `Settings` > `Advanced`
-    4. Use the new `Load unpacked plugin` option under `Plugins`, choosing repo folder to install the theme.
-
-### Switching Accent Color
+This option is only available when the theme installed through the Plugins Marketplace
 
 1. Theme settings can be accessed under `Settings` > `Plugins` > `Catppuccin`
-2. Select an accent color of choice from the dropdown under `CtpAccent` setting.
+2. Select an accent color from the dropdown under `CtpAccent` setting.
 
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-logseq-switch-accent.webp"/>
 
-### Bonus: Oledppuccin
+## Bonus: Oledppuccin
 
 > The _niche_ dark side
 
-You can choose this variant of dark theme under `Settings` > `Themes`. 
+You can choose this dark theme variant under `Settings` > `Themes`. 
 
 <img src="https://raw.githubusercontent.com/catppuccin/logseq/main/assets/ctp-oledppuccin.webp"/>
 

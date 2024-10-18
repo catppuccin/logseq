@@ -1,6 +1,6 @@
 {
   "name": "logseq-catppuccin",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "🦫 Soothing pastel theme for Logseq",
   "main": "index.html",
   "scripts": {
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/catppuccin/logseq#readme",
   "devDependencies": {
-    "@catppuccin/highlightjs": "^0.1.4",
+    "@catppuccin/highlightjs": "^1.0.0",
     "@catppuccin/palette": "^1.1.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.0.0",
     "sass": "^1.55.0"
   },
   "logseq": {
