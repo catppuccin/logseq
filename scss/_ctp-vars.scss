@@ -125,7 +125,10 @@
   --ctp-text-italics: var(--ctp-accent, var(--ctp-green));
   --ctp-text-underline: var(--ctp-primary-text-color);
   --ctp-text-strikethrough: var(--ctp-accent, var(--ctp-maroon));
-  --ctp-blockquote-line: var(--ctp-accent);
+  // Needs its own fallback: with no accent selected `var(--ctp-accent)` is
+  // invalid, which made the whole `border-left-color` declaration invalid and
+  // dropped the quote bar back to currentColor.
+  --ctp-blockquote-line: var(--ctp-accent, var(--ctp-lavender));
   --ctp-active-setting: var(--ctp-accent, var(--ctp-blue));
 
  // priorites variables

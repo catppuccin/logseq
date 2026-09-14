@@ -1,0 +1,86 @@
+// Logseq 2.0 only surfaces.
+//
+// Almost all of 2.0's new chrome (properties, table/gallery views, cards, the
+// command palette, the icon picker) is written against the design tokens, so
+// the `--lx-*`, `--rx-*` and shadcn definitions already carry it. Only the
+// places where 2.0 introduced a *new element* for an existing visual role need
+// help, so that the theme keeps painting that role the same way it does in
+// 0.10.
+//
+// Every selector here is inert on 0.10, which does not render these elements.
+
+html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
+html[data-color='none'] {
+
+  // 2.0 renders quotes as a block node rather than a real <blockquote>, so the
+  // accent bar the theme draws on `blockquote` has to be restated here.
+  .block-content-or-editor-wrap[data-node-type='quote'] {
+    border-left: 2px solid;
+    border-left-color: rgb(var(--ctp-blockquote-line));
+    background-color: var(--ctp-page-blockquote-bg-color);
+    color: var(--ctp-page-blockquote-color);
+  }
+
+  // Task checkboxes moved from `.form-checkbox` to a Radix checkbox button.
+  // Mirror the marker styling from _custom.scss so tasks look the same in both
+  // versions.
+  .ls-block button[role='checkbox'] {
+    border-radius: var(--ctp-marker-border-radius);
+    border: 2px solid rgb(var(--ctp-checkbox-color));
+    background-color: transparent;
+
+    &[data-state='checked'] {
+      background-color: rgb(var(--ctp-checkbox-color));
+      color: var(--ctp-primary-background-color);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // The tag chip wrapper is new in 2.0; `a.tag` inside it is already themed.
+  .block-tag {
+    background-color: var(--ctp-quaternary-background-color);
+    border-radius: var(--ctp-marker-border-radius);
+
+    &:hover {
+      background-color: var(--ctp-menu-hover-color);
+    }
+  }
+
+  // 2.0 dropped `--ls-warning-text-color` / `--ls-warning-background-color` and
+  // rewrote these two onto literal Tailwind swatches (`text-yellow-600`,
+  // `bg-yellow-300`) rather than the `-rx-` token scale it used for the error
+  // and success states. Those swatches compile to hardcoded Radix hex, so they
+  // are the only semantic colours the token layer cannot reach.
+  .text-warning {
+    color: rgb(var(--ctp-yellow));
+  }
+
+  .bg-warning {
+    background: rgba(var(--ctp-yellow), 0.2);
+  }
+
+  // Property keys read as secondary text, values as primary.
+  .ls-property-key,
+  .ls-page-properties .property-key,
+  .ls-properties-area .property-key {
+    color: var(--ctp-secondary-text-color);
+  }
+
+  // Table and gallery views: keep the zebra striping the theme already applies
+  // to markdown tables.
+  .ls-table-header,
+  .ls-table-headers {
+    background-color: var(--ctp-secondary-background-color);
+    color: var(--ctp-title-text-color);
+  }
+
+  .ls-card-item {
+    background-color: var(--ctp-secondary-background-color);
+    border-color: var(--ctp-border-color);
+  }
+}

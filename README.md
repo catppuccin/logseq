@@ -39,6 +39,16 @@
 </details>
 
 
+## Compatibility
+
+| Logseq | Status |
+| --- | --- |
+| 2.0.x | Supported |
+| 0.10.x | Supported |
+
+A single stylesheet covers both. Whiteboards were removed in Logseq 2.0, so the
+`CtpWhiteboard` plugin setting only has an effect on 0.10.
+
 ## Usage
 
 > [!WARNING]

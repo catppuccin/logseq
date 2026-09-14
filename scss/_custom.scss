@@ -36,17 +36,24 @@ html[data-color='none'] {
 
     // Buttons
 
+    // Only the *solid* button variants get the accent fill.
+    //
+    // shui tags every button with its variant: as-classic (the default),
+    // as-solid, as-destructive, as-outline, as-secondary, as-ghost, as-link.
+    // This block used to match plain `.ui__button`, which painted every
+    // variant. Logseq 2.0 renders the entire header toolbar and most inline
+    // controls as ghost buttons, so that turned each toolbar icon into a solid
+    // accent block. The variant class names are identical in 0.10 and 2.0, so
+    // narrowing the selector fixes both.
     a.ui__button, button.ui__button {
-        color: var(--ctp-button-text);
-        background-color: rgb(var(--ctp-button-background));
-
-        &[intent=logseq]:hover:not(.active) {
+        &.as-classic, &.as-solid, &[intent=logseq] {
             color: var(--ctp-button-text);
             background-color: rgb(var(--ctp-button-background));
-        }
 
-        &.as-ghost:hover, &:hover {
-            background-color: rgb(var(--ctp-button-background));
+            &:hover, &:hover:not(.active) {
+                color: var(--ctp-button-text);
+                background-color: rgb(var(--ctp-button-background));
+            }
         }
     }
 
@@ -423,9 +430,14 @@ html[data-color='none'] {
         }
     }
 
+    // Matches the button rule above: only solid buttons carry a label colour
+    // contrasting against the accent fill. On a transparent ghost button that
+    // colour would be all but invisible.
     button.ui__button {
-        .ui__icon {
-            color: var(--ctp-button-text);
+        &.as-classic, &.as-solid, &[intent=logseq] {
+            .ui__icon {
+                color: var(--ctp-button-text);
+            }
         }
     }
 

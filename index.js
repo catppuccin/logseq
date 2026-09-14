@@ -1,23 +1,37 @@
+// Palette entry backing each accent choice. "Full palette" is the opt-out: it
+// resolves to `unset`, which for a custom property behaves as a guaranteed
+// invalid value, so every `var(--ctp-accent, <default>)` in the stylesheet
+// falls through to its own per-role default.
 const accentMap = {
-    "Full palette" : "unset", // undefined css var name
-    "Rosewater"    : "var(--ctp-rosewater)",
-    "Flamingo"     : "var(--ctp-flamingo)",
-    "Pink"         : "var(--ctp-pink)",
-    "Mauve"        : "var(--ctp-mauve)",
-    "Red"          : "var(--ctp-red)",
-    "Maroon"       : "var(--ctp-maroon)",
-    "Peach"        : "var(--ctp-peach)",
-    "Yellow"       : "var(--ctp-yellow)",
-    "Green"        : "var(--ctp-green)",
-    "Teal"         : "var(--ctp-teal)",
-    "Sky"          : "var(--ctp-sky)",
-    "Sapphire"     : "var(--ctp-sapphire)",
-    "Blue"         : "var(--ctp-blue)",
-    "Lavender"     : "var(--ctp-lavender)"
+    "Full palette" : null,
+    "Rosewater"    : "rosewater",
+    "Flamingo"     : "flamingo",
+    "Pink"         : "pink",
+    "Mauve"        : "mauve",
+    "Red"          : "red",
+    "Maroon"       : "maroon",
+    "Peach"        : "peach",
+    "Yellow"       : "yellow",
+    "Green"        : "green",
+    "Teal"         : "teal",
+    "Sky"          : "sky",
+    "Sapphire"     : "sapphire",
+    "Blue"         : "blue",
+    "Lavender"     : "lavender"
 };
 
-const accentClasses = Object.values(accentMap);
 const accentNames = Object.keys(accentMap);
+
+// Logseq 2.0 leans on shadcn/Radix tokens that are consumed as bare HSL
+// triplets via `hsl(var(--primary))`, so the accent has to be published in both
+// notations: `--ctp-accent` (R, G, B) and `--ctp-accent-hsl` (H S% L%).
+function accentDeclarations(accentName) {
+    const color = accentMap[accentName];
+    if (!color) {
+        return `--ctp-accent: unset;\n            --ctp-accent-hsl: unset;`;
+    }
+    return `--ctp-accent: var(--ctp-${color});\n            --ctp-accent-hsl: var(--ctp-${color}-hsl);`;
+}
 
 const settings = [
     {
@@ -32,7 +46,7 @@ const settings = [
     {
         key: "CtpWhiteboard",
         title: "Override Whiteboard theme to light theme?",
-        description: "  Override whiteboard theme to use Latte theme flavor",
+        description: "Override whiteboard theme to use Latte theme flavor. Logseq 0.10 only — whiteboards were removed in Logseq 2.0.",
         type: "boolean",
         default: false,
     },
@@ -48,23 +62,24 @@ function setWhiteboardOverride(bool) {
 }
 
 function setAccent(accentName) {
+    const decls = accentDeclarations(accentName);
     logseq.provideStyle({
         key: 'ctp-accent',
         style: `
-          :root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
-            --ctp-accent: ${accentMap[accentName]};
+          :root:root:not([data-color]), :root:root[data-color='none'], :root:root[data-color='logseq'] {
+            ${decls}
           }
           html.whiteboard-latte div.whiteboard-page {
-            --ctp-accent: ${accentMap[accentName]};
+            ${decls}
           }
           html.whiteboard-latte div.dashboard-card {
-            --ctp-accent: ${accentMap[accentName]};
+            ${decls}
           }
           html.whiteboard-latte div.tl-tooltip-content {
-            --ctp-accent: ${accentMap[accentName]};
+            ${decls}
           }
           html.whiteboard-latte div.tl-select-input-content {
-            --ctp-accent: ${accentMap[accentName]};
+            ${decls}
           }
         `,
     });

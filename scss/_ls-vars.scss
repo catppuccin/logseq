@@ -96,6 +96,34 @@
   --ls-color-file-sync-error: rgb(var(--ctp-red));
   --ls-color-file-sync-pending: rgb(var(--ctp-yellow));
   --ls-color-file-sync-idle: rgb(var(--ctp-green));
+
+  // Logseq 2.0 additions.
+  //
+  // These have no usable fallback chain: Logseq either hardcodes a literal
+  // (`--ls-page-mark-bg-color` defaults to #fef3ac) or exposes the variable
+  // through a bare `bg-[color:var(--ls-quinary-background-color)]` arbitrary
+  // utility with nothing behind it.
+  --ls-quinary-background-color: var(--color-base-40);
+  --ls-senary-background-color: var(--color-base-50);
+  --ls-bg-quaternary: var(--ctp-quaternary-background-color);
+
+  --ls-page-mark-bg-color: var(--ctp-text-highlight);
+
+  --ls-button-background: rgb(var(--ctp-accent, var(--ctp-blue)));
+  --ls-button-background-hsl: var(--ctp-accent-hsl, var(--ctp-blue-hsl));
+
+  --ls-block-left-color: var(--ctp-bullet-thread-color);
+  --ls-block-bullet-active-color: var(--ctp-block-bullet-color);
+
+  --ls-right-sidebar-topbar-color: var(--ctp-secondary-background-color);
+  --ls-search-icon-hover-color: var(--ctp-link-text-hover-color);
+  --ls-left-sidebar-text-color: var(--ctp-primary-text-color);
+
+  --ls-modal-overlay-gradient-start: var(--ctp-tertiary-background-color);
+  --ls-modal-overlay-gradient-end: var(--ctp-primary-background-color);
+
+  --ls-notification-background: var(--ctp-secondary-background-color);
+  --ls-notification-text-color: var(--ctp-primary-text-color);
 }
 
 // Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
