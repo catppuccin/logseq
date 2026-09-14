@@ -1,0 +1,185 @@
+// shadcn/ui ("shui") and Radix ("rx") tokens.
+//
+// Logseq's component library reads colours as bare HSL triplets and expands
+// them itself -- `hsl(var(--primary))`, and frequently with the slash alpha
+// form `hsl(var(--primary) / .4)`. That syntax only parses when the triplet is
+// space separated, which is why `hex-to-hsl()` in _utils.scss emits `H S% L%`.
+//
+// Logseq 0.10 already shipped these tokens but barely used them. 2.0 routes a
+// large part of its chrome through them (dialogs, dropdowns, selects, toasts,
+// buttons, the command palette, tables and the property editor), and
+// `resources/css/shui.css` opens with:
+//
+//     html * { border-color: hsl(var(--border)); }
+//
+// so an unthemed `--border` tints every border in the app. All of them are
+// defined here.
+
+@mixin shui-variables {
+  --background: var(--ctp-base-hsl);
+  --foreground: var(--ctp-text-hsl);
+
+  --card: var(--ctp-mantle-hsl);
+  --card-foreground: var(--ctp-text-hsl);
+
+  --popover: var(--ctp-mantle-hsl);
+  --popover-foreground: var(--ctp-text-hsl);
+
+  // Brand colour: buttons, focus rings, active states.
+  --primary: var(--ctp-accent-hsl, var(--ctp-blue-hsl));
+  // Solid accent buttons need a contrasting label. `base` is dark in the dark
+  // flavours and light in Latte, which is the correct polarity in both cases
+  // because the accent colours invert alongside it.
+  --primary-foreground: var(--ctp-base-hsl);
+
+  --secondary: var(--ctp-surface0-hsl);
+  --secondary-foreground: var(--ctp-text-hsl);
+
+  --muted: var(--ctp-surface0-hsl);
+  --muted-foreground: var(--ctp-subtext0-hsl);
+
+  // In shadcn `--accent` is the subtle hover/selected background, NOT the brand
+  // colour -- that is `--primary`. Logseq's own stylesheet gets this backwards
+  // in light mode (it assigns the brand blue), which is why it is pinned here.
+  --accent: var(--ctp-surface0-hsl);
+  --accent-foreground: var(--ctp-text-hsl);
+
+  --destructive: var(--ctp-red-hsl);
+  --destructive-foreground: var(--ctp-base-hsl);
+
+  --border: var(--ctp-surface0-hsl);
+  --input: var(--ctp-surface1-hsl);
+  --ring: var(--ctp-accent-hsl, var(--ctp-blue-hsl));
+
+  --kbd-glow-top: rgba(var(--ctp-text), 0.10);
+  --kbd-glow-bottom: rgba(var(--ctp-crust), 0.25);
+}
+
+// Radix grey ramp. `--lx-gray-*` shadows most of it through the Tailwind
+// chain, but Logseq still reads `--rx-gray-*` (and the `-hsl` twins) directly
+// in shui.css, container.css, block.css and shortcut.css.
+@mixin rx-gray-scale {
+  --rx-gray-01: rgb(var(--ctp-base));
+  --rx-gray-02: rgb(var(--ctp-mantle));
+  --rx-gray-03: rgb(var(--ctp-crust));
+  --rx-gray-04: rgb(var(--ctp-surface0));
+  --rx-gray-05: rgb(var(--ctp-surface0));
+  --rx-gray-06: rgb(var(--ctp-surface1));
+  --rx-gray-07: rgb(var(--ctp-surface2));
+  --rx-gray-08: rgb(var(--ctp-overlay0));
+  --rx-gray-09: rgb(var(--ctp-overlay1));
+  --rx-gray-10: rgb(var(--ctp-overlay2));
+  --rx-gray-11: rgb(var(--ctp-subtext0));
+  --rx-gray-12: rgb(var(--ctp-text));
+
+  --rx-gray-01-hsl: var(--ctp-base-hsl);
+  --rx-gray-02-hsl: var(--ctp-mantle-hsl);
+  --rx-gray-03-hsl: var(--ctp-crust-hsl);
+  --rx-gray-04-hsl: var(--ctp-surface0-hsl);
+  --rx-gray-05-hsl: var(--ctp-surface0-hsl);
+  --rx-gray-06-hsl: var(--ctp-surface1-hsl);
+  --rx-gray-07-hsl: var(--ctp-surface2-hsl);
+  --rx-gray-08-hsl: var(--ctp-overlay0-hsl);
+  --rx-gray-09-hsl: var(--ctp-overlay1-hsl);
+  --rx-gray-10-hsl: var(--ctp-overlay2-hsl);
+  --rx-gray-11-hsl: var(--ctp-subtext0-hsl);
+  --rx-gray-12-hsl: var(--ctp-text-hsl);
+
+  --rx-gray-01-alpha: rgba(var(--ctp-text), 0.02);
+  --rx-gray-02-alpha: rgba(var(--ctp-text), 0.04);
+  --rx-gray-03-alpha: rgba(var(--ctp-text), 0.06);
+  --rx-gray-04-alpha: rgba(var(--ctp-text), 0.08);
+  --rx-gray-05-alpha: rgba(var(--ctp-text), 0.11);
+  --rx-gray-06-alpha: rgba(var(--ctp-text), 0.14);
+  --rx-gray-07-alpha: rgba(var(--ctp-text), 0.18);
+  --rx-gray-08-alpha: rgba(var(--ctp-text), 0.25);
+  --rx-gray-09-alpha: rgba(var(--ctp-text), 0.39);
+  --rx-gray-10-alpha: rgba(var(--ctp-text), 0.45);
+  --rx-gray-11-alpha: rgba(var(--ctp-text), 0.60);
+  --rx-gray-12-alpha: rgba(var(--ctp-text), 0.92);
+}
+
+// Semantic Radix hues.
+//
+// 2.0 rewrote `.error` / `.warning` / `.success` from the removed
+// `--ls-{error,warning,success}-*` variables onto Tailwind utilities such as
+// `bg-red-rx-04-alpha` and `text-yellow-rx-08`, so these ramps are now what
+// paints those states.
+//
+// Steps 01-07 are translucent tints (backgrounds and borders); 08-12 stay solid
+// because Logseq uses them as text colours.
+@mixin rx-hue($name, $color) {
+  --rx-#{$name}-01: rgba(var(--ctp-#{$color}), 0.04);
+  --rx-#{$name}-02: rgba(var(--ctp-#{$color}), 0.07);
+  --rx-#{$name}-03: rgba(var(--ctp-#{$color}), 0.11);
+  --rx-#{$name}-04: rgba(var(--ctp-#{$color}), 0.15);
+  --rx-#{$name}-05: rgba(var(--ctp-#{$color}), 0.20);
+  --rx-#{$name}-06: rgba(var(--ctp-#{$color}), 0.28);
+  --rx-#{$name}-07: rgba(var(--ctp-#{$color}), 0.38);
+  --rx-#{$name}-08: rgb(var(--ctp-#{$color}));
+  --rx-#{$name}-09: rgb(var(--ctp-#{$color}));
+  --rx-#{$name}-10: rgb(var(--ctp-#{$color}));
+  --rx-#{$name}-11: rgb(var(--ctp-#{$color}));
+  --rx-#{$name}-12: rgb(var(--ctp-#{$color}));
+
+  --rx-#{$name}-01-alpha: rgba(var(--ctp-#{$color}), 0.04);
+  --rx-#{$name}-02-alpha: rgba(var(--ctp-#{$color}), 0.07);
+  --rx-#{$name}-03-alpha: rgba(var(--ctp-#{$color}), 0.11);
+  --rx-#{$name}-04-alpha: rgba(var(--ctp-#{$color}), 0.15);
+  --rx-#{$name}-05-alpha: rgba(var(--ctp-#{$color}), 0.20);
+  --rx-#{$name}-06-alpha: rgba(var(--ctp-#{$color}), 0.28);
+  --rx-#{$name}-07-alpha: rgba(var(--ctp-#{$color}), 0.38);
+  --rx-#{$name}-08-alpha: rgba(var(--ctp-#{$color}), 0.55);
+  --rx-#{$name}-09-alpha: rgba(var(--ctp-#{$color}), 0.70);
+  --rx-#{$name}-10-alpha: rgba(var(--ctp-#{$color}), 0.80);
+  --rx-#{$name}-11-alpha: rgba(var(--ctp-#{$color}), 0.90);
+  --rx-#{$name}-12-alpha: rgb(var(--ctp-#{$color}));
+
+  --rx-#{$name}-09-hsl: var(--ctp-#{$color}-hsl);
+  --rx-#{$name}-10-hsl: var(--ctp-#{$color}-hsl);
+  --rx-#{$name}-11-hsl: var(--ctp-#{$color}-hsl);
+  --rx-#{$name}-12-hsl: var(--ctp-#{$color}-hsl);
+}
+
+// Quoted throughout: bare `red`, `blue`, `maroon` and friends are CSS colour
+// keywords, and Sass would interpolate them as colour values instead of names.
+$rx-hues: (
+  "red": "red",
+  "crimson": "maroon",
+  "pink": "pink",
+  "purple": "mauve",
+  "violet": "mauve",
+  "indigo": "lavender",
+  "blue": "blue",
+  "cyan": "sky",
+  "teal": "teal",
+  "green": "green",
+  "grass": "green",
+  "orange": "peach",
+  "amber": "yellow",
+  "yellow": "yellow",
+  "logseq": "blue",
+);
+
+:root:root:not([data-color]),
+:root:root[data-color='none'],
+:root:root[data-color='logseq'] {
+  @include shui-variables;
+  @include rx-gray-scale;
+
+  @each $name, $color in $rx-hues {
+    @include rx-hue($name, $color);
+  }
+
+  // Logseq re-scopes `--accent` inside popovers, selects and the calendar
+  // (resources/css/shui.css) to a high contrast Radix grey. Those rules are
+  // element scoped, so they are restated here to keep menus on the flavour.
+  div[data-radix-menu-content],
+  .ui__select-content,
+  .ui__calendar,
+  .rc-datepicker {
+    --accent: var(--ctp-surface0-hsl);
+    --accent-foreground: var(--ctp-text-hsl);
+    --muted: var(--ctp-surface1-hsl);
+  }
+}

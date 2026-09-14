@@ -6,8 +6,21 @@
   @return math.div($value, ($value * 0 + 1));
 }
 
+@function round-to($value, $decimals: 1) {
+    $factor: math.pow(10, $decimals);
+    @return math.div(math.round($value * $factor), $factor);
+}
+
+// Space separated triplet (`H S% L%`).
+//
+// Logseq consumes these through `hsl(var(--x) / <alpha>)`, and the slash
+// syntax is only legal on the space separated form -- `hsl(240, 21%, 15% / .4)`
+// does not parse. Keep this space separated.
 @function hex-to-hsl($hexColor) {
-    @return #{math.round(strip-unit(hue($hexColor)))}, #{math.round(saturation($hexColor))}, #{math.round(lightness($hexColor))};
+    $h: round-to(strip-unit(hue($hexColor)));
+    $s: round-to(strip-unit(saturation($hexColor)));
+    $l: round-to(strip-unit(lightness($hexColor)));
+    @return #{$h} #{$s}#{"%"} #{$l}#{"%"};
 }
 
 @function hex-to-rgb($hexColor) {

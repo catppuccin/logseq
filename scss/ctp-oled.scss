@@ -10,6 +10,12 @@ $flavor: mocha;
   --ctp-base: 02, 02, 02;
   --ctp-mantle: 01, 01, 01;
   --ctp-crust: 00, 00, 00;
+  // The HSL twins have to be blacked out alongside the RGB ones, otherwise the
+  // shadcn tokens (--background, --card, --popover ...) would keep rendering
+  // Mocha's surfaces while everything else went OLED black.
+  --ctp-base-hsl: 0 0% 0.8%;
+  --ctp-mantle-hsl: 0 0% 0.4%;
+  --ctp-crust-hsl: 0 0% 0%;
 }
 
 $ctp-base: utils.get-flavor-color-rgb($flavor, base);
